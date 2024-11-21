@@ -1,53 +1,89 @@
-"use client"
-import React from 'react';
+'use client'
 
- const Footer = () => {
-    return (
-      <footer className="bg-black text-white py-20">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-            <div>
-              <h3 className="text-2xl font-bold mb-6">Molfar</h3>
-              <p className="text-gray-400">
-                Transforming businesses with AI-powered solutions.
-              </p>
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import { useTheme } from '@/app/components/contexts/DarkThemeContext'
+import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa'
+
+export default function Contact() {
+  const { theme } = useTheme()
+
+  return (
+    <section className="py-32 px-32 bg-gray-50 rounded-t-[10%]">
+      <div className=" mx-auto">
+        <motion.h1 
+          className={`text-5xl md:text-9xl font-bold mb-24 bg-gradient-to-r ${
+            theme === 'dark' 
+              ? 'from-gray-100 to-gray-500' 
+              : 'from-gray-700 to-gray-400'
+          } bg-clip-text text-transparent`}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Let&apos;s Work Together
+        </motion.h1>
+
+        <div className="space-y-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <h2 className={`text-lg font-medium mb-2 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+              Email
+            </h2>
+            <Link 
+              href="mailto:agustin.cordoba.work@gmail.com"
+              className={`text-xl md:text-2xl ${
+                theme === 'dark' 
+                  ? 'text-white hover:text-gray-300' 
+                  : 'text-gray-900 hover:text-gray-600'
+              } transition-colors duration-200`}
+            >
+              agustin.cordoba.work@gmail.com
+            </Link>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <h2 className={`text-lg font-medium mb-2 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+              Socials
+            </h2>
+            <div className="flex space-x-6">
+              <Link 
+                href="https://www.linkedin.com/in/agustin-maria-cordoba/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`text-xl md:text-2xl flex items-center ${
+                  theme === 'dark' 
+                    ? 'text-white hover:text-gray-300' 
+                    : 'text-gray-900 hover:text-gray-600'
+                } transition-colors duration-200`}
+              >
+                <FaLinkedin className="w-6 h-6 mr-2" />
+                LinkedIn
+              </Link>
+              <Link 
+                href="https://github.com/AgusWork"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`text-xl md:text-2xl flex items-center ${
+                  theme === 'dark' 
+                    ? 'text-white hover:text-gray-300' 
+                    : 'text-gray-900 hover:text-gray-600'
+                } transition-colors duration-200`}
+              >
+                <FaGithub className="w-6 h-6 mr-2" />
+                Github
+              </Link>
             </div>
-            <div>
-              <h4 className="font-semibold mb-4">Product</h4>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white">Features</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Solutions</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Enterprise</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Pricing</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Resources</h4>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white">Documentation</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">API Reference</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Blog</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Support</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white">About</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Careers</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Contact</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Legal</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 mt-12 pt-8">
-            <p className="text-gray-400 text-center">
-              © 2024 Molfar. All rights reserved.
-            </p>
-          </div>
+          </motion.div>
         </div>
-      </footer>
-    );
-  };
-  
-  export default Footer;
+      </div>
+    </section>
+  )
+}

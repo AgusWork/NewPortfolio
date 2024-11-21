@@ -45,7 +45,7 @@ const projects = [
 	},
 ];
 
-export default function SelectedWorkSection() {
+export default function SelectedPracticeSection() {
 	const ref = React.useRef(null);
 	const isInView = useInView(ref, { once: true, amount: 0.2 });
 	const { theme } = useTheme();
@@ -53,14 +53,14 @@ export default function SelectedWorkSection() {
 	return (
 		<GralLayout
 			className={`pt-20 h-full`}
-			// ${theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black"}
+			// ${ theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black" }
 		>
 			<motion.h2
 				{...fadeIn}
 				ref={ref}
-				className={`${playFair.className} text-5xl flex flex-row font-bold mb-12 relative pb-6`}
+				className={`${playFair.className} text-5xl flex flex-row justify-end font-bold mb-12 relative pb-6`}
 			>
-				Selected <p className={`${playFair.className} ml-4 text-teal-500`}>Work</p>
+				Selected <p className={`${playFair.className} ml-4 text-teal-500`}>Pra</p>
 				<motion.div
 					initial={{ scaleX: 0 }}
 					animate={{ scaleX: isInView ? 1 : 0 }}
@@ -129,17 +129,17 @@ export default function SelectedWorkSection() {
 				<motion.button
 					whileTap={{ scale: 0.95 }}
 					className={`
-            relative overflow-hidden rounded-full text-bold text-lg flex items-center justify-center
-            py-3 px-6 transition-all duration-300 ease-in-out
-            ${
-							theme === "dark"
-								? "bg-teal-600 text-white hover:bg-white hover:text-teal-600 "
-								: "bg-teal-500 text-white hover:bg-white hover:text-teal-600 hover:border hover:border-teal-600"
-						}
-            focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-opacity-50
+							relative overflow-hidden rounded-full text-bold text-lg flex items-center justify-center
+							py-3 px-6 transition-all duration-300 ease-in-out
+							${
+											theme === "dark"
+												? "bg-teal-600 text-white hover:bg-white hover:text-teal-600 "
+												: "bg-teal-500 text-white hover:bg-white hover:text-teal-600 hover:border hover:border-teal-600"
+										}
+							focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-opacity-50
           `}
 				>
-					<span className="relative z-10">Ver Todos</span>
+					<span className="relative z-40">Ver Todos</span>
 					<FaArrowRight className="ml-2 h-5 w-5 relative z-10" />
 					<motion.div
 						className="absolute inset-0 bg-white"

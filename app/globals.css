@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: "bg-neutral-50 bg-[radial-gradient(ellipse_80%80%_at_50%-20%,rgba(0,128,255,.40),rgba(0,191,255,.20))] transition-colors duration-300 dark:text-white dark:bg-neutral-950 dark:bg-[radial-gradient(ellipse_80%80%_at_50%-20%,rgba(0,128,255,.20),rgba(255,255,255,0))]"
   --foreground: #171717;
 }
 
@@ -23,6 +23,7 @@ body {
 html {
   background-color: #f9f9f9;
   color: #333333;
+  scroll-behavior: smooth;
 }
 
 html.dark {

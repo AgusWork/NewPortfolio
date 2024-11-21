@@ -19,7 +19,7 @@ import { motion } from 'framer-motion';
     ];
   
     return (
-      <section className="py-20 bg-white">
+      <section className="py-20 ">
         <div className="max-w-7xl mx-auto px-4">
           <motion.h2 
             className="text-4xl font-bold text-center mb-12"

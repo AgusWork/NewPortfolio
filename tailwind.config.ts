@@ -9,11 +9,13 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: '#f9f9f9',
-        'background-dark': '#1a1a1a',
-        foreground: '#333333',
-        'foreground-dark': '#ffffff',
+      backgroundColor: {
+        background: 'rgb(var(--background))',
+        'background-dark': 'rgb(var(--background))',
+      },
+      textColor: {
+        foreground: 'rgb(var(--foreground))',
+        'foreground-dark': 'rgb(var(--foreground))',
       },
     },
   },

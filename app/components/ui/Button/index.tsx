@@ -10,9 +10,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const baseStyles = 'inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none'
     
     const variants = {
-      default: 'bg-orange-500 text-white hover:bg-orange-600 focus:ring-orange-500',
-      outline: 'border border-orange-500 text-orange-500 hover:bg-orange-50 focus:ring-orange-500',
-      ghost: 'text-orange-500 hover:bg-orange-50 focus:ring-orange-500',
+      default: 'bg-teal-500 text-white hover:bg-orange-600 focus:ring-orange-500',
+      outline: 'border border-teal-500 text-teal-500 hover:bg-orange-50 focus:ring-orange-500',
+      ghost: 'text-teal-500 hover:bg-orange-50 focus:ring-orange-500',
     }
     
     const sizes = {
