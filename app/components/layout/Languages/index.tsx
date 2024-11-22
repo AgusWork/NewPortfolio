@@ -71,24 +71,32 @@ const LanguageItem: React.FC<{ language: Language }> = ({ language }) => {
     </li>
   )
 }
-
-const SkillCard: React.FC<{ category: SkillCategory, index: number }> = ({ category, index }) => {
-  const [showAll, setShowAll] = useState(false)
-  const displayedLanguages = showAll ? category.languages : category.languages.slice(0, 5)
-  const { theme } = useTheme()
+const SkillCard: React.FC<{ category: SkillCategory; index: number }> = ({ category, index }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const [showAll, setShowAll] = useState(false);
+  const displayedLanguages = showAll ? category.languages : category.languages.slice(0, 5);
+  const { theme } = useTheme();
 
   return (
     <motion.div
-      className={`p-6 rounded-2xl border transition-colors duration-700 cursor-pointer ${theme === 'dark' ? 'border-gray-700 hover:border-teal-800 hover:bg-teal-800 ' : 'border-2 border-white hover:border-teal-800 hover:bg-teal-800 hover:text-white'} shadow-sm`}
+      ref={ref}
+      className={`p-6 rounded-2xl border transition-colors duration-700 cursor-pointer ${
+        theme === 'dark'
+          ? 'border-gray-700 hover:border-teal-800 hover:bg-teal-800'
+          : 'border-2 border-white hover:border-teal-800 hover:bg-teal-800 hover:text-white'
+      } shadow-sm`}
       initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ 
-        duration: 0.5, 
-        delay: index * 0.2 // Staggered delay based on index
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{
+        duration: 0.5,
+        delay: index * 0.2, // Staggered delay based on index
       }}
     >
       <div className="flex items-center space-x-3 mb-4">
-        <category.icon className={`w-8 h-8 ${theme === 'dark' ? 'text-teal-400 ' : 'text-teal-600'}`} />
+        <category.icon
+          className={`w-8 h-8 ${theme === 'dark' ? 'text-teal-400 ' : 'text-teal-600'}`}
+        />
         <h3 className="text-2xl font-bold">{category.name}</h3>
       </div>
       <ul className="space-y-2 mb-4">
@@ -99,7 +107,11 @@ const SkillCard: React.FC<{ category: SkillCategory, index: number }> = ({ categ
       {category.languages.length > 5 && (
         <button
           onClick={() => setShowAll(!showAll)}
-          className={`${theme === 'dark' ? 'text-teal-400 hover:text-teal-300' : 'text-teal-600 hover:text-teal-700'} transition-colors duration-200 flex items-center`}
+          className={`${
+            theme === 'dark'
+              ? 'text-teal-400 hover:text-teal-300'
+              : 'text-teal-600 hover:text-teal-700'
+          } transition-colors duration-200 flex items-center`}
         >
           {showAll ? 'See Less' : 'See More'}
           <ChevronDownIcon
@@ -110,8 +122,9 @@ const SkillCard: React.FC<{ category: SkillCategory, index: number }> = ({ categ
         </button>
       )}
     </motion.div>
-  )
-}
+  );
+};
+
 
 const LanguageSkills: React.FC = () => {
   const { theme } = useTheme()

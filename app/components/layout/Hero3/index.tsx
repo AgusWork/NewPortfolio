@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from "react"
 import { motion } from "framer-motion"
 import { Menu, Moon, Sun, ArrowRight, Code, Palette, Zap } from 'lucide-react'
 import Link from "next/link"
@@ -33,7 +32,7 @@ export default function EnhancedHero() {
   }
 
   return (
-    <div className={theme === 'dark' ? 'dark' : ''}>
+    <div className={`${theme === 'dark' ? 'dark' : ''}`}>
       <div className="bg-background min-h-screen text-foreground transition-colors duration-300 dark:bg-background-dark dark:text-foreground-dark">
         {/* Header */}
         <header className="container mx-auto px-4 py-6 flex justify-between items-center">
@@ -99,7 +98,7 @@ export default function EnhancedHero() {
             </div>
           </motion.div>
 
-          {/* <motion.div className="mt-20" {...fadeIn}>
+          <motion.div className="mt-20" {...fadeIn}>
             <InfiniteSlider
               words={["User Interface", "Design", "Development", "Innovation"]}
               color1="text-yellow-800"
@@ -110,7 +109,7 @@ export default function EnhancedHero() {
               fontSize="text-4xl"
               spacing="mx-14"
             />
-          </motion.div> */}
+          </motion.div>
 
           <motion.div 
             className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8"

@@ -64,6 +64,7 @@ export default function SelectedPracticeSection() {
 				<motion.div
 					initial={{ scaleX: 0 }}
 					animate={{ scaleX: isInView ? 1 : 0 }}
+					style={{ originX: 1 }}
 					transition={{ duration: 0.8, ease: "easeInOut" }}
 					className="absolute bottom-0 left-0 w-full h-2 overflow-hidden"
 				>

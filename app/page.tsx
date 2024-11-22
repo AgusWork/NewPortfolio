@@ -1,6 +1,6 @@
 import React from "react";
-import { Navbar, SubHeader, Features } from "./components/ui";
-import HeroSection, {
+import { Features } from "./components/ui";
+import {
 	AIFeatures,
 	Footer,
 	Hero,
@@ -9,8 +9,6 @@ import HeroSection, {
 	Testimonials,
 	Works,
 } from "./components/layout";
-import Hero3 from "./components/layout/Hero3";
-import { ThemeProvider } from "./components/contexts/DarkThemeContext";
 import ThemeWrapper from "./components/contexts/ThemeWrapper";
 
 export default function Home() {
@@ -18,7 +16,7 @@ export default function Home() {
 		<ThemeWrapper>
 			<div className="min-h-screen">
 				<main>
-					<Hero3 />
+					<Hero />
 					<Works />
 					<Practice />
 					<Languages />
