@@ -80,8 +80,9 @@ export default function SelectedPracticeSection() {
 					</svg>
 				</motion.div>
 			</motion.h2>
-			<div className="flex flex-row gap-8 md:gap-12 w-full flex-grow overflow-hidden h-[80vh]">
-				<div className="md:row-span-2 h-full w-full">
+			<div className="flex flex-col gap-8 md:gap-12 w-full flex-grow overflow-hidden h-[80vh]">
+				<div className="md:row-span-2 h-full w-full flex flex-row gap-8">
+				<div className="h-full w-full">
 					<CardWork
 						category={projects[1].category}
 						imageUrl={projects[1].imageUrl}
@@ -94,9 +95,10 @@ export default function SelectedPracticeSection() {
 						}
 						aspectRatio="aspect-[2/3]"
 					/>
+
 				</div>
-				<div className="flex flex-col justify-between w-full h-full gap-4">
-					<div className="h-full">
+				<div className="h-full w-full">
+
 						<CardWork
 							category={projects[0].category}
 							imageUrl={projects[0].imageUrl}
@@ -109,7 +111,10 @@ export default function SelectedPracticeSection() {
 							}
 							aspectRatio="aspect-[16/9]"
 						/>
-					</div>
+				</div>
+				</div>
+				<div className="flex flex-col justify-between w-full h-full gap-4">
+					
 					<div className="h-full">
 						<CardWork
 							category={projects[2].category}

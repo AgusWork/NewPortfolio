@@ -1,12 +1,11 @@
 import React from "react";
 import { Features } from "./components/ui";
 import {
-	AIFeatures,
+	AboutMe,
 	Footer,
 	Hero,
 	Practice,
 	Languages,
-	Testimonials,
 	Works,
 } from "./components/layout";
 import ThemeWrapper from "./components/contexts/ThemeWrapper";
@@ -17,12 +16,11 @@ export default function Home() {
 			<div className="min-h-screen">
 				<main>
 					<Hero />
+					<AboutMe />
 					<Works />
 					<Practice />
 					<Languages />
 					<Features />
-					<AIFeatures />
-					<Testimonials />
 				</main>
 				<Footer />
 			</div>

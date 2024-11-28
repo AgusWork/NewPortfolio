@@ -66,7 +66,7 @@ export default function SelectedWorkSection() {
 					animate={{ scaleX: isInView ? 1 : 0 }}
 					transition={{ duration: 0.8, ease: "easeInOut" }}
 					style={{ originX: 0 }}
-					className="absolute bottom-0 left-0 w-full h-2 overflow-hidden"
+					className="absolute bottom-0 left-0 w-[50%] h-2 overflow-hidden"
 				>
 					<svg className="w-full h-full" viewBox="0 0 600 60" preserveAspectRatio="none">
 						<motion.path
