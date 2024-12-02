@@ -1,8 +1,8 @@
 "use client";
 
+import React from "react";
 import { motion, useInView } from "framer-motion";
 import { Playfair_Display } from "next/font/google";
-import React from "react";
 import { CardWork } from "../../ui";
 import GralLayout from "../GralLayout";
 import { useTheme } from "@/app/components/contexts/DarkThemeContext";
@@ -60,7 +60,7 @@ export default function SelectedPracticeSection() {
 				ref={ref}
 				className={`${playFair.className} text-5xl flex flex-row justify-end font-bold mb-12 relative pb-6`}
 			>
-				Selected <p className={`${playFair.className} ml-4 text-teal-500`}>Pra</p>
+				Selected <p className={`${playFair.className} ml-4 text-teal-500`}>Practices</p>
 				<motion.div
 					initial={{ scaleX: 0 }}
 					animate={{ scaleX: isInView ? 1 : 0 }}

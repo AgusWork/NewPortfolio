@@ -26,7 +26,6 @@ export default function CardWork({
   imageUrl,
   link,
   bgColor = "bg-white",
-  aspectRatio = "aspect-[3/4]",
 }: ProjectCardProps) {
   const { theme } = useTheme()
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 })

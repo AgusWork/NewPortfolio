@@ -1,12 +1,10 @@
 import React from "react";
 import { Features } from "./components/ui";
 import {
-	AIFeatures,
 	Footer,
 	Hero,
 	Practice,
 	Languages,
-	Testimonials,
 	Works,
 } from "./components/layout";
 import ThemeWrapper from "./components/contexts/ThemeWrapper";
@@ -21,8 +19,6 @@ export default function Home() {
 					<Practice />
 					<Languages />
 					<Features />
-					<AIFeatures />
-					<Testimonials />
 				</main>
 				<Footer />
 			</div>
