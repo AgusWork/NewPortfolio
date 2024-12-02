@@ -1,6 +1,7 @@
 import React from "react";
 import { Features } from "./components/ui";
 import {
+	AboutMe,
 	Footer,
 	Hero,
 	Practice,
@@ -15,6 +16,7 @@ export default function Home() {
 			<div className="min-h-screen">
 				<main>
 					<Hero />
+					<AboutMe />
 					<Works />
 					<Practice />
 					<Languages />

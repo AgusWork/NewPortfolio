@@ -35,11 +35,7 @@ export default function Contact() {
             </h2>
             <Link 
               href="mailto:agustin.cordoba.work@gmail.com"
-              className={`text-xl md:text-2xl ${
-                theme === 'dark' 
-                  ? 'text-white hover:text-gray-300' 
-                  : 'text-gray-900 hover:text-gray-600'
-              } transition-colors duration-200`}
+              className={`text-xl md:text-2xl text-gray-900 hover:text-gray-600 transition-colors duration-200`}
             >
               agustin.cordoba.work@gmail.com
             </Link>
@@ -58,11 +54,7 @@ export default function Contact() {
                 href="https://www.linkedin.com/in/agustin-maria-cordoba/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`text-xl md:text-2xl flex items-center ${
-                  theme === 'dark' 
-                    ? 'text-white hover:text-gray-300' 
-                    : 'text-gray-900 hover:text-gray-600'
-                } transition-colors duration-200`}
+                className={`text-xl md:text-2xl flex items-center text-gray-900 hover:text-gray-600 transition-colors duration-200`}
               >
                 <FaLinkedin className="w-6 h-6 mr-2" />
                 LinkedIn
@@ -71,11 +63,9 @@ export default function Contact() {
                 href="https://github.com/AgusWork"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`text-xl md:text-2xl flex items-center ${
-                  theme === 'dark' 
-                    ? 'text-white hover:text-gray-300' 
-                    : 'text-gray-900 hover:text-gray-600'
-                } transition-colors duration-200`}
+                className={`text-xl md:text-2xl flex items-center 
+               text-gray-900 hover:text-gray-600
+                 transition-colors duration-200`}
               >
                 <FaGithub className="w-6 h-6 mr-2" />
                 Github
