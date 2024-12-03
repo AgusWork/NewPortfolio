@@ -7,6 +7,7 @@ import { CardWork } from "../../ui";
 import GralLayout from "../GralLayout";
 import { useTheme } from "@/app/components/contexts/DarkThemeContext";
 import { FaArrowRight } from "react-icons/fa";
+import { CardSection } from "../../ui/Card/Sections/Card";
 
 const playFair = Playfair_Display({ subsets: ["latin"] });
 
@@ -52,13 +53,13 @@ export default function SelectedPracticeSection() {
 
 	return (
 		<GralLayout
-			className={`pt-20 h-full`}
+			className={`pt-10 md:pt-20 h-full`}
 			// ${ theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-black" }
 		>
 			<motion.h2
 				{...fadeIn}
 				ref={ref}
-				className={`${playFair.className} text-5xl flex flex-row justify-end font-bold mb-12 relative pb-6`}
+				className={`${playFair.className} text-4xl md:text-5xl flex flex-col md:flex-row md:justify-end font-bold mb-12 relative pb-6`}
 			>
 				Selected <p className={`${playFair.className} ml-4 text-teal-500`}>Practices</p>
 				<motion.div
@@ -80,57 +81,27 @@ export default function SelectedPracticeSection() {
 					</svg>
 				</motion.div>
 			</motion.h2>
-			<div className="flex flex-col gap-8 md:gap-12 w-full flex-grow overflow-hidden h-[80vh]">
-				<div className="md:row-span-2 h-full w-full flex flex-row gap-8">
-				<div className="h-full w-full">
-					<CardWork
-						category={projects[1].category}
-						imageUrl={projects[1].imageUrl}
-						link={projects[1].link}
-						title={projects[1].title}
-						bgColor={
-							theme === "dark"
-								? "bg-gradient-to-r from-gray-800 via-gray-700 to-gray-600"
-								: projects[1].bgColor
-						}
-						aspectRatio="aspect-[2/3]"
-					/>
-
-				</div>
-				<div className="h-full w-full">
-
-						<CardWork
-							category={projects[0].category}
-							imageUrl={projects[0].imageUrl}
-							link={projects[0].link}
-							title={projects[0].title}
-							bgColor={
-								theme === "dark"
-									? "bg-gradient-to-r from-gray-700 via-gray-600 to-gray-500"
-									: projects[0].bgColor
-							}
-							aspectRatio="aspect-[16/9]"
-						/>
-				</div>
-				</div>
-				<div className="flex flex-col justify-between w-full h-full gap-4">
-					
-					<div className="h-full">
-						<CardWork
-							category={projects[2].category}
-							imageUrl={projects[2].imageUrl}
-							link={projects[2].link}
-							title={projects[2].title}
-							bgColor={
-								theme === "dark"
-									? "bg-gradient-to-r from-gray-600 via-gray-500 to-gray-400"
-									: "bg-gray-200"
-							}
-							aspectRatio="aspect-[16/9]"
-						/>
-					</div>
-				</div>
-			</div>
+			<div className="w-full h-[80vh] overflow-y-auto custom-scrollbar ">
+        <div className="hidden md:flex flex-col gap-8 w-full  min-h-full">
+          <CardSection
+            projects={projects}
+            theme={theme}
+          />
+        </div>
+        <div className="md:hidden flex flex-col gap-8 w-full  min-h-full">
+          {projects.map((p) => (
+            <div className=" w-full h-[60vh]" key={p.title}>
+              <CardWork
+                category={p.category}
+                imageUrl={p.imageUrl}
+                link={p.link}
+                title={p.title}
+                theme={theme}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
 			<div className="h-60 w-full flex items-center justify-center">
 				<motion.button
 					whileTap={{ scale: 0.95 }}

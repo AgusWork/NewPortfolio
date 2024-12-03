@@ -34,7 +34,7 @@ const Features = () => {
 	};
 
 	return (
-		<div className="py-20">
+		<div className="py-10 md:py-20 px-6 xs:px-10 sm:px-20 md:px-0">
 			<div className="max-w-7xl mx-auto px-4">
 				<div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
 					{cards.map((card, index) => (

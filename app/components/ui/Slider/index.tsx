@@ -30,7 +30,7 @@ const InfiniteSlider: React.FC<InfiniteSliderProps> = ({
 	const repeatedWords = [...words, ...words, ...words, ...words];
 
 	return (
-		<div className="relative overflow-hidden w-full" style={{ height: "100px" }}>
+		<div className="relative overflow-hidden w-full" style={{ height: "100%" }}>
 			{fadeCorners && (
 				<>
 					<div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-black to-transparent pointer-events-none z-10" />

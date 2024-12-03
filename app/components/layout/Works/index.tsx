@@ -7,6 +7,9 @@ import { CardWork } from "../../ui";
 import GralLayout from "../GralLayout";
 import { useTheme } from "@/app/components/contexts/DarkThemeContext";
 import { FaArrowRight } from "react-icons/fa";
+import { CardSection } from "../../ui/Card/Sections/Card";
+import { projects } from "@/app/data/projects";
+import "../../styles/custom-scrollbar-sectionCard.css"
 
 const playFair = Playfair_Display({ subsets: ["latin"] });
 
@@ -16,46 +19,17 @@ const fadeIn = {
   transition: { duration: 0.6 },
 };
 
-const projects = [
-  {
-    title: "E-commerce Platform",
-    category: "Web Development",
-    imageUrl: "/mockup/BukmaMob.png",
-    link: "#",
-    bgColor: "bg-gradient-to-r from-gray-700 via-gray-500 to-gray-300",
-  },
-  {
-    title: "Mobile Banking App",
-    category: "UI Design",
-    imageUrl: "/mockup/MammMob0.jpeg",
-    link: "#",
-    bgColor: "bg-gradient-to-r from-gray-800 via-gray-600 to-gray-400",
-  },
-  {
-    title: "Portfolio Website",
-    category: "Web Development",
-    imageUrl: "/mockup/BuassoMob.png",
-    link: "#",
-  },
-  {
-    title: "Task Management Tool",
-    category: "UI/UX Design",
-    imageUrl: "/escribania/EscBuasso1.jpg",
-    link: "#",
-  },
-];
-
 export default function SelectedWorkSection() {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
   const { theme } = useTheme();
 
   return (
-    <GralLayout className={`pt-20 h-full`}>
+    <GralLayout className={`pt-10 md:pt-20 h-full`}>
       <motion.h2
         {...fadeIn}
         ref={ref}
-        className={`${playFair.className} text-5xl flex flex-row font-bold mb-12 relative pb-6`}
+        className={`${playFair.className} text-4xl md:text-5xl flex flex-col md:flex-row  font-bold mb-12 relative pb-6`}
       >
         Selected{" "}
         <p className={`${playFair.className} ml-4 text-teal-500`}>Work</p>
@@ -82,135 +56,26 @@ export default function SelectedWorkSection() {
           </svg>
         </motion.div>
       </motion.h2>
-      <div className="w-full h-[80vh] overflow-y-auto">
-        <div className="flex flex-col gap-8 w-full overflow-y-auto min-h-full">
-          <div className="flex flex-row gap-8 md:gap-12 w-full flex-grow h-[80vh]">
-            <div className="md:row-span-2 h-[80vh] w-full">
+      <div className="w-full h-[80vh] overflow-y-auto custom-scrollbar ">
+        <div className="hidden md:flex flex-col gap-8 w-full min-h-full">
+          <CardSection
+            className=""
+            projects={projects}
+            theme={theme}
+          />
+        </div>
+        <div className="md:hidden flex flex-col gap-8 w-full  min-h-full">
+          {projects.map((p) => (
+            <div className=" w-full h-[60vh]" key={p.title}>
               <CardWork
-                category={projects[1].category}
-                imageUrl={projects[1].imageUrl}
-                link={projects[1].link}
-                title={projects[1].title}
-                bgColor={
-                  theme === "dark"
-                    ? "bg-gradient-to-r from-gray-800 via-gray-700 to-gray-600"
-                    : projects[1].bgColor
-                }
+                category={p.category}
+                imageUrl={p.imageUrl}
+                link={p.link}
+                title={p.title}
+                theme={theme}
               />
             </div>
-            <div className="flex flex-col justify-between w-full h-full gap-4">
-              <div className="h-[40vh]">
-                <CardWork
-                  category={projects[0].category}
-                  imageUrl={projects[0].imageUrl}
-                  link={projects[0].link}
-                  title={projects[0].title}
-                  bgColor={
-                    theme === "dark"
-                      ? "bg-gradient-to-r from-gray-700 via-gray-600 to-gray-500"
-                      : projects[0].bgColor
-                  }
-                />
-              </div>
-              <div className="h-[40vh]">
-                <CardWork
-                  category={projects[2].category}
-                  imageUrl={projects[2].imageUrl}
-                  link={projects[2].link}
-                  title={projects[2].title}
-                  bgColor={
-                    theme === "dark"
-                      ? "bg-gradient-to-r from-gray-600 via-gray-500 to-gray-400"
-                      : "bg-gray-200"
-                  }
-                />
-              </div>
-            </div>
-          </div>
-          <div className="h-[45vh] md:row-span-3 w-full">
-            <CardWork
-              category={projects[2].category}
-              imageUrl={projects[2].imageUrl}
-              link={projects[2].link}
-              title={projects[2].title}
-              bgColor={
-                theme === "dark"
-                  ? "bg-gradient-to-r from-gray-600 via-gray-500 to-gray-400"
-                  : "bg-gray-200"
-              }
-            />
-          </div>
-          <div className="flex flex-row justify-between w-full h-[45vh] gap-4">
-              <div className="w-[50%] h-full">
-                <CardWork
-                  category={projects[0].category}
-                  imageUrl={projects[0].imageUrl}
-                  link={projects[0].link}
-                  title={projects[0].title}
-                  bgColor={
-                    theme === "dark"
-                      ? "bg-gradient-to-r from-gray-700 via-gray-600 to-gray-500"
-                      : projects[0].bgColor
-                  }
-                />
-              </div>
-              <div className="w-[50%] h-full">
-                <CardWork
-                  category={projects[2].category}
-                  imageUrl={projects[2].imageUrl}
-                  link={projects[2].link}
-                  title={projects[2].title}
-                  bgColor={
-                    theme === "dark"
-                      ? "bg-gradient-to-r from-gray-600 via-gray-500 to-gray-400"
-                      : "bg-gray-200"
-                  }
-                />
-              </div>
-            </div>
-            <div className="flex flex-row gap-8 md:gap-12 w-full flex-grow h-[80vh]">
-            <div className="flex flex-col justify-between w-full h-full gap-4">
-              <div className="h-[40vh]">
-                <CardWork
-                  category={projects[0].category}
-                  imageUrl={projects[0].imageUrl}
-                  link={projects[0].link}
-                  title={projects[0].title}
-                  bgColor={
-                    theme === "dark"
-                      ? "bg-gradient-to-r from-gray-700 via-gray-600 to-gray-500"
-                      : projects[0].bgColor
-                  }
-                />
-              </div>
-              <div className="h-[40vh]">
-                <CardWork
-                  category={projects[2].category}
-                  imageUrl={projects[2].imageUrl}
-                  link={projects[2].link}
-                  title={projects[2].title}
-                  bgColor={
-                    theme === "dark"
-                      ? "bg-gradient-to-r from-gray-600 via-gray-500 to-gray-400"
-                      : "bg-gray-200"
-                  }
-                />
-              </div>
-            </div>
-            <div className="md:row-span-2 h-[80vh] w-full">
-              <CardWork
-                category={projects[1].category}
-                imageUrl={projects[1].imageUrl}
-                link={projects[1].link}
-                title={projects[1].title}
-                bgColor={
-                  theme === "dark"
-                    ? "bg-gradient-to-r from-gray-800 via-gray-700 to-gray-600"
-                    : projects[1].bgColor
-                }
-              />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 

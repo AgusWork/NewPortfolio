@@ -16,7 +16,7 @@ export default function WoodenWindowVideo() {
   }, [])
 
   return (
-    <div className="relative w-80 h-80">
+    <div className="relative w-60 md:w-80 h-60 md:h-80">
       <motion.div
         className="relative w-full h-full"
         initial={{ scale: 0.8, opacity: 0 }}

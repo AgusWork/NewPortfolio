@@ -1,0 +1,29 @@
+/* Estilos para la barra de desplazamiento */
+.custom-scrollbar {
+    padding-right: 16px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 8px 0;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+  }
+  
+  /* Tema claro */
+  html:not(.dark) .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #fafafa; /* Marrón (SaddleBrown) */
+  }
+  
+  /* Tema oscuro */
+  html.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #14b8a6; /* teal-500 */
+  }
+  
+  

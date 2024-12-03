@@ -90,7 +90,7 @@ const SkillCard: React.FC<{ category: SkillCategory; index: number }> = ({ categ
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{
         duration: 0.5,
-        delay: index * 0.2, // Staggered delay based on index
+        delay: index * 0.2,
       }}
     >
       <div className="flex items-center space-x-3 mb-4">
@@ -132,7 +132,7 @@ const LanguageSkills: React.FC = () => {
   const isInView = useInView(ref, { once: true, amount: 0.2 })
 
   return (
-    <section className={`py-20  ${theme === 'dark' ? '' : ''}`}>
+    <section className={`py-10 md:py-20  ${theme === 'dark' ? '' : ''}`}>
       <div className="max-w-7xl mx-auto px-4">
         <motion.div 
           ref={ref}
@@ -164,7 +164,7 @@ const LanguageSkills: React.FC = () => {
             </svg>
           </motion.div>
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  px-6 xs:px-10 sm:px-20 md:px-0">
           {skillCategories.map((category, index) => (
             <SkillCard key={category.name} category={category} index={index} />
           ))}

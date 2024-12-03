@@ -1,24 +1,16 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Image from "next/image"
-import Link from "next/link"
-import { ArrowUpRight } from 'lucide-react'
-import { useTheme } from "@/app/components/contexts/DarkThemeContext"
-import { useState, useRef, useEffect } from "react"
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { useTheme } from "@/app/components/contexts/DarkThemeContext";
+import { useState, useRef, useEffect } from "react";
+import { CardWorkProps } from "../../../types/cardLayout";
 
 const hideCursorClass = `
   [&_*]:cursor-none
-`
-
-interface ProjectCardProps {
-  title: string
-  category: string
-  imageUrl: string
-  link: string
-  bgColor?: string
-  aspectRatio?: string
-}
+`;
 
 export default function CardWork({
   title,
@@ -26,31 +18,36 @@ export default function CardWork({
   imageUrl,
   link,
   bgColor = "bg-white",
-}: ProjectCardProps) {
-  const { theme } = useTheme()
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 })
-  const [isHovering, setIsHovering] = useState(false)
-  const cardRef = useRef<HTMLDivElement>(null)
+}: CardWorkProps) {
+  const { theme } = useTheme();
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const [isHovering, setIsHovering] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (cardRef.current) {
-        const rect = cardRef.current.getBoundingClientRect()
+        const rect = cardRef.current.getBoundingClientRect();
         setCursorPosition({
           x: e.clientX - rect.left,
           y: e.clientY - rect.top,
-        })
+        });
       }
-    }
+    };
 
-    const card = cardRef.current
+    const card = cardRef.current;
     if (card) {
-      card.addEventListener("mousemove", handleMouseMove)
+      card.addEventListener("mousemove", handleMouseMove);
       return () => {
-        card.removeEventListener("mousemove", handleMouseMove)
-      }
+        card.removeEventListener("mousemove", handleMouseMove);
+      };
     }
-  }, [])
+  }, []);
+
+  const backgroundClass =
+    theme === "dark"
+      ? "bg-gradient-to-r from-gray-800 via-gray-700 to-gray-600"
+      : bgColor;
 
   return (
     <motion.div
@@ -64,7 +61,9 @@ export default function CardWork({
       onMouseLeave={() => setIsHovering(false)}
     >
       <Link href={link} className="block w-full">
-        <div className={`${bgColor} rounded-2xl relative h-full w-full overflow-hidden`}>
+        <div
+          className={`${backgroundClass} rounded-2xl relative h-full w-full overflow-hidden`}
+        >
           <Image
             src={imageUrl}
             alt={title}
@@ -73,11 +72,15 @@ export default function CardWork({
           />
           <div
             className={`absolute bottom-0 left-0 right-0 px-6 py-3 ${
-              theme === "dark" ? "bg-black bg-opacity-70" : "bg-white bg-opacity-70"
+              theme === "dark"
+                ? "bg-black bg-opacity-70"
+                : "bg-white bg-opacity-70"
             } z-10`}
           >
             <div className="flex items-center justify-between mb-2">
-              <span className="text-sm text-teal-500 font-medium">{category}</span>
+              <span className="text-sm text-teal-500 font-medium">
+                {category}
+              </span>
               <motion.div
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: 1 }}
@@ -101,8 +104,8 @@ export default function CardWork({
         style={{
           width: 120,
           height: 120,
-          x: cursorPosition.x ,
-          y: cursorPosition.y ,
+          x: cursorPosition.x,
+          y: cursorPosition.y,
         }}
         animate={{
           opacity: isHovering ? 1 : 0,
@@ -113,5 +116,5 @@ export default function CardWork({
         Explore
       </motion.div>
     </motion.div>
-  )
+  );
 }

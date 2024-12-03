@@ -9,7 +9,7 @@ export default function Contact() {
   const { theme } = useTheme()
 
   return (
-    <section className="py-32 px-32 bg-gray-50 rounded-t-[10%]">
+    <section className="py-16 md:py-32 px-10 md:px-32 bg-gray-50 rounded-t-[10%]">
       <div className=" mx-auto">
         <motion.h1 
           className={`text-5xl md:text-9xl font-bold mb-24 bg-gradient-to-r ${
@@ -35,7 +35,7 @@ export default function Contact() {
             </h2>
             <Link 
               href="mailto:agustin.cordoba.work@gmail.com"
-              className={`text-xl md:text-2xl text-gray-900 hover:text-gray-600 transition-colors duration-200`}
+              className={`text-lg md:text-2xl text-gray-900 hover:text-gray-600 transition-colors duration-200`}
             >
               agustin.cordoba.work@gmail.com
             </Link>
