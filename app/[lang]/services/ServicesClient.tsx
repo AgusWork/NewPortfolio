@@ -1,32 +1,39 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import  Button  from "@/app/components/ui/Button"
-import { 
-  Info, 
-  MonitorSmartphone,
-  BrainCircuit,
-  Code,
-  Box,
-  CheckCircle2
-} from 'lucide-react'
+import Button from "@/app/components/ui/Button"
+import { Info, MonitorSmartphone, BrainCircuit, Code, Box, CheckCircle2 } from 'lucide-react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { Locale } from '@/app/i18n-config'
 
-// Service Card Component
-const ServiceCard = ({ 
+type Messages = {
+  uiUxDesign: string
+  uiUxDescription: string
+  branding: string
+  brandingDescription: string
+  webDevelopment: string
+  webDevDescription: string
+  productDesign: string
+  productDesignDescription: string
+  title: string
+  moreDetails: string
+  getTemplate: string
+}
+
+type Service = {
+  title: string
+  icon: React.ComponentType<{ className?: string }>
+  description: string
+  services: string[]
+}
+
+const ServiceCard: React.FC<Service & { moreDetails: string }> = ({ 
   title, 
   icon: Icon, 
   description, 
   services,
   moreDetails
-}: { 
-  title: string
-  icon: any
-  description: string
-  services: string[]
-  moreDetails: string
 }) => {
   return (
     <motion.div
@@ -43,12 +50,12 @@ const ServiceCard = ({
         {description}
       </p>
       <ul className="space-y-3 mb-6">
-        {services.map((service, index) => (
+        {services.map((service) => (
           <motion.li
             key={service}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.1 }}
+            transition={{ delay: services.indexOf(service) * 0.1 }}
             className="flex items-center gap-2 text-gray-300"
           >
             <CheckCircle2 className="h-5 w-5 text-orange-500" />
@@ -71,14 +78,17 @@ const ServiceCard = ({
   )
 }
 
-export default function ServicesClient({ lang, messages }: { lang: Locale, messages: any }) {
+export default function ServicesClient({ lang, messages }: { 
+  lang: Locale, 
+  messages: Messages 
+}) {
   const router = useRouter()
 
   const toggleLanguage = () => {
     router.push(`/${lang === 'en' ? 'es' : 'en'}/services`)
   }
 
-  const services = [
+  const services: Service[] = [
     {
       title: messages.uiUxDesign,
       icon: MonitorSmartphone,
@@ -127,7 +137,6 @@ export default function ServicesClient({ lang, messages }: { lang: Locale, messa
 
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Navbar */}
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -163,7 +172,6 @@ export default function ServicesClient({ lang, messages }: { lang: Locale, messa
         </div>
       </motion.nav>
 
-      {/* Main Content */}
       <div className="container mx-auto px-4 py-20">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -174,7 +182,7 @@ export default function ServicesClient({ lang, messages }: { lang: Locale, messa
           {messages.title}
         </motion.h1>
         <div className="grid md:grid-cols-2 gap-8">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <ServiceCard
               key={service.title}
               {...service}
@@ -184,7 +192,6 @@ export default function ServicesClient({ lang, messages }: { lang: Locale, messa
         </div>
       </div>
 
-      {/* Footer */}
       <motion.footer
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -200,3 +207,4 @@ export default function ServicesClient({ lang, messages }: { lang: Locale, messa
     </div>
   )
 }
+

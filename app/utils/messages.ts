@@ -1,5 +1,5 @@
-import type { Locale } from "@/app/i18n-config";
+import { Locale } from '../i18n-config'
 
 export async function getMessages(locale: Locale) {
-	return (await import(`../messages/${locale}.json`)).default;
+  return import(`../messages/${locale}.json`).then((module) => module.default)
 }

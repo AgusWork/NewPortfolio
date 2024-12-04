@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import React from "react";
 
 const AboutMe = () => {
@@ -20,7 +19,7 @@ const AboutMe = () => {
           {/* Contenido */}
           <div className="w-full md:w-1/2 text-center md:text-left">
             <h2 className="md:text-3xl font-bold text-gray-800 dark:text-white leading-snug">
-              Hi, I'm <span className="text-teal-500">Agustín Córdoba</span>
+            Hi, {`I'm`}<span className="text-teal-500">Agustín Córdoba</span>
             </h2>
             <p className="mt-4 text-gray-600 dark:text-gray-300 text-md md:text-lg">
               A passionate Front-End Developer with expertise in crafting

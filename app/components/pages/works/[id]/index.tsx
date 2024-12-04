@@ -1,8 +1,6 @@
 'use client'
 
 import Button from "@/app/components/ui"
-import Image from "next/image"
-
 
 export default function Page() {
   return (
