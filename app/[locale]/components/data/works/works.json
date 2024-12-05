@@ -1,0 +1,208 @@
+{
+	"work": [
+		{
+			"image": "/escribania/EscBuasso1.jpg",
+			"client": "Escribania Buasso",
+			"date": "12/05/2023",
+			"link": "https://www.escribanosbuasso.ar/",
+			"duration": "5",
+			"language": [
+				"/iconos/Git.png",
+				"/iconos/NextJs.png",
+				"/iconos/Figma.png",
+				"/iconos/Notion.png",
+				"/iconos/React.png",
+				"/iconos/Sass.png",
+				"/iconos/Node.png",
+				"/iconos/NestJS.png",
+				"/iconos/MongoDB.png"
+			],
+			"imagenes": [
+				"/escribania/EscBuasso1.jpg",
+				"/escribania/EscBuasso2.jpg",
+				"/escribania/EscBuasso3.jpg",
+				"/escribania/EscBuasso4.jpg",
+				"/escribania/EscBuasso5.jpg",
+				"/escribania/EscBuasso6.jpg",
+				"/escribania/EscBuasso7.jpg"
+			]
+		},
+		{
+			"image": "/work/bwebly/Capba-d2/1.png",
+			"client": "Capba",
+			"date": "05/06/2024",
+			"link": "https://capba-d2.storefront.dev.mybpanel.com/",
+			"duration": "4",
+			"language": [
+				"/iconos/Git.png",
+				"/iconos/NextJs.png",
+				"/iconos/Figma.png",
+				"/iconos/Notion.png",
+				"/iconos/React.png",
+				"/iconos/Node.png",
+				"/iconos/NestJS.png",
+				"/iconos/MongoDB.png"
+			],
+			"imagenes": [
+				"/work/bwebly/Capba-d2/1.png",
+				"/work/bwebly/Capba-d2/2.png",
+				"/work/bwebly/Capba-d2/3.png",
+				"/work/bwebly/Capba-d2/4.png",
+				"/work/bwebly/Capba-d2/5.png",
+				"/work/bwebly/Capba-d2/6.png",
+				"/work/bwebly/Capba-d2/7.png"
+			]
+		},
+		{
+			"image": "/work/bwebly/Mamm/1.png",
+			"client": "Mamm",
+			"date": "02/03/2024",
+			"link": "https://mamm.storefront.dev.mybpanel.com/",
+			"duration": "12",
+			"language": [
+				"/iconos/Git.png",
+				"/iconos/NextJs.png",
+				"/iconos/Figma.png",
+				"/iconos/Notion.png",
+				"/iconos/React.png",
+				"/iconos/Node.png",
+				"/iconos/NestJS.png",
+				"/iconos/MongoDB.png"
+			],
+			"imagenes": [
+				"/work/bwebly/Mamm/1.png",
+				"/work/bwebly/Mamm/2.png",
+				"/work/bwebly/Mamm/3.png",
+				"/work/bwebly/Mamm/4.png",
+				"/work/bwebly/Mamm/5.png",
+				"/work/bwebly/Mamm/6.png",
+				"/work/bwebly/Mamm/7.png",
+				"/work/bwebly/Mamm/8.png",
+				"/work/bwebly/Mamm/9.png",
+				"/work/bwebly/Mamm/10.png",
+				"/work/bwebly/Mamm/11.png",
+				"/work/bwebly/Mamm/12.png",
+				"/work/bwebly/Mamm/13.png"
+			]
+		},
+		{
+			"image": "/work/bwebly/MyBpanel/mybpanel1.png",
+			"client": "MyBpanel",
+			"date": "02/03/2024",
+			"link": "/",
+			"duration": "13",
+			"language": [
+				"/iconos/Git.png",
+				"/iconos/NextJs.png",
+				"/iconos/Figma.png",
+				"/iconos/Notion.png",
+				"/iconos/React.png",
+				"/iconos/Node.png",
+				"/iconos/NestJS.png",
+				"/iconos/MongoDB.png"
+			],
+			"imagenes": [
+				"/work/bwebly/MyBpanel/mybpanel1.png",
+				"/work/bwebly/MyBpanel/mybpanel2.png",
+				"/work/bwebly/MyBpanel/mybpanel3.png",
+				"/work/bwebly/MyBpanel/mybpanel4.png",
+				"/work/bwebly/MyBpanel/mybpanel5.png",
+				"/work/bwebly/MyBpanel/mybpanel6.png"
+			]
+		},
+		{
+			"image": "/work/bwebly/tu-huella/TuHuella-1.jpg",
+			"client": "Tu huella saludable",
+			"date": "10/07/2023",
+			"link": "/",
+			"duration": "6",
+			"language": [
+				"/iconos/Git.png",
+				"/iconos/NextJs.png",
+				"/iconos/Figma.png",
+				"/iconos/Notion.png",
+				"/iconos/React.png",
+				"/iconos/Sass.png"
+			],
+			"imagenes": [
+				"/work/bwebly/tu-huella/TuHuella-1.jpg",
+				"/work/bwebly/tu-huella/TuHuella-2.jpg",
+				"/work/bwebly/tu-huella/TuHuella-3.jpg",
+				"/work/bwebly/tu-huella/TuHuella-4.jpg",
+				"/work/bwebly/tu-huella/TuHuella-5.jpg",
+				"/work/bwebly/tu-huella/TuHuella-6.jpg",
+				"/work/bwebly/tu-huella/TuHuella-7.jpg",
+				"/work/bwebly/tu-huella/TuHuella-8.jpg",
+				"/work/bwebly/tu-huella/TuHuella-9.jpg",
+				"/work/bwebly/tu-huella/TuHuella-10.jpg",
+				"/work/bwebly/tu-huella/TuHuella-11.jpg"
+			]
+		},
+		{
+			"image": "/qualimed/FotoQualimed0.PNG",
+			"client": "Qualimed",
+			"date": "04/05/2022",
+			"link": "https://qualimed.com.ar/",
+			"duration": "5 semanas",
+			"language": [
+				"/iconos/Git.png",
+				"/iconos/Discord.png",
+				"/iconos/NextJs.png",
+				"/iconos/Figma.png",
+				"/iconos/Notion.png",
+				"/iconos/React.png",
+				"/iconos/Sass.png"
+			],
+			"imagenes": [
+				"/qualimed/FotoQualimed0.PNG",
+				"/qualimed/FotoQualimed1.PNG",
+				"/qualimed/FotoQualimed2.PNG",
+				"/qualimed/FotoQualimed3.PNG",
+				"/qualimed/FotoQualimed4.PNG"
+			]
+		},
+		{
+			"image": "/bukma/Bukma1.png",
+			"client": "Bukma",
+			"date": "02/03/2022",
+			"link": "https://bukmasrl.com.ar/",
+			"duration": "3",
+			"language": [
+				"/iconos/Git.png",
+				"/iconos/Discord.png",
+				"/iconos/NextJs.png",
+				"/iconos/Figma.png",
+				"/iconos/Notion.png",
+				"/iconos/React.png",
+				"/iconos/Sass.png"
+			],
+			"imagenes": [
+				"/bukma/Bukma1.png",
+				"/bukma/Bukma2.png",
+				"/bukma/Bukma3.png",
+				"/bukma/Bukma4.PNG",
+				"/bukma/Bukma5.jpg"
+			]
+		},
+		{
+			"image": "/phpLogin/Login2.PNG",
+			"client": "Syntesis",
+			"date": "20/11/2021",
+			"link": "https://sintesys.com.ar/Login/",
+			"duration": "4",
+			"language": [
+				"/iconos/Figma.png",
+				"/iconos/Notion.png",
+				"/iconos/Php.png",
+				"/iconos/Tailwind.png"
+			],
+			"imagenes": [
+				"/phpLogin/Login.PNG",
+				"/phpLogin/Login2.PNG",
+				"/phpLogin/SignUp.PNG",
+				"/phpLogin/SignUp2.PNG",
+				"/phpLogin/SignUp2-2.PNG"
+			]
+		}
+	]
+}
