@@ -1,0 +1,131 @@
+{
+	"Sections": {
+		"HomeSection": {
+			"heading": "Desarrollador ",
+			"headingColor": "Front End",
+			"subheading": "Diseño sitios web visualmente atractivos e intuitivos que permiten a las empresas destacar y conectar eficazmente con su audiencia.",
+			"experience": "3 años de experiencia",
+			"projects": "Proyectos globales",
+			"cta": "Ver mi trabajo",
+			"sliderWords": {
+				"userInterface": {
+					"title": "Interfaz de usuario"
+				},
+				"design": {
+					"title": "Diseño"
+				},
+				"development": {
+					"title": "Desarrollo"
+				},
+				"innovation": {
+					"title": "Innovación"
+				}
+			}
+		},
+		"AboutSection": {
+			"heading": "Hola, soy ",
+			"subheading": "Un apasionado Desarrollador Front-End experto en crear experiencias web impecables utilizando Next.js, React y tecnologías modernas.",
+			"description": "Me especializo en construir aplicaciones eficientes, responsivas y visualmente impactantes.",
+			"additionalInfo": "Con más de 3 años de experiencia, me enfoco en ofrecer código limpio, diseños creativos y un rendimiento rápido para elevar tu presencia digital.",
+			"cta": "Ver mi trabajo"
+		},
+		"FeaturedSection": {
+			"cleanCode": {
+				"title": "Código limpio",
+				"description": "Escribo código limpio, mantenible y eficiente que escala con tu proyecto."
+			},
+			"creativeDesign": {
+				"title": "Diseño creativo",
+				"description": "Creo diseños visualmente impactantes que capturan la esencia de tu marca."
+			},
+			"fastPerformance": {
+				"title": "Rendimiento rápido",
+				"description": "Optimizamos para la velocidad, asegurando que tu sitio web cargue rápidamente y funcione sin problemas."
+			}
+		},
+		"LanguageSection": {
+			"heading": "Mis Lenguages"
+		},
+		"SelectedPracticeSection": {
+			"heading": "Prácticas",
+			"headingColor": "Seleccionadas",
+			"seeAll": "Ver todo",
+			"projects": {
+				"ecommerce": {
+					"title": "Plataforma de E-commerce",
+					"category": {
+						"title": "Desarrollo web"
+					},
+					"imageUrl": "/mockup/BukmaMob.png",
+					"link": "#"
+				},
+				"mobileBanking": {
+					"title": "App de banca móvil",
+					"category": {
+						"title": "Diseño de interfaz"
+					},
+					"imageUrl": "/mockup/MammMob0.jpeg",
+					"link": "#"
+				},
+				"portfolio": {
+					"title": "Sitio web de portafolio",
+					"category": {
+						"title": "Desarrollo web"
+					},
+					"imageUrl": "/mockup/BuassoMob.png",
+					"link": "#"
+				},
+				"taskManagement": {
+					"title": "Herramienta de gestión de tareas",
+					"category": {
+						"title": "Diseño UI/UX"
+					},
+					"imageUrl": "/escribania/EscBuasso1.jpg",
+					"link": "#"
+				}
+			}
+		},
+		"FooterSection": {
+			"heading": "Trabajemos juntos",
+			"email": "agustin.cordoba.work@gmail.com",
+			"socials": {
+				"title": "Redes sociales",
+				"linkedin": {
+					"label": "LinkedIn",
+					"url": "https://www.linkedin.com/in/agustin-maria-cordoba/"
+				},
+				"github": {
+					"label": "Github",
+					"url": "https://github.com/AgusWork"
+				}
+			}
+		}
+	},
+	"Components": {
+		"SubHeader": {
+			"heading": "Contáctame",
+			"links": {
+				"about": {
+					"name": "Acerca de",
+					"href": "about"
+				},
+				"works": {
+					"name": "Trabajos",
+					"href": "works"
+				},
+				"contact": {
+					"name": "Contacto",
+					"href": "contact"
+				},
+				"languages": {
+					"name": "Lenguajes",
+					"href": "languages"
+				},
+				"projects": {
+					"name": "Proyectos",
+					"href": "projects"
+				}
+			}
+		}
+	}
+}
