@@ -1,8 +1,8 @@
-import { notFound } from "next/navigation";
 import Image from "next/image";
-import workerData from "@/app/[locale]/components/data/works/works.json";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { useLocale } from "next-intl";
+import projectsData from "@/app/[locale]/components/data/projects/projects.json";
 
 type WorkItem = {
 	image: string;
@@ -18,7 +18,7 @@ type WorkItem = {
 };
 
 function getClientData(id: string): WorkItem | undefined {
-	return workerData.work.find(
+	return projectsData.projects.find(
 		(item) => item.client.toLowerCase().replace(/\s+/g, "-") === id.toLowerCase()
 	);
 }
@@ -33,9 +33,9 @@ export default function ClientPage({ params }: { params: { id: string } }) {
 
 	return (
 		<main className="min-h-screen">
-			<section id="hero" className="py-20 h-[70vh]">
-				<div className="container mx-auto px-4 h-full flex items-center">
-					<div className="max-w-4xl ">
+			<section id="hero" className="py-20">
+				<div className="container mx-auto px-4">
+					<div className="max-w-4xl mx-auto">
 						<h1 className="text-[#40A0A0] text-6xl md:text-7xl lg:text-8xl font-bold mb-12">
 							{clientData.client}
 						</h1>
@@ -60,7 +60,6 @@ export default function ClientPage({ params }: { params: { id: string } }) {
 						This project for {clientData.client} was completed in {clientData.duration} weeks. It
 						falls under the category of {clientData.category}.
 						{locale == "es" ? clientData.descriptionEsp : clientData.descriptionEn}
-
 					</p>
 					<Link href={clientData.link} target="_blank" rel="noopener noreferrer">
 						View Project
