@@ -3,7 +3,7 @@
     {
       "image": "/escribania/EscBuasso1.jpg",
       "category": "Freelance",
-      "type": "works",
+      "type": "work",
       "client": "Escribania Buasso",
       "date": "12/05/2023",
       "link": "https://www.escribanosbuasso.ar/",
@@ -33,9 +33,9 @@
     },
     {
       "image": "/work/bwebly/Capba-d2/1.png",
-      "category": "Freelance en grupo",
+      "category": "Bwebly",
       "client": "Capba",
-      "type": "works",
+      "type": "work",
       "date": "05/06/2024",
       "link": "https://capba-d2.storefront.dev.mybpanel.com/",
       "duration": "4",
@@ -63,15 +63,15 @@
     },
     {
       "image": "/work/bwebly/Mamm/1.png",
-      "category": "Freelance en grupo",
+      "category": "Bwebly",
       "client": "Mamm",
-      "type": "works",
+      "type": "work",
 
       "date": "02/03/2024",
       "link": "https://mamm.storefront.dev.mybpanel.com/",
       "duration": "12",
       "descriptionEsp": "Pagina realizada para el Museo de Aquitectura y Urbanismo de la ciudad de Buenos Aires para mostrar sus obras como tambien, la integracion de las mismas a un mapa personalizado y creado en base a los requerimientos pedidos",
-      "descriptionEn": "Page created for the Architecture and Urbanism Museum to show their works as well as their integration into a personalized map created based on the requested requirements from the employer.",
+      "descriptionEn": "Page created for the Architecture and Urbanism Museum to show their work as well as their integration into a personalized map created based on the requested requirements from the employer.",
       "language": [
         "/iconos/Git.png",
         "/iconos/NextJs.png",
@@ -100,9 +100,9 @@
     },
     {
       "image": "/work/bwebly/MyBpanel/mybpanel1.png",
-      "category": "Freelance en grupo",
+      "category": "Bwebly",
       "client": "MyBpanel",
-      "type": "works",
+      "type": "work",
 
       "date": "02/03/2024",
       "link": "/",
@@ -130,9 +130,9 @@
     },
     {
       "image": "/work/bwebly/tu-huella/TuHuella-1.jpg",
-      "category": "Freelance en grupo",
+      "category": "Bwebly",
       "client": "Tu huella saludable",
-      "type": "works",
+      "type": "work",
 
       "date": "10/07/2023",
       "link": "/",
@@ -165,7 +165,7 @@
       "image": "/qualimed/FotoQualimed0.PNG",
       "category": "Freelance",
       "client": "Qualimed",
-      "type": "works",
+      "type": "work",
 
       "date": "04/05/2022",
       "link": "https://qualimed.com.ar/",
@@ -191,9 +191,9 @@
     },
     {
       "image": "/bukma/Bukma1.png",
-      "category": "Freelance",
+      "category": "Bwebly",
       "client": "Bukma",
-      "type": "works",
+      "type": "work",
 
       "date": "02/03/2022",
       "link": "https://bukmasrl.com.ar/",
@@ -221,7 +221,7 @@
       "image": "/phpLogin/Login2.PNG",
       "category": "Freelance",
       "client": "Syntesis",
-      "type": "works",
+      "type": "work",
 
       "date": "20/11/2021",
       "link": "https://sintesys.com.ar/Login/",

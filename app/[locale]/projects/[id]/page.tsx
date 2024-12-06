@@ -1,10 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { useLocale } from "next-intl";
+import { Playfair_Display, Raleway } from "next/font/google";
+import { ColorThemeText } from "../../components/ui";
+import { useTranslations } from "next-intl";
 import projectsData from "@/app/[locale]/components/data/projects/projects.json";
 
 type WorkItem = {
+	type: string;
 	image: string;
 	category: string;
 	client: string;
@@ -17,15 +20,29 @@ type WorkItem = {
 	descriptionEn: string;
 };
 
+const playFair = Playfair_Display({
+	subsets: ["latin"],
+	weight: ["400", "500", "600", "700"],
+	style: ["normal", "italic"],
+	display: "swap",
+});
+const raleway = Raleway({
+	subsets: ["latin"],
+	weight: ["400", "500", "600", "700"],
+	style: ["normal", "italic"],
+	display: "swap",
+});
+
 function getClientData(id: string): WorkItem | undefined {
 	return projectsData.projects.find(
 		(item) => item.client.toLowerCase().replace(/\s+/g, "-") === id.toLowerCase()
 	);
 }
 
-export default function ClientPage({ params }: { params: { id: string } }) {
+export default function ClientPage({ params }: { params: { locale: string; id: string } }) {
 	const clientData = getClientData(params.id);
-	const locale = useLocale();
+	const { locale } = params;
+	const t = useTranslations("Pages.Projects");
 
 	if (!clientData) {
 		notFound();
@@ -33,43 +50,62 @@ export default function ClientPage({ params }: { params: { id: string } }) {
 
 	return (
 		<main className="min-h-screen">
-			<section id="hero" className="py-20">
+			<section id="hero" className="py-20 h-[70vh] flex items-center">
 				<div className="container mx-auto px-4">
-					<div className="max-w-4xl mx-auto">
-						<h1 className="text-[#40A0A0] text-6xl md:text-7xl lg:text-8xl font-bold mb-12">
+					<p className={`${playFair.className} text-2xl w-full flex flex-row items-center`}>
+						<span className="text-xl mr-4">{t("projectType")}:</span>
+						{clientData.type}
+					</p>
+					<div className={`${playFair.className} max-w-4xl md:mt-[10vh]`}>
+						<h1
+							className={`${raleway.className} text-[#40A0A0] text-6xl md:text-7xl lg:text-8xl font-bold mb-12`}
+						>
 							{clientData.client}
 						</h1>
 						<div className="grid grid-cols-2 gap-8 mb-16">
 							<div>
-								<h2 className="text-sm text-gray-500 mb-1">Category</h2>
-								<p className="text-gray-900">{clientData.category}</p>
+								<ColorThemeText
+									text={t("category")}
+									darkThemeColor="text-teal-500"
+									lightThemeColor="text-black"
+									className="text-sm mb-1"
+								/>
+								<p>{clientData.category}</p>
 							</div>
 							<div>
-								<h2 className="text-sm text-gray-500 mb-1">Date</h2>
-								<p className="text-gray-900">{clientData.date}</p>
+								<ColorThemeText
+									text={t("date")}
+									darkThemeColor="text-teal-500"
+									lightThemeColor="text-black"
+									className="text-sm mb-1"
+								/>
+								<p>{clientData.date}</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
+			<section >
+				
+			</section>
 
 			<section id="about" className="py-20 bg-gray-50 text-slate-800">
 				<div className="container mx-auto px-4">
-					<h2 className="text-4xl font-bold mb-8">About {clientData.client}</h2>
+					<h2 className="text-4xl font-bold mb-8">{t("about")} {clientData.client}</h2>
 					<p className="text-lg mb-8">
-						This project for {clientData.client} was completed in {clientData.duration} weeks. It
-						falls under the category of {clientData.category}.
-						{locale == "es" ? clientData.descriptionEsp : clientData.descriptionEn}
+						{t("projectFor")} {clientData.client} {t("wasCompletedIn")} {clientData.duration} {t("weeks")}.
+						{t("fallsUnderCategory")} {clientData.category}.
+						{locale === "es" ? clientData.descriptionEsp : clientData.descriptionEn}
 					</p>
 					<Link href={clientData.link} target="_blank" rel="noopener noreferrer">
-						View Project
+						{t("viewProject")}
 					</Link>
 				</div>
 			</section>
 
 			<section id="technologies" className="py-20">
 				<div className="container mx-auto px-4">
-					<h2 className="text-4xl font-bold mb-8">Technologies Used</h2>
+					<h2 className="text-4xl font-bold mb-8">{t("technologiesUsed")}</h2>
 					<div className="flex flex-wrap gap-4">
 						{clientData.language.map((tech, index) => (
 							<Image
@@ -86,7 +122,7 @@ export default function ClientPage({ params }: { params: { id: string } }) {
 
 			<section id="gallery" className="py-20 bg-gray-50 text-slate-800">
 				<div className="container mx-auto px-4">
-					<h2 className="text-4xl font-bold mb-8">Project Gallery</h2>
+					<h2 className="text-4xl font-bold mb-8">{t("projectGallery")}</h2>
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 						{clientData.imagenes.map((image, index) => (
 							<div key={index} className="relative aspect-w-16 aspect-h-9">
@@ -104,11 +140,11 @@ export default function ClientPage({ params }: { params: { id: string } }) {
 
 			<section id="contact" className="py-20">
 				<div className="container mx-auto px-4">
-					<h2 className="text-4xl font-bold mb-8">Get in Touch</h2>
+					<h2 className="text-4xl font-bold mb-8">{t("getInTouch")}</h2>
 					<form className="max-w-md mx-auto">
 						<div className="mb-4">
 							<label htmlFor="name" className="block text-gray-700 mb-2">
-								Name
+								{t("name")}
 							</label>
 							<input
 								type="text"
@@ -119,7 +155,7 @@ export default function ClientPage({ params }: { params: { id: string } }) {
 						</div>
 						<div className="mb-4">
 							<label htmlFor="email" className="block text-gray-700 mb-2">
-								Email
+								{t("email")}
 							</label>
 							<input
 								type="email"
@@ -130,7 +166,7 @@ export default function ClientPage({ params }: { params: { id: string } }) {
 						</div>
 						<div className="mb-4">
 							<label htmlFor="message" className="block text-gray-700 mb-2">
-								Message
+								{t("message")}
 							</label>
 							<textarea
 								id="message"
@@ -140,7 +176,7 @@ export default function ClientPage({ params }: { params: { id: string } }) {
 							></textarea>
 						</div>
 						<button type="submit" className="w-full">
-							Send Message
+							{t("sendMessage")}
 						</button>
 					</form>
 				</div>

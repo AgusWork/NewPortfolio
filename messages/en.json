@@ -128,74 +128,24 @@
 			}
 		}
 	},
-	"Information": {
-		"Works": {
-			"EscribaniaBuasso": {
-				"client": "Escribania Buasso",
-				"descriptionEn": "Page created for a legal study with the objective of providing all the data in a simple landing page, optimized by SEO with Google tools + code, with an optimized loading of the main video and reCaptcha v3 to provide anti-spam security in the form."
-			},
-			"Capba": {
-				"client": "Capba",
-				"descriptionEn": "Page created for the College of Architects of the province of Buenos Aires"
-			},
-			"Mamm": {
-				"client": "Mamm",
-				"descriptionEn": "Page created for the Architecture and Urbanism Museum to show their works as well as their integration into a personalized map created based on the requested requirements from the employer."
-			},
-			"MyBpanel": {
-				"client": "MyBpanel",
-				"descriptionEn": "Application made in order to create several interfaces quickly with customizations for each client, also giving the possibility that the client can also enter with their respective user role and personalize their page, with images, texts, colors, fonts, sizes and more."
-			},
-			"TuHuella": {
-				"client": "Tu huella saludable",
-				"descriptionEn": "Page created for an organic products store, with a user creation method, purchases with different payment methods, shipping and purchase confirmation with personalized notifications for email and within it."
-			},
-			"Qualimed": {
-				"client": "Qualimed",
-				"descriptionEn": ""
-			},
-			"Bukma": {
-				"client": "Bukma",
-				"descriptionEn": "Page created for my first client where the work that the company does to provide it is shown, and thus achieve more visibility for it, creating a different UX so that it stands out more among its competencies"
-			},
-			"Syntesis": {
-				"client": "Syntesis",
-				"descriptionEn": "Page created for my first client who asks me to create a simple user system, and with clean code so that I can reuse it in another project."
-			}
-		},
-		"Practice": {
-			"TesloShop": {
-				"client": "Teslo - Shop",
-				"descriptionEn": "Complete e-commerce with order system, payments via PayPal and ML, user creation with GitHub, Google, and email, along with an admin system for creating, editing, and deleting products."
-			},
-			"GifApp": {
-				"client": "Gif App",
-				"descriptionEn": "App to search for any type of Gif, fetched from an API."
-			},
-			"OpenJira": {
-				"client": "Open Jira",
-				"descriptionEn": "Task management app with Scrum methodology and ability to drag and drop to change the entry state."
-			},
-			"BuscadorMarvel": {
-				"client": "Buscador Marvel/Dc",
-				"descriptionEn": "Marvel and DC search app using API, with route protection via Login."
-			},
-			"Boliche": {
-				"client": "Boceto app para barra de boliche",
-				"descriptionEn": "Nightclub app with shopping cart where data is stored locally."
-			},
-			"PokemonApp": {
-				"client": "Pokemon App",
-				"descriptionEn": "Pokemon app fetching data from pokeapi, allows saving favorites in a different screen."
-			},
-			"DigiFianz": {
-				"client": "Digi Fianz Test",
-				"descriptionEn": "Test app in JS with functionalities like drag and drop, navbar toggle, and popups, all coded without libraries or NPM."
-			},
-			"Ecommerce": {
-				"client": "Ecommerce Practice",
-				"descriptionEn": ""
-			}
+	"Pages": {
+		"Projects": {
+			"projectType": "Type of project",
+			"category": "Category",
+			"date": "Date",
+			"about": "About",
+			"projectFor": "This project for",
+			"wasCompletedIn": "was completed in",
+			"weeks": "weeks",
+			"fallsUnderCategory": "It falls under the category of",
+			"viewProject": "View Project",
+			"technologiesUsed": "Technologies Used",
+			"projectGallery": "Project Gallery",
+			"getInTouch": "Get in Touch",
+			"name": "Name",
+			"email": "Email",
+			"message": "Message",
+			"sendMessage": "Send Message"
 		}
 	}
 }

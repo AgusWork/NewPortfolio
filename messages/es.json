@@ -128,74 +128,24 @@
 			}
 		}
 	},
-	"Information": {
-		"Works": {
-			"EscribaniaBuasso": {
-				"client": "Escribania Buasso",
-				"descriptionEsp": "Pagina realizada para escribania con el objetivo de brindar todos los datos en una sencilla landing page, optimizada por SEO con herramientas de google + codigo, con una carga optimizada de video principal y reCaptcha v3 para brindar seguridad anti spam en el formulario."
-			},
-			"Capba": {
-				"client": "Capba",
-				"descriptionEsp": "Pagina realizada para el Colegio de Arquitectos de la provincia de Buenos Aires"
-			},
-			"Mamm": {
-				"client": "Mamm",
-				"descriptionEsp": "Pagina realizada para el Museo de Aquitectura y Urbanismo de la ciudad de Buenos Aires para mostrar sus obras como tambien, la integracion de las mismas a un mapa personalizado y creado en base a los requerimientos pedidos"
-			},
-			"MyBpanel": {
-				"client": "MyBpanel",
-				"descriptionEsp": "Aplicacion realizada con el fin de crear varias interfaces rapidamente con personalizaciones para cada cliente, y ademas dando la posibilidad de que el cliente tambien pueda adentrarse y personalizar su pagina, con imagenes textos, colores, tipografias, tamaños y demas."
-			},
-			"TuHuella": {
-				"client": "Tu huella saludable",
-				"descriptionEsp": "Pagina realizada para una tienda de productos organicos, con metodo de creacion de usuario, compras con distintos metodos de pago, envios y confirmacion de compra con notificaciones personalizadas para mail y dentro de la misma."
-			},
-			"Qualimed": {
-				"client": "Qualimed",
-				"descriptionEsp": ""
-			},
-			"Bukma": {
-				"client": "Bukma",
-				"descriptionEsp": "Pagina realizada para mi primer cliente donde se muestran los trabajos que realiza la empresa para brindarle,  y asi lograr brindarle mas visibilidad a la misma, creando un UX distinto para que destaque mas entre sus competencias."
-			},
-			"Syntesis": {
-				"client": "Syntesis",
-				"descriptionEsp": "Pagina realizada para mi primer cliente el cual me pidio que cree un sistema de usuario simple, y con el codigo limpio para que pueda reutilizarlo en otro proyecto."
-			}
-		},
-		"Practice": {
-			"TesloShop": {
-				"client": "Teslo - Shop",
-				"descriptionEsp": "E-commerce completo con sistema de pedidos, pago en paypal y ML, creacion de usuario con github, google y correo electronico, como tambien un sistema de admin para la creacion, edicion, eliminacion de productos."
-			},
-			"GifApp": {
-				"client": "Gif App",
-				"descriptionEsp": "App para buscar cualquier tipo de Gif que trae desde una api."
-			},
-			"OpenJira": {
-				"client": "Open Jira",
-				"descriptionEsp": "App de organizacion de entradas con metodologia scrum y capacidad de arrastrar y cambiar el estado de la entrada."
-			},
-			"BuscadorMarvel": {
-				"client": "Buscador Marvel/Dc",
-				"descriptionEsp": "Buscador de Marvel y DC con busqueda por API y proteccion de ruta por Login."
-			},
-			"Boliche": {
-				"client": "Boceto app para barra de boliche",
-				"descriptionEsp": "App para una barra de boliche con carrito de compras donde los datos se almacenan localmente."
-			},
-			"PokemonApp": {
-				"client": "Pokemon App",
-				"descriptionEsp": "Aplicacion de pokemons que trae los datos de la pokeapi, permite guardar favoritos en otra pantalla."
-			},
-			"DigiFianz": {
-				"client": "Digi Fianz Test",
-				"descriptionEsp": "Aplicacion de prueba en JS con funcionalidades como arrastrar elementos, toggle de navbar y popups, todo hecho sin librerías ni NPM."
-			},
-			"Ecommerce": {
-				"client": "Practica de Ecommerce",
-				"descriptionEsp": ""
-			}
+	"Pages": {
+		"Projects": {
+			"projectType": "Tipo de proyecto",
+			"category": "Categoría",
+			"date": "Fecha",
+			"about": "Sobre",
+			"projectFor": "Este proyecto para",
+			"wasCompletedIn": "se completó en",
+			"weeks": "semanas",
+			"fallsUnderCategory": "Pertenece a la categoría de",
+			"viewProject": "Ver Proyecto",
+			"technologiesUsed": "Tecnologías Utilizadas",
+			"projectGallery": "Galería del Proyecto",
+			"getInTouch": "Ponerse en Contacto",
+			"name": "Nombre",
+			"email": "Correo Electrónico",
+			"message": "Mensaje",
+			"sendMessage": "Enviar Mensaje"
 		}
 	}
 }

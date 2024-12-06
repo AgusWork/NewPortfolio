@@ -20,7 +20,7 @@ const fadeIn = {
 };
 
 interface SelectedSectionProps {
-  type: "works" | "practice";
+  type: "work" | "practice";
   headingText: string;
   headingColorText: string;
   seeAllText: string;
