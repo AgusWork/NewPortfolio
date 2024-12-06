@@ -8,6 +8,8 @@ import GralLayout from "../GralLayout";
 import { useTheme } from "@/app/[locale]/components/contexts/DarkThemeContext";
 import { FaArrowRight } from "react-icons/fa";
 import { useTranslations } from "next-intl";
+import worksData from "../../data/works/works.json";
+import { useLocale } from 'next-intl';
 import "../../styles/custom-scrollbar-sectionCard.css";
 
 const playFair = Playfair_Display({ subsets: ["latin"] });
@@ -22,20 +24,21 @@ export default function SelectedWorkSection() {
 	const ref = React.useRef(null);
 	const isInView = useInView(ref, { once: true, amount: 0.2 });
 	const { theme } = useTheme();
-	const t = useTranslations("Sections.SelectedPracticeSection");  
+	const t = useTranslations("Sections.SelectedPracticeSection");
+	const locale = useLocale();
 
-	const keys = ['ecommerce', 'mobileBanking', 'portfolio', 'taskManagement'] as const;
+	const keys = ["ecommerce", "mobileBanking", "portfolio", "taskManagement"] as const;
 
-	const projects = keys.map(key => ({
-	  title: t(`projects.${key}.title`),
-	  category: t(`projects.${key}.category.title`),
-	  imageUrl: t(`projects.${key}.imageUrl`),
-	  link: t(`projects.${key}.link`),
+	const works = worksData.work.map((work) => ({
+		title: work.client,
+		category: work.category,
+		imageUrl: work.image,
+		link: `/${locale}/works/${work.client.replace(/\s+/g, '-')}`,
 	}));
 	return (
 		<GralLayout className={`pt-10 md:pt-20 h-full`}>
 			<motion.h2
-			id="works"
+				id="works"
 				{...fadeIn}
 				ref={ref}
 				className={`${playFair.className} text-4xl md:text-5xl flex flex-col md:flex-row  font-bold mb-12 relative pb-6`}
@@ -62,10 +65,10 @@ export default function SelectedWorkSection() {
 			</motion.h2>
 			<div className="w-full h-[80vh] overflow-y-auto custom-scrollbar ">
 				<div className="hidden md:flex flex-col gap-8 w-full min-h-full">
-					<CardSection className="" projects={projects} theme={theme} />
+					<CardSection className="" projects={works} theme={theme} />
 				</div>
 				<div className="md:hidden flex flex-col gap-8 w-full  min-h-full">
-					{projects.map((p) => (
+					{works.map((p) => (
 						<div className=" w-full h-[60vh]" key={p.title}>
 							<CardWork
 								category={p.category}

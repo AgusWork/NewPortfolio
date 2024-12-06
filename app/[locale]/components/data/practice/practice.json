@@ -1,0 +1,195 @@
+{
+	"practice": [
+	  {
+		"image": "/teslo-shop/Teslo1.jpg",
+		"category": "Practice",
+		"client": "Teslo - Shop",
+		"date": "28/04/2023",
+		"link": "https://teslo-shop-aguscba.vercel.app/",
+		"duration": "5",
+		"descriptionEsp": "E-commerce completo con sistema de pedidos, pago en paypal y ML, creacion de usuario con github, google y correo electronico, como tambien un sistema de admin para la creacion, edicion, eliminacion de productos.",
+		"descriptionEn": "Complete e-commerce with order system, payments via PayPal and ML, user creation with GitHub, Google, and email, along with an admin system for creating, editing, and deleting products.",
+		"language": [
+		  "/iconos/Git.png",
+		  "/iconos/NextJs.png",
+		  "/iconos/Figma.png",
+		  "/iconos/React.png",
+		  "/iconos/Sass.png",
+		  "/iconos/MongoDB.png",
+		  "/iconos/Docker.png",
+		  "/iconos/Node.png"
+		],
+		"imagenes": [
+		  "/teslo-shop/Teslo1.jpg",
+		  "/teslo-shop/Teslo2.jpg",
+		  "/teslo-shop/Teslo3.jpg",
+		  "/teslo-shop/Teslo4.jpg",
+		  "/teslo-shop/Teslo5.jpg",
+		  "/teslo-shop/Teslo6.jpg",
+		  "/teslo-shop/Teslo7.jpg",
+		  "/teslo-shop/Teslo8.jpg"
+		]
+	  },
+	  {
+		"image": "/practicas/GifApp/Gif1.png",
+		"category": "Practice",
+		"client": "Gif App",
+		"date": "20/02/2022",
+		"link": "https://react-gif-app-sigma.vercel.app/",
+		"duration": "2",
+		"descriptionEsp": "App para buscar cualquier tipo de Gif que trae desde una api.",
+		"descriptionEn": "App to search for any type of Gif, fetched from an API.",
+		"language": [
+		  "/iconos/Git.png",
+		  "/iconos/Figma.png",
+		  "/iconos/React.png",
+		  "/iconos/Sass.png"
+		],
+		"imagenes": [
+		  "/practicas/GifApp/Gif1.png",
+		  "/practicas/GifApp/Gif2.png",
+		  "/practicas/GifApp/Gif3.png"
+		]
+	  },
+	  {
+		"image": "/practicas/OpenJira/Open1.png",
+		"category": "Practice",
+		"client": "Open Jira",
+		"date": "05/07/2022",
+		"link": "",
+		"duration": "3",
+		"descriptionEsp": "App de organizacion de entradas con metodologia scrum y capacidad de arrastrar y cambiar el estado de la entrada.",
+		"descriptionEn": "Task management app with Scrum methodology and ability to drag and drop to change the entry state.",
+		"language": [
+		  "/iconos/Git.png",
+		  "/iconos/NextJs.png",
+		  "/iconos/Figma.png",
+		  "/iconos/React.png",
+		  "/iconos/Sass.png",
+		  "/iconos/MongoDB.png",
+		  "/iconos/Docker.png",
+		  "/iconos/Node.png"
+		],
+		"imagenes": [
+		  "/practicas/OpenJira/Open1.png",
+		  "/practicas/OpenJira/Open2.png",
+		  "/practicas/OpenJira/Open3.png",
+		  "/practicas/OpenJira/Open4.png",
+		  "/practicas/OpenJira/Open5.png",
+		  "/practicas/OpenJira/OpenVideo.mp4"
+		]
+	  },
+	  {
+		"image": "/practicas/MarvelDc/MarvelDc1.png",
+		"category": "Practice",
+		"client": "Buscador Marvel/Dc",
+		"date": "05/05/2022",
+		"link": "https://heroes-app-rouge.vercel.app/",
+		"duration": "1",
+		"descriptionEsp": "Buscador de Marvel y DC con busqueda por API y proteccion de ruta por Login.",
+		"descriptionEn": "Marvel and DC search app using API, with route protection via Login.",
+		"language": [
+		  "/iconos/Git.png",
+		  "/iconos/NextJs.png",
+		  "/iconos/Figma.png",
+		  "/iconos/React.png",
+		  "/iconos/Sass.png"
+		],
+		"imagenes": [
+		  "/practicas/MarvelDc/MarvelDc1.png",
+		  "/practicas/MarvelDc/MarvelDc2.png",
+		  "/practicas/MarvelDc/MarvelDc3.png"
+		]
+	  },
+	  {
+		"image": "/practicas/Bar/Bar1.png",
+		"category": "Practice",
+		"client": "Boceto app para barra de boliche",
+		"date": "10/10/2022",
+		"link": "https://barra-boliche.vercel.app/",
+		"duration": "2",
+		"descriptionEsp": "App para una barra de boliche con carrito de compras donde los datos se almacenan localmente.",
+		"descriptionEn": "Nightclub app with shopping cart where data is stored locally.",
+		"language": [
+		  "/iconos/Git.png",
+		  "/iconos/NextJs.png",
+		  "/iconos/Figma.png",
+		  "/iconos/React.png",
+		  "/iconos/Sass.png"
+		],
+		"imagenes": [
+		  "/practicas/Bar/Bar1.png",
+		  "/practicas/Bar/Bar2.png",
+		  "/practicas/Bar/Bar3.png"
+		]
+	  },
+	  {
+		"image": "/practicas/Pokemon/Pokemon1.png",
+		"category": "Practice",
+		"client": "Pokemon App",
+		"date": "15/03/2022",
+		"link": "https://pokemon-app1-zl1y.vercel.app/",
+		"duration": "2",
+		"descriptionEsp": "Aplicacion de pokemons que trae los datos de la pokeapi, permite guardar favoritos en otra pantalla.",
+		"descriptionEn": "Pokemon app fetching data from pokeapi, allows saving favorites in a different screen.",
+		"language": [
+		  "/iconos/Git.png",
+		  "/iconos/NextJs.png",
+		  "/iconos/Figma.png",
+		  "/iconos/React.png",
+		  "/iconos/Sass.png"
+		],
+		"imagenes": [
+		  "/practicas/Pokemon/Pokemon1.png",
+		  "/practicas/Pokemon/Pokemon2.png",
+		  "/practicas/Pokemon/Pokemon3.png",
+		  "/practicas/Pokemon/Pokemon4.png"
+		]
+	  },
+	  {
+		"image": "/practicas/digiFianz/digi1.jpg",
+		"category": "Practice",
+		"client": "Digi Fianz Test",
+		"date": "20/10/2021",
+		"link": "https://aguswork.github.io/DigiFianzTest/",
+		"duration": "1",
+		"descriptionEsp": "Aplicacion de prueba en JS con funcionalidades como arrastrar elementos, toggle de navbar y popups, todo hecho sin librerías ni NPM.",
+		"descriptionEn": "Test app in JS with functionalities like drag and drop, navbar toggle, and popups, all coded without libraries or NPM.",
+		"language": [
+		  "/iconos/Git.png",
+		  "/iconos/Figma.png",
+		  "/iconos/Javascript.png",
+		  "/iconos/css.png"
+		],
+		"imagenes": [
+		  "/practicas/digiFianz/digi1.jpg",
+		  "/practicas/digiFianz/digi2.jpg",
+		  "/practicas/digiFianz/digi3.jpg",
+		  "/practicas/digiFianz/digi4.jpg",
+		  "/practicas/digiFianz/digi5.jpg",
+		  "/practicas/digiFianz/digi6.jpg"
+		]
+	  },
+	  {
+		"image": "/e-commerce/Mi pagina.PNG",
+		"category": "Freelance",
+		"client": "Practica",
+		"date": "12/07/2021",
+		"link": "https://cordobaskatepage.000webhostapp.com/index.html",
+		"duration": "5",
+		"descriptionEsp": "",
+		"descriptionEn": "",
+		"language": [
+		  "/iconos/Git.png",
+		  "/iconos/Javascript.png",
+		  "/iconos/Sass.png"
+		],
+		"imagenes": [
+		  "/e-commerce/Mi pagina.PNG",
+		  "/e-commerce/MiPagina2.PNG",
+		  "/e-commerce/MiPagina3.PNG"
+		]
+	  }
+	]
+  }
+  

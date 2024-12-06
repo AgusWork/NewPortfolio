@@ -38,8 +38,6 @@ export default function EnhancedHero() {
 	return (
 		<div className={`${theme === "dark" ? "dark" : ""} h-screen`}>
 			<div className="bg-background h-full text-foreground transition-colors duration-300 dark:bg-background-dark dark:text-foreground-dark">
-				<SubHeader style="h-[10vh] py-6" />
-
 				<section className="container mx-auto px-4 my-[5vh] flex flex-col justify-center w-full h-[80vh] ">
 					<motion.div
 						className="flex flex-col lg:flex-row w-full  md:max-h-[60vh] p-7 md:p-10 bg-gradient-to-br from-teal-50 to-sky-50 dark:from-teal-900 dark:to-sky-900 rounded-3xl shadow-xl"

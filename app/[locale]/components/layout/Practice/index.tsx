@@ -7,7 +7,8 @@ import { CardWork, CardSection } from "../../ui";
 import GralLayout from "../GralLayout";
 import { useTheme } from "@/app/[locale]/components/contexts/DarkThemeContext";
 import { FaArrowRight } from "react-icons/fa";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import practiceData from "../../data/practice/practice.json";
 
 const playFair = Playfair_Display({ subsets: ["latin"] });
 
@@ -22,15 +23,17 @@ export default function SelectedPracticeSection() {
 	const isInView = useInView(ref, { once: true, amount: 0.2 });
 	const { theme } = useTheme();
 	const t = useTranslations("Sections.SelectedPracticeSection");
+	const locale = useLocale();
 
 	const keys = ["ecommerce", "mobileBanking", "portfolio", "taskManagement"] as const;
 
-	const projects = keys.map((key) => ({
-		title: t(`projects.${key}.title`),
-		category: t(`projects.${key}.category.title`),
-		imageUrl: t(`projects.${key}.imageUrl`),
-		link: t(`projects.${key}.link`),
+	const practice = practiceData.practice.map((practice) => ({
+		title: practice.client,
+		category: practice.category,
+		imageUrl: practice.image,
+		link: `/${locale}/works/${practice.client.replace(/\s+/g, '-')}`,
 	}));
+
 
 	return (
 		<GralLayout className={`pt-10 md:pt-20 h-full`}>
@@ -62,15 +65,15 @@ export default function SelectedPracticeSection() {
 			</motion.h2>
 			<div className="w-full h-[80vh] overflow-y-auto custom-scrollbar">
 				<div className="hidden md:flex flex-col gap-8 w-full min-h-full">
-					<CardSection projects={projects} theme={theme} />
+					<CardSection projects={practice} theme={theme} />
 				</div>
 				<div className="md:hidden flex flex-col gap-8 w-full min-h-full">
-					{projects.map((p, index) => (
+					{practice.map((p, index) => (
 						<div className="w-full h-[60vh]" key={index}>
 							<CardWork
 								category={p.category}
 								imageUrl={p.imageUrl}
-								link={p.link}
+								link={`/practice/${p.link}`}
 								title={p.title}
 								theme={theme}
 							/>
