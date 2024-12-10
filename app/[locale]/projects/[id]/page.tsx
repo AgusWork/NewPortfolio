@@ -85,7 +85,11 @@ export default function ClientPage({ params }: { params: { locale: string; id: s
 					</div>
 				</div>
 			</section>
-			<section >
+			<section className="m-[5vw]">
+				<div className="w-full h-[60vh] relative  ">
+
+				<Image src={clientData.image} alt={clientData.image} fill className="rounded-2xl" />
+				</div>
 				
 			</section>
 
@@ -93,8 +97,7 @@ export default function ClientPage({ params }: { params: { locale: string; id: s
 				<div className="container mx-auto px-4">
 					<h2 className="text-4xl font-bold mb-8">{t("about")} {clientData.client}</h2>
 					<p className="text-lg mb-8">
-						{t("projectFor")} {clientData.client} {t("wasCompletedIn")} {clientData.duration} {t("weeks")}.
-						{t("fallsUnderCategory")} {clientData.category}.
+					
 						{locale === "es" ? clientData.descriptionEsp : clientData.descriptionEn}
 					</p>
 					<Link href={clientData.link} target="_blank" rel="noopener noreferrer">
