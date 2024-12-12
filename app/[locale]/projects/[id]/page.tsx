@@ -49,8 +49,9 @@ async function getClientData(id: string): Promise<WorkItem | undefined> {
 type tParams = Promise<{ id: string }>;
 
 export default async function Challenge(props: { params: tParams }) {
-	const { id } = await props.params;
+	let { id } = await props.params;
 	const locale = await getLocale();
+
 
 	const [clientData, t] = await Promise.all([getClientData(id), getTranslations("Pages.Projects")]);
 

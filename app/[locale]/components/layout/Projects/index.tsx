@@ -48,7 +48,7 @@ export default function SelectedSection({
       title: item.client,
       category: item.category,
       image: item.image,
-      link: `/${locale}/projects/${item.client.replace(/\s+/g, "-")}`,
+      link:`/${locale}/projects/${item.client.replace(/\s+/g, "-")}`,
     }));
 
   return (
