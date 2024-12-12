@@ -4,7 +4,6 @@ import React from "react";
 import { motion, useInView } from "framer-motion";
 import { Playfair_Display } from "next/font/google";
 import { useTheme } from "@/app/[locale]/components/contexts/DarkThemeContext";
-import { FaArrowRight } from "react-icons/fa";
 import GralLayout from "../GralLayout";
 import { CardSection, CardWork } from "../../ui";
 import projectsData from "../../data/projects/projects.json";
@@ -33,7 +32,6 @@ export default function SelectedSection({
   type,
   headingText,
   headingColorText,
-  seeAllText,
   justifyEnd = false,
   underlineOriginRight = false,
 }: SelectedSectionProps) {
@@ -108,30 +106,6 @@ export default function SelectedSection({
           ))}
         </div>
       </div>
-      {/* <div className="h-60 w-full flex items-center justify-center">
-        <motion.button
-          whileTap={{ scale: 0.95 }}
-          className={`  
-            relative overflow-hidden rounded-full text-bold text-lg flex items-center justify-center  
-            py-3 px-6 transition-all duration-300 ease-in-out  
-            ${
-              theme === "dark"
-                ? "bg-teal-600 text-white hover:bg-white hover:text-teal-600 "
-                : "bg-teal-500 text-white hover:bg-white hover:text-teal-600 hover:border hover:border-teal-600"
-            }  
-            focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-opacity-50  
-          `}
-        >
-          <span className="relative z-40">{seeAllText}</span>
-          <FaArrowRight className="ml-2 h-5 w-5 relative z-10" />
-          <motion.div
-            className="absolute inset-0 bg-white"
-            initial={{ x: "100%" }}
-            whileHover={{ x: 0 }}
-            transition={{ duration: 0.3 }}
-          />
-        </motion.button>
-      </div> */}
     </GralLayout>
   );
 }

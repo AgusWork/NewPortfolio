@@ -49,7 +49,7 @@ async function getClientData(id: string): Promise<WorkItem | undefined> {
 type tParams = Promise<{ id: string }>;
 
 export default async function Challenge(props: { params: tParams }) {
-	let { id } = await props.params;
+	const { id } = await props.params;
 	const locale = await getLocale();
 
 
