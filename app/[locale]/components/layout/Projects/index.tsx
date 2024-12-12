@@ -108,7 +108,7 @@ export default function SelectedSection({
           ))}
         </div>
       </div>
-      <div className="h-60 w-full flex items-center justify-center">
+      {/* <div className="h-60 w-full flex items-center justify-center">
         <motion.button
           whileTap={{ scale: 0.95 }}
           className={`  
@@ -131,7 +131,7 @@ export default function SelectedSection({
             transition={{ duration: 0.3 }}
           />
         </motion.button>
-      </div>
+      </div> */}
     </GralLayout>
   );
 }
