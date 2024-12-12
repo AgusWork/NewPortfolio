@@ -6,36 +6,40 @@ import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import {
 	FaReact,
 	FaVuejs,
-	FaAngular,
 	FaHtml5,
 	FaCss3Alt,
 	FaJs,
 	FaNodeJs,
 	FaPython,
-	FaJava,
 	FaPhp,
-	FaDatabase,
 	FaCode,
 	FaServer,
+	FaTools,
+	FaGitAlt,
+	FaDocker,
+	FaFigma,
+	FaDiscord,
 } from "react-icons/fa";
 import {
 	SiTypescript,
-	SiCsharp,
-	SiRuby,
 	SiMysql,
 	SiMongodb,
-	SiPostgresql,
-	SiRedis,
-	SiSqlite,
+	SiSass,
+	SiTailwindcss,
+	SiNestjs,
+	SiNotion,
 } from "react-icons/si";
 import { IconType } from "react-icons";
 import { useTheme } from "@/app/[locale]/components/contexts/DarkThemeContext";
 import { useTranslations } from "next-intl";
+import projectsData from "@/app/[locale]/components/data/projects/projects.json";
+import { Project } from "../../types/cardLayout";
 
 interface Language {
 	name: string;
 	icon: IconType;
 	category: string;
+	path?: string;
 }
 
 interface SkillCategory {
@@ -51,11 +55,13 @@ const skillCategories: SkillCategory[] = [
 		languages: [
 			{ name: "React", icon: FaReact, category: "Frontend" },
 			{ name: "Vue", icon: FaVuejs, category: "Frontend" },
-			{ name: "Angular", icon: FaAngular, category: "Frontend" },
+//			{ name: "Angular", icon: FaAngular, category: "Frontend" },
 			{ name: "HTML", icon: FaHtml5, category: "Frontend" },
 			{ name: "CSS", icon: FaCss3Alt, category: "Frontend" },
 			{ name: "JavaScript", icon: FaJs, category: "Frontend" },
 			{ name: "TypeScript", icon: SiTypescript, category: "Frontend" },
+			{ name: "Sass", icon: SiSass, category: "Frontend" },
+			{ name: "Tailwind", icon: SiTailwindcss, category: "Frontend" },
 		],
 	},
 	{
@@ -64,21 +70,21 @@ const skillCategories: SkillCategory[] = [
 		languages: [
 			{ name: "Node.js", icon: FaNodeJs, category: "Backend" },
 			{ name: "Python", icon: FaPython, category: "Backend" },
-			{ name: "Java", icon: FaJava, category: "Backend" },
-			{ name: "C#", icon: SiCsharp, category: "Backend" },
-			{ name: "Ruby", icon: SiRuby, category: "Backend" },
 			{ name: "PHP", icon: FaPhp, category: "Backend" },
+			{ name: "NestJS", icon: SiNestjs, category: "Backend" },
+			{ name: "MongoDB", icon: SiMongodb, category: "Database" },
+			{ name: "MySQL", icon: SiMysql, category: "Database" },
 		],
 	},
 	{
-		name: "Database",
-		icon: FaDatabase,
+		name: "Tools",
+		icon: FaTools,
 		languages: [
-			{ name: "MySQL", icon: SiMysql, category: "Database" },
-			{ name: "MongoDB", icon: SiMongodb, category: "Database" },
-			{ name: "PostgreSQL", icon: SiPostgresql, category: "Database" },
-			{ name: "Redis", icon: SiRedis, category: "Database" },
-			{ name: "SQLite", icon: SiSqlite, category: "Database" },
+			{ name: "Git", icon: FaGitAlt, category: "Tools" },
+			{ name: "Docker", icon: FaDocker, category: "Tools" },
+			{ name: "Figma", icon: FaFigma, category: "Tools" },
+			{ name: "Discord", icon: FaDiscord, category: "Tools" },
+			{ name: "Notion", icon: SiNotion, category: "Tools" },
 		],
 	},
 ];
@@ -148,11 +154,42 @@ const SkillCard: React.FC<{ category: SkillCategory; index: number }> = ({ categ
 	);
 };
 
+const extractUniqueLanguages = (): Language[] => {
+	const languageSet = new Set<string>();
+	const languages: Language[] = [];
+
+	projectsData.projects.forEach((project: Project) => {
+		project.language?.forEach((lang) => {
+			const langName = lang.split("/").pop()?.split(".")[0] || "";
+			if (!languageSet.has(langName)) {
+				languageSet.add(langName);
+				languages.push({
+					name: langName,
+					icon: FaCode, // Default icon
+					category: "Other",
+					path: lang,
+				});
+			}
+		});
+	});
+
+	return languages;
+};
+
 const LanguageSkills: React.FC = () => {
 	const { theme } = useTheme();
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true, amount: 0.2 });
 	const t = useTranslations("Sections.LanguageSection");
+
+	const uniqueLanguages = extractUniqueLanguages();
+	const updatedSkillCategories = skillCategories.map((category) => ({
+		...category,
+		languages: [
+			...category.languages,
+			...uniqueLanguages.filter((lang) => lang.category === category.name),
+		],
+	}));
 
 	return (
 		<section id="languages" className={`py-10 md:py-20  ${theme === "dark" ? "" : ""}`}>
@@ -190,7 +227,7 @@ const LanguageSkills: React.FC = () => {
 					</motion.div>
 				</motion.div>
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  px-6 xs:px-10 sm:px-20 md:px-0">
-					{skillCategories.map((category, index) => (
+					{updatedSkillCategories.map((category, index) => (
 						<SkillCard key={category.name} category={category} index={index} />
 					))}
 				</div>

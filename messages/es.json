@@ -99,6 +99,10 @@
 					"url": "https://github.com/AgusWork"
 				}
 			}
+		},
+		"RelatedSection": {
+			"heading": "Explore other",
+			"headingColor": " Projects"
 		}
 	},
 	"Components": {
@@ -139,7 +143,8 @@
 			"weeks": "semanas",
 			"fallsUnderCategory": "Pertenece a la categoría de",
 			"viewProject": "Ver Proyecto",
-			"technologiesUsed": "Tecnologías Utilizadas",
+			"technologiesUsed": "Utilizadas",
+			"technologiesUsedColor": "Tecnologías",
 			"projectGallery": "Galería del Proyecto",
 			"getInTouch": "Ponerse en Contacto",
 			"name": "Nombre",

@@ -47,7 +47,7 @@ export default function SelectedSection({
     .map((item) => ({
       title: item.client,
       category: item.category,
-      imageUrl: item.image,
+      image: item.image,
       link: `/${locale}/projects/${item.client.replace(/\s+/g, "-")}`,
     }));
 
@@ -99,7 +99,7 @@ export default function SelectedSection({
             <div className="w-full h-[60vh]" key={index}>
               <CardWork
                 category={item.category}
-                imageUrl={item.imageUrl}
+                image={item.image}
                 link={item.link}
                 title={item.title}
                 theme={theme}

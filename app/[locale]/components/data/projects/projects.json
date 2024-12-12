@@ -1,452 +1,762 @@
 {
-  "projects": [
-    {
-      "image": "/escribania/EscBuasso1.jpg",
-      "category": "Freelance",
-      "type": "work",
-      "client": "Escribania Buasso",
-      "date": "12/05/2023",
-      "link": "https://www.escribanosbuasso.ar/",
-      "duration": "5",
-      "descriptionEsp": "Pagina realizada para escribania con el objetivo de brindar todos los datos en una sencilla landing page, optimizada por SEO con herramientas de google + codigo, con una carga optimizada de video principal y reCaptcha v3 para brindar seguridad anti spam en el formulario.",
-      "descriptionEn": "Page created for a legal study with the objective of providing all the data in a simple landing page, optimized by SEO with Google tools + code, with an optimized loading of the main video and reCaptcha v3 to provide anti-spam security in the form.",
-      "language": [
-        "/iconos/Git.png",
-        "/iconos/NextJs.png",
-        "/iconos/Figma.png",
-        "/iconos/Notion.png",
-        "/iconos/React.png",
-        "/iconos/Sass.png",
-        "/iconos/Node.png",
-        "/iconos/NestJS.png",
-        "/iconos/MongoDB.png"
-      ],
-      "imagenes": [
-        "/escribania/EscBuasso1.jpg",
-        "/escribania/EscBuasso2.jpg",
-        "/escribania/EscBuasso3.jpg",
-        "/escribania/EscBuasso4.jpg",
-        "/escribania/EscBuasso5.jpg",
-        "/escribania/EscBuasso6.jpg",
-        "/escribania/EscBuasso7.jpg"
-      ]
-    },
-    {
-      "image": "/work/bwebly/Capba-d2/1.png",
-      "category": "Bwebly",
-      "client": "Capba",
-      "type": "work",
-      "date": "05/06/2024",
-      "link": "https://capba-d2.storefront.dev.mybpanel.com/",
-      "duration": "4",
-      "descriptionEsp": "Pagina realizada para el Colegio de Arquitectos de la provincia de Buenos Aires",
-      "descriptionEn": "Page created for the College of Architects of the province of Buenos Aires",
-      "language": [
-        "/iconos/Git.png",
-        "/iconos/NextJs.png",
-        "/iconos/Figma.png",
-        "/iconos/Notion.png",
-        "/iconos/React.png",
-        "/iconos/Node.png",
-        "/iconos/NestJS.png",
-        "/iconos/MongoDB.png"
-      ],
-      "imagenes": [
-        "/work/bwebly/Capba-d2/1.png",
-        "/work/bwebly/Capba-d2/2.png",
-        "/work/bwebly/Capba-d2/3.png",
-        "/work/bwebly/Capba-d2/4.png",
-        "/work/bwebly/Capba-d2/5.png",
-        "/work/bwebly/Capba-d2/6.png",
-        "/work/bwebly/Capba-d2/7.png"
-      ]
-    },
-    {
-      "image": "/work/bwebly/Mamm/1.png",
-      "category": "Bwebly",
-      "client": "Mamm",
-      "type": "work",
-
-      "date": "02/03/2024",
-      "link": "https://mamm.storefront.dev.mybpanel.com/",
-      "duration": "12",
-      "descriptionEsp": "Pagina realizada para el Museo de Aquitectura y Urbanismo de la ciudad de Buenos Aires para mostrar sus obras como tambien, la integracion de las mismas a un mapa personalizado y creado en base a los requerimientos pedidos",
-      "descriptionEn": "Page created for the Architecture and Urbanism Museum to show their work as well as their integration into a personalized map created based on the requested requirements from the employer.",
-      "language": [
-        "/iconos/Git.png",
-        "/iconos/NextJs.png",
-        "/iconos/Figma.png",
-        "/iconos/Notion.png",
-        "/iconos/React.png",
-        "/iconos/Node.png",
-        "/iconos/NestJS.png",
-        "/iconos/MongoDB.png"
-      ],
-      "imagenes": [
-        "/work/bwebly/Mamm/1.png",
-        "/work/bwebly/Mamm/2.png",
-        "/work/bwebly/Mamm/3.png",
-        "/work/bwebly/Mamm/4.png",
-        "/work/bwebly/Mamm/5.png",
-        "/work/bwebly/Mamm/6.png",
-        "/work/bwebly/Mamm/7.png",
-        "/work/bwebly/Mamm/8.png",
-        "/work/bwebly/Mamm/9.png",
-        "/work/bwebly/Mamm/10.png",
-        "/work/bwebly/Mamm/11.png",
-        "/work/bwebly/Mamm/12.png",
-        "/work/bwebly/Mamm/13.png"
-      ]
-    },
-    {
-      "image": "/work/bwebly/MyBpanel/mybpanel1.png",
-      "category": "Bwebly",
-      "client": "MyBpanel",
-      "type": "work",
-
-      "date": "02/03/2024",
-      "link": "/",
-      "duration": "13",
-      "descriptionEsp": "Aplicacion realizada con el fin de crear varias interfaces rapidamente con personalizaciones para cada cliente, y ademas dando la posibilidad de que el cliente tambien pueda adentrarse y personalizar su pagina, con imagenes textos, colores, tipografias, tamaños y demas.",
-      "descriptionEn": "Application made in order to create several interfaces quickly with customizations for each client, also giving the possibility that the client can also enter with their respective user role and personalize their page, with images, texts, colors, fonts, sizes and more.",
-      "language": [
-        "/iconos/Git.png",
-        "/iconos/NextJs.png",
-        "/iconos/Figma.png",
-        "/iconos/Notion.png",
-        "/iconos/React.png",
-        "/iconos/Node.png",
-        "/iconos/NestJS.png",
-        "/iconos/MongoDB.png"
-      ],
-      "imagenes": [
-        "/work/bwebly/MyBpanel/mybpanel1.png",
-        "/work/bwebly/MyBpanel/mybpanel2.png",
-        "/work/bwebly/MyBpanel/mybpanel3.png",
-        "/work/bwebly/MyBpanel/mybpanel4.png",
-        "/work/bwebly/MyBpanel/mybpanel5.png",
-        "/work/bwebly/MyBpanel/mybpanel6.png"
-      ]
-    },
-    {
-      "image": "/work/bwebly/tu-huella/TuHuella-1.jpg",
-      "category": "Bwebly",
-      "client": "Tu huella saludable",
-      "type": "work",
-
-      "date": "10/07/2023",
-      "link": "/",
-      "duration": "6",
-      "descriptionEsp": "Pagina realizada para una tienda de productos organicos, con metodo de creacion de usuario, compras con distintos metodos de pago, envios y confirmacion de compra con notificaciones personalizadas para mail y dentro de la misma.",
-      "descriptionEn": "Page created for an organic products store, with a user creation method, purchases with different payment methods, shipping and purchase confirmation with personalized notifications for email and within it.",
-      "language": [
-        "/iconos/Git.png",
-        "/iconos/NextJs.png",
-        "/iconos/Figma.png",
-        "/iconos/Notion.png",
-        "/iconos/React.png",
-        "/iconos/Sass.png"
-      ],
-      "imagenes": [
-        "/work/bwebly/tu-huella/TuHuella-1.jpg",
-        "/work/bwebly/tu-huella/TuHuella-2.jpg",
-        "/work/bwebly/tu-huella/TuHuella-3.jpg",
-        "/work/bwebly/tu-huella/TuHuella-4.jpg",
-        "/work/bwebly/tu-huella/TuHuella-5.jpg",
-        "/work/bwebly/tu-huella/TuHuella-6.jpg",
-        "/work/bwebly/tu-huella/TuHuella-7.jpg",
-        "/work/bwebly/tu-huella/TuHuella-8.jpg",
-        "/work/bwebly/tu-huella/TuHuella-9.jpg",
-        "/work/bwebly/tu-huella/TuHuella-10.jpg",
-        "/work/bwebly/tu-huella/TuHuella-11.jpg"
-      ]
-    },
-    {
-      "image": "/qualimed/FotoQualimed0.PNG",
-      "category": "Freelance",
-      "client": "Qualimed",
-      "type": "work",
-
-      "date": "04/05/2022",
-      "link": "https://qualimed.com.ar/",
-      "duration": "5 semanas",
-      "descriptionEsp": "",
-      "descriptionEn": "",
-      "language": [
-        "/iconos/Git.png",
-        "/iconos/Discord.png",
-        "/iconos/NextJs.png",
-        "/iconos/Figma.png",
-        "/iconos/Notion.png",
-        "/iconos/React.png",
-        "/iconos/Sass.png"
-      ],
-      "imagenes": [
-        "/qualimed/FotoQualimed0.PNG",
-        "/qualimed/FotoQualimed1.PNG",
-        "/qualimed/FotoQualimed2.PNG",
-        "/qualimed/FotoQualimed3.PNG",
-        "/qualimed/FotoQualimed4.PNG"
-      ]
-    },
-    {
-      "image": "/bukma/Bukma1.png",
-      "category": "Bwebly",
-      "client": "Bukma",
-      "type": "work",
-
-      "date": "02/03/2022",
-      "link": "https://bukmasrl.com.ar/",
-      "duration": "3",
-      "descriptionEsp": "Pagina realizada para mi primer cliente donde se muestran los trabajos que realiza la empresa para brindarle,  y asi lograr brindarle mas visibilidad a la misma, creando un UX distinto para que destaque mas entre sus competencias.",
-      "descriptionEn": "Page created for my first client where the work that the company does to provide it is shown, and thus achieve more visibility for it, creating a different UX so that it stands out more among its competencies",
-      "language": [
-        "/iconos/Git.png",
-        "/iconos/Discord.png",
-        "/iconos/NextJs.png",
-        "/iconos/Figma.png",
-        "/iconos/Notion.png",
-        "/iconos/React.png",
-        "/iconos/Sass.png"
-      ],
-      "imagenes": [
-        "/bukma/Bukma1.png",
-        "/bukma/Bukma2.png",
-        "/bukma/Bukma3.png",
-        "/bukma/Bukma4.PNG",
-        "/bukma/Bukma5.jpg"
-      ]
-    },
-    {
-      "image": "/phpLogin/Login2.PNG",
-      "category": "Freelance",
-      "client": "Syntesis",
-      "type": "work",
-
-      "date": "20/11/2021",
-      "link": "https://sintesys.com.ar/Login/",
-      "duration": "4",
-      "descriptionEsp": "Pagina realizada para mi primer cliente el cual me pidio que cree un sistema de usuario simple, y con el codigo limpio para que pueda reutilizarlo en otro proyecto.",
-      "descriptionEn": "Page created for my first client who asks me to create a simple user system, and with clean code so that I can reuse it in another project.",
-      "language": [
-        "/iconos/Figma.png",
-        "/iconos/Notion.png",
-        "/iconos/Php.png",
-        "/iconos/Tailwind.png"
-      ],
-      "imagenes": [
-        "/phpLogin/Login.PNG",
-        "/phpLogin/Login2.PNG",
-        "/phpLogin/SignUp.PNG",
-        "/phpLogin/SignUp2.PNG",
-        "/phpLogin/SignUp2-2.PNG"
-      ]
-    },
-    {
-      "image": "/teslo-shop/Teslo1.jpg",
-      "category": "Practice",
-      "client": "Teslo - Shop",
-      "type": "practice",
-
-      "date": "28/04/2023",
-      "link": "https://teslo-shop-aguscba.vercel.app/",
-      "duration": "5",
-      "descriptionEsp": "E-commerce completo con sistema de pedidos, pago en paypal y ML, creacion de usuario con github, google y correo electronico, como tambien un sistema de admin para la creacion, edicion, eliminacion de productos.",
-      "descriptionEn": "Complete e-commerce with order system, payments via PayPal and ML, user creation with GitHub, Google, and email, along with an admin system for creating, editing, and deleting products.",
-      "language": [
-        "/iconos/Git.png",
-        "/iconos/NextJs.png",
-        "/iconos/Figma.png",
-        "/iconos/React.png",
-        "/iconos/Sass.png",
-        "/iconos/MongoDB.png",
-        "/iconos/Docker.png",
-        "/iconos/Node.png"
-      ],
-      "imagenes": [
-        "/teslo-shop/Teslo1.jpg",
-        "/teslo-shop/Teslo2.jpg",
-        "/teslo-shop/Teslo3.jpg",
-        "/teslo-shop/Teslo4.jpg",
-        "/teslo-shop/Teslo5.jpg",
-        "/teslo-shop/Teslo6.jpg",
-        "/teslo-shop/Teslo7.jpg",
-        "/teslo-shop/Teslo8.jpg"
-      ]
-    },
-    {
-      "image": "/practicas/GifApp/Gif1.png",
-      "category": "Practice",
-      "client": "Gif App",
-      "type": "practice",
-
-      "date": "20/02/2022",
-      "link": "https://react-gif-app-sigma.vercel.app/",
-      "duration": "2",
-      "descriptionEsp": "App para buscar cualquier tipo de Gif que trae desde una api.",
-      "descriptionEn": "App to search for any type of Gif, fetched from an API.",
-      "language": [
-        "/iconos/Git.png",
-        "/iconos/Figma.png",
-        "/iconos/React.png",
-        "/iconos/Sass.png"
-      ],
-      "imagenes": [
-        "/practicas/GifApp/Gif1.png",
-        "/practicas/GifApp/Gif2.png",
-        "/practicas/GifApp/Gif3.png"
-      ]
-    },
-    {
-      "image": "/practicas/OpenJira/Open1.png",
-      "category": "Practice",
-      "client": "Open Jira",
-      "type": "practice",
-
-      "date": "05/07/2022",
-      "link": "",
-      "duration": "3",
-      "descriptionEsp": "App de organizacion de entradas con metodologia scrum y capacidad de arrastrar y cambiar el estado de la entrada.",
-      "descriptionEn": "Task management app with Scrum methodology and ability to drag and drop to change the entry state.",
-      "language": [
-        "/iconos/Git.png",
-        "/iconos/NextJs.png",
-        "/iconos/Figma.png",
-        "/iconos/React.png",
-        "/iconos/Sass.png",
-        "/iconos/MongoDB.png",
-        "/iconos/Docker.png",
-        "/iconos/Node.png"
-      ],
-      "imagenes": [
-        "/practicas/OpenJira/Open1.png",
-        "/practicas/OpenJira/Open2.png",
-        "/practicas/OpenJira/Open3.png",
-        "/practicas/OpenJira/Open4.png",
-        "/practicas/OpenJira/Open5.png",
-        "/practicas/OpenJira/OpenVideo.mp4"
-      ]
-    },
-    {
-      "image": "/practicas/MarvelDc/MarvelDc1.png",
-      "category": "Practice",
-      "client": "Buscador Marvel/Dc",
-      "type": "practice",
-
-      "date": "05/05/2022",
-      "link": "https://heroes-app-rouge.vercel.app/",
-      "duration": "1",
-      "descriptionEsp": "Buscador de Marvel y DC con busqueda por API y proteccion de ruta por Login.",
-      "descriptionEn": "Marvel and DC search app using API, with route protection via Login.",
-      "language": [
-        "/iconos/Git.png",
-        "/iconos/NextJs.png",
-        "/iconos/Figma.png",
-        "/iconos/React.png",
-        "/iconos/Sass.png"
-      ],
-      "imagenes": [
-        "/practicas/MarvelDc/MarvelDc1.png",
-        "/practicas/MarvelDc/MarvelDc2.png",
-        "/practicas/MarvelDc/MarvelDc3.png"
-      ]
-    },
-    {
-      "image": "/practicas/Bar/Bar1.png",
-      "category": "Practice",
-      "client": "Boceto app para barra de boliche",
-      "type": "practice",
-
-      "date": "10/10/2022",
-      "link": "https://barra-boliche.vercel.app/",
-      "duration": "2",
-      "descriptionEsp": "App para una barra de boliche con carrito de compras donde los datos se almacenan localmente.",
-      "descriptionEn": "Nightclub app with shopping cart where data is stored locally.",
-      "language": [
-        "/iconos/Git.png",
-        "/iconos/NextJs.png",
-        "/iconos/Figma.png",
-        "/iconos/React.png",
-        "/iconos/Sass.png"
-      ],
-      "imagenes": [
-        "/practicas/Bar/Bar1.png",
-        "/practicas/Bar/Bar2.png",
-        "/practicas/Bar/Bar3.png"
-      ]
-    },
-    {
-      "image": "/practicas/Pokemon/Pokemon1.png",
-      "category": "Practice",
-      "client": "Pokemon App",
-      "type": "practice",
-
-      "date": "15/03/2022",
-      "link": "https://pokemon-app1-zl1y.vercel.app/",
-      "duration": "2",
-      "descriptionEsp": "Aplicacion de pokemons que trae los datos de la pokeapi, permite guardar favoritos en otra pantalla.",
-      "descriptionEn": "Pokemon app fetching data from pokeapi, allows saving favorites in a different screen.",
-      "language": [
-        "/iconos/Git.png",
-        "/iconos/NextJs.png",
-        "/iconos/Figma.png",
-        "/iconos/React.png",
-        "/iconos/Sass.png"
-      ],
-      "imagenes": [
-        "/practicas/Pokemon/Pokemon1.png",
-        "/practicas/Pokemon/Pokemon2.png",
-        "/practicas/Pokemon/Pokemon3.png",
-        "/practicas/Pokemon/Pokemon4.png"
-      ]
-    },
-    {
-      "image": "/practicas/digiFianz/digi1.jpg",
-      "category": "Practice",
-      "client": "Digi Fianz Test",
-      "type": "practice",
-
-      "date": "20/10/2021",
-      "link": "https://aguswork.github.io/DigiFianzTest/",
-      "duration": "1",
-      "descriptionEsp": "Aplicacion de prueba en JS con funcionalidades como arrastrar elementos, toggle de navbar y popups, todo hecho sin librerías ni NPM.",
-      "descriptionEn": "Test app in JS with functionalities like drag and drop, navbar toggle, and popups, all coded without libraries or NPM.",
-      "language": [
-        "/iconos/Git.png",
-        "/iconos/Figma.png",
-        "/iconos/Javascript.png",
-        "/iconos/css.png"
-      ],
-      "imagenes": [
-        "/practicas/digiFianz/digi1.jpg",
-        "/practicas/digiFianz/digi2.jpg",
-        "/practicas/digiFianz/digi3.jpg",
-        "/practicas/digiFianz/digi4.jpg",
-        "/practicas/digiFianz/digi5.jpg",
-        "/practicas/digiFianz/digi6.jpg"
-      ]
-    },
-    {
-      "image": "/e-commerce/Mi pagina.PNG",
-      "category": "Freelance",
-      "client": "Practica",
-      "type": "practice",
-
-      "date": "12/07/2021",
-      "link": "https://cordobaskatepage.000webhostapp.com/index.html",
-      "duration": "5",
-      "descriptionEsp": "",
-      "descriptionEn": "",
-      "language": [
-        "/iconos/Git.png",
-        "/iconos/Javascript.png",
-        "/iconos/Sass.png"
-      ],
-      "imagenes": [
-        "/e-commerce/Mi pagina.PNG",
-        "/e-commerce/MiPagina2.PNG",
-        "/e-commerce/MiPagina3.PNG"
-      ]
-    }
-  ]
+	"projects": [
+		{
+			"image": {
+				"src": "/escribania/EscBuasso1.jpg",
+				"alt": "EscBuasso1"
+			},
+			"category": "Freelance",
+			"type": "work",
+			"client": "Escribania Buasso",
+			"date": "12/05/2023",
+			"link": "https://www.escribanosbuasso.ar/",
+			"duration": "5",
+			"descriptionEsp": "Pagina realizada para escribania con el objetivo de brindar todos los datos en una sencilla landing page, optimizada por SEO con herramientas de google + codigo, con una carga optimizada de video principal y reCaptcha v3 para brindar seguridad anti spam en el formulario.",
+			"descriptionEn": "Page created for a legal study with the objective of providing all the data in a simple landing page, optimized by SEO with Google tools + code, with an optimized loading of the main video and reCaptcha v3 to provide anti-spam security in the form.",
+			"language": [
+				"/iconos/Git.png",
+				"/iconos/NextJs.png",
+				"/iconos/Figma.png",
+				"/iconos/Notion.png",
+				"/iconos/React.png",
+				"/iconos/Sass.png",
+				"/iconos/Node.png",
+				"/iconos/NestJS.png",
+				"/iconos/MongoDB.png"
+			],
+			"imagenes": [
+				{
+					"src": "/escribania/EscBuasso1.jpg",
+					"alt": "EscBuasso1"
+				},
+				{
+					"src": "/escribania/EscBuasso2.jpg",
+					"alt": "EscBuasso2"
+				},
+				{
+					"src": "/escribania/EscBuasso3.jpg",
+					"alt": "EscBuasso3"
+				},
+				{
+					"src": "/escribania/EscBuasso4.jpg",
+					"alt": "EscBuasso4"
+				},
+				{
+					"src": "/escribania/EscBuasso5.jpg",
+					"alt": "EscBuasso5"
+				},
+				{
+					"src": "/escribania/EscBuasso6.jpg",
+					"alt": "EscBuasso6"
+				},
+				{
+					"src": "/escribania/EscBuasso7.jpg",
+					"alt": "EscBuasso7"
+				}
+			]
+		},
+		{
+			"image": {
+				"src": "/work/bwebly/Capba-d2/1.png",
+				"alt": "1"
+			},
+			"category": "Bwebly",
+			"client": "Capba",
+			"type": "work",
+			"date": "05/06/2024",
+			"link": "https://capba-d2.storefront.dev.mybpanel.com/",
+			"duration": "4",
+			"descriptionEsp": "Pagina realizada para el Colegio de Arquitectos de la provincia de Buenos Aires",
+			"descriptionEn": "Page created for the College of Architects of the province of Buenos Aires",
+			"language": [
+				"/iconos/Git.png",
+				"/iconos/NextJs.png",
+				"/iconos/Figma.png",
+				"/iconos/Notion.png",
+				"/iconos/React.png",
+				"/iconos/Node.png",
+				"/iconos/NestJS.png",
+				"/iconos/MongoDB.png"
+			],
+			"imagenes": [
+				{
+					"src": "/work/bwebly/Capba-d2/1.png",
+					"alt": "1"
+				},
+				{
+					"src": "/work/bwebly/Capba-d2/2.png",
+					"alt": "2"
+				},
+				{
+					"src": "/work/bwebly/Capba-d2/3.png",
+					"alt": "3"
+				},
+				{
+					"src": "/work/bwebly/Capba-d2/4.png",
+					"alt": "4"
+				},
+				{
+					"src": "/work/bwebly/Capba-d2/5.png",
+					"alt": "5"
+				},
+				{
+					"src": "/work/bwebly/Capba-d2/6.png",
+					"alt": "6"
+				},
+				{
+					"src": "/work/bwebly/Capba-d2/7.png",
+					"alt": "7"
+				}
+			]
+		},
+		{
+			"image": {
+				"src": "/work/bwebly/Mamm/1.png",
+				"alt": "1"
+			},
+			"category": "Bwebly",
+			"client": "Mamm",
+			"type": "work",
+			"date": "02/03/2024",
+			"link": "https://mamm.storefront.dev.mybpanel.com/",
+			"duration": "12",
+			"descriptionEsp": "Pagina realizada para el Museo de Aquitectura y Urbanismo de la ciudad de Buenos Aires para mostrar sus obras como tambien, la integracion de las mismas a un mapa personalizado y creado en base a los requerimientos pedidos",
+			"descriptionEn": "Page created for the Architecture and Urbanism Museum to show their work as well as their integration into a personalized map created based on the requested requirements from the employer.",
+			"language": [
+				"/iconos/Git.png",
+				"/iconos/NextJs.png",
+				"/iconos/Figma.png",
+				"/iconos/Notion.png",
+				"/iconos/React.png",
+				"/iconos/Node.png",
+				"/iconos/NestJS.png",
+				"/iconos/MongoDB.png"
+			],
+			"imagenes": [
+				{
+					"src": "/work/bwebly/Mamm/1.png",
+					"alt": "1"
+				},
+				{
+					"src": "/work/bwebly/Mamm/2.png",
+					"alt": "2"
+				},
+				{
+					"src": "/work/bwebly/Mamm/3.png",
+					"alt": "3"
+				},
+				{
+					"src": "/work/bwebly/Mamm/4.png",
+					"alt": "4"
+				},
+				{
+					"src": "/work/bwebly/Mamm/5.png",
+					"alt": "5"
+				},
+				{
+					"src": "/work/bwebly/Mamm/6.png",
+					"alt": "6"
+				},
+				{
+					"src": "/work/bwebly/Mamm/7.png",
+					"alt": "7"
+				},
+				{
+					"src": "/work/bwebly/Mamm/8.png",
+					"alt": "8"
+				},
+				{
+					"src": "/work/bwebly/Mamm/9.png",
+					"alt": "9"
+				},
+				{
+					"src": "/work/bwebly/Mamm/10.png",
+					"alt": "10"
+				},
+				{
+					"src": "/work/bwebly/Mamm/11.png",
+					"alt": "11"
+				},
+				{
+					"src": "/work/bwebly/Mamm/12.png",
+					"alt": "12"
+				},
+				{
+					"src": "/work/bwebly/Mamm/13.png",
+					"alt": "13"
+				}
+			]
+		},
+		{
+			"image": {
+				"src": "/work/bwebly/MyBpanel/mybpanel1.png",
+				"alt": "mybpanel1"
+			},
+			"category": "Bwebly",
+			"client": "MyBpanel",
+			"type": "work",
+			"date": "02/03/2024",
+			"link": "/",
+			"duration": "13",
+			"descriptionEsp": "Aplicacion realizada con el fin de crear varias interfaces rapidamente con personalizaciones para cada cliente, y ademas dando la posibilidad de que el cliente tambien pueda adentrarse y personalizar su pagina, con imagenes textos, colores, tipografias, tamaños y demas.",
+			"descriptionEn": "Application made in order to create several interfaces quickly with customizations for each client, also giving the possibility that the client can also enter with their respective user role and personalize their page, with images, texts, colors, fonts, sizes and more.",
+			"language": [
+				"/iconos/Git.png",
+				"/iconos/NextJs.png",
+				"/iconos/Figma.png",
+				"/iconos/Notion.png",
+				"/iconos/React.png",
+				"/iconos/Node.png",
+				"/iconos/NestJS.png",
+				"/iconos/MongoDB.png"
+			],
+			"imagenes": [
+				{
+					"src": "/work/bwebly/MyBpanel/mybpanel1.png",
+					"alt": "mybpanel1"
+				},
+				{
+					"src": "/work/bwebly/MyBpanel/mybpanel2.png",
+					"alt": "mybpanel2"
+				},
+				{
+					"src": "/work/bwebly/MyBpanel/mybpanel3.png",
+					"alt": "mybpanel3"
+				},
+				{
+					"src": "/work/bwebly/MyBpanel/mybpanel4.png",
+					"alt": "mybpanel4"
+				},
+				{
+					"src": "/work/bwebly/MyBpanel/mybpanel5.png",
+					"alt": "mybpanel5"
+				},
+				{
+					"src": "/work/bwebly/MyBpanel/mybpanel6.png",
+					"alt": "mybpanel6"
+				}
+			]
+		},
+		{
+			"image": {
+				"src": "/work/bwebly/tu-huella/TuHuella-1.jpg",
+				"alt": "TuHuella-1"
+			},
+			"category": "Bwebly",
+			"client": "Tu huella saludable",
+			"type": "work",
+			"date": "10/07/2023",
+			"link": "/",
+			"duration": "6",
+			"descriptionEsp": "Pagina realizada para una tienda de productos organicos, con metodo de creacion de usuario, compras con distintos metodos de pago, envios y confirmacion de compra con notificaciones personalizadas para mail y dentro de la misma.",
+			"descriptionEn": "Page created for an organic products store, with a user creation method, purchases with different payment methods, shipping and purchase confirmation with personalized notifications for email and within it.",
+			"language": [
+				"/iconos/Git.png",
+				"/iconos/NextJs.png",
+				"/iconos/Figma.png",
+				"/iconos/Notion.png",
+				"/iconos/React.png",
+				"/iconos/Sass.png"
+			],
+			"imagenes": [
+				{
+					"src": "/work/bwebly/tu-huella/TuHuella-1.jpg",
+					"alt": "TuHuella-1"
+				},
+				{
+					"src": "/work/bwebly/tu-huella/TuHuella-2.jpg",
+					"alt": "TuHuella-2"
+				},
+				{
+					"src": "/work/bwebly/tu-huella/TuHuella-3.jpg",
+					"alt": "TuHuella-3"
+				},
+				{
+					"src": "/work/bwebly/tu-huella/TuHuella-4.jpg",
+					"alt": "TuHuella-4"
+				},
+				{
+					"src": "/work/bwebly/tu-huella/TuHuella-5.jpg",
+					"alt": "TuHuella-5"
+				},
+				{
+					"src": "/work/bwebly/tu-huella/TuHuella-6.jpg",
+					"alt": "TuHuella-6"
+				},
+				{
+					"src": "/work/bwebly/tu-huella/TuHuella-7.jpg",
+					"alt": "TuHuella-7"
+				},
+				{
+					"src": "/work/bwebly/tu-huella/TuHuella-8.jpg",
+					"alt": "TuHuella-8"
+				},
+				{
+					"src": "/work/bwebly/tu-huella/TuHuella-9.jpg",
+					"alt": "TuHuella-9"
+				},
+				{
+					"src": "/work/bwebly/tu-huella/TuHuella-10.jpg",
+					"alt": "TuHuella-10"
+				},
+				{
+					"src": "/work/bwebly/tu-huella/TuHuella-11.jpg",
+					"alt": "TuHuella-11"
+				}
+			]
+		},
+		{
+			"image": {
+				"src": "/qualimed/FotoQualimed0.PNG",
+				"alt": "FotoQualimed0"
+			},
+			"category": "Freelance",
+			"client": "Qualimed",
+			"type": "work",
+			"date": "04/05/2022",
+			"link": "https://qualimed.com.ar/",
+			"duration": "5 semanas",
+			"descriptionEsp": "",
+			"descriptionEn": "",
+			"language": [
+				"/iconos/Git.png",
+				"/iconos/Discord.png",
+				"/iconos/NextJs.png",
+				"/iconos/Figma.png",
+				"/iconos/Notion.png",
+				"/iconos/React.png",
+				"/iconos/Sass.png"
+			],
+			"imagenes": [
+				{
+					"src": "/qualimed/FotoQualimed0.PNG",
+					"alt": "FotoQualimed0"
+				},
+				{
+					"src": "/qualimed/FotoQualimed1.PNG",
+					"alt": "FotoQualimed1"
+				},
+				{
+					"src": "/qualimed/FotoQualimed2.PNG",
+					"alt": "FotoQualimed2"
+				},
+				{
+					"src": "/qualimed/FotoQualimed3.PNG",
+					"alt": "FotoQualimed3"
+				},
+				{
+					"src": "/qualimed/FotoQualimed4.PNG",
+					"alt": "FotoQualimed4"
+				}
+			]
+		},
+		{
+			"image": {
+				"src": "/bukma/mockup5.jpeg",
+				"alt": "mockup5"
+			},
+			"category": "Bwebly",
+			"client": "Bukma",
+			"type": "work",
+			"date": "02/03/2022",
+			"link": "https://bukmasrl.com.ar/",
+			"duration": "3",
+			"descriptionEsp": "Pagina realizada para mi primer cliente donde se muestran los trabajos que realiza la empresa para brindarle, y asi lograr brindarle mas visibilidad a la misma, creando un UX distinto para que destaque mas entre sus competencias.",
+			"descriptionEn": "Page created for my first client where the work that the company does to provide it is shown, and thus achieve more visibility for it, creating a different UX so that it stands out more among its competencies",
+			"language": [
+				"/iconos/Git.png",
+				"/iconos/Discord.png",
+				"/iconos/NextJs.png",
+				"/iconos/Figma.png",
+				"/iconos/Notion.png",
+				"/iconos/React.png",
+				"/iconos/Sass.png"
+			],
+			"imagenes": [
+				{
+					"src": "/bukma/Bukma1.png",
+					"alt": "Bukma1"
+				},
+				{
+					"src": "/bukma/Bukma2.png",
+					"alt": "Bukma2"
+				},
+				{
+					"src": "/bukma/Bukma3.png",
+					"alt": "Bukma3"
+				},
+				{
+					"src": "/bukma/Bukma4.PNG",
+					"alt": "Bukma4"
+				},
+				{
+					"src": "/bukma/Bukma5.jpg",
+					"alt": "Bukma5"
+				}
+			]
+		},
+		{
+			"image": {
+				"src": "/phpLogin/Login2.PNG",
+				"alt": "Login2"
+			},
+			"category": "Freelance",
+			"client": "Syntesis",
+			"type": "work",
+			"date": "20/11/2021",
+			"link": "https://sintesys.com.ar/Login/",
+			"duration": "4",
+			"descriptionEsp": "Pagina realizada para mi primer cliente el cual me pidio que cree un sistema de usuario simple, y con el codigo limpio para que pueda reutilizarlo en otro proyecto.",
+			"descriptionEn": "Page created for my first client who asks me to create a simple user system, and with clean code so that I can reuse it in another project.",
+			"language": [
+				"/iconos/Figma.png",
+				"/iconos/Notion.png",
+				"/iconos/Php.png",
+				"/iconos/Tailwind.png"
+			],
+			"imagenes": [
+				{
+					"src": "/phpLogin/Login.PNG",
+					"alt": "Login"
+				},
+				{
+					"src": "/phpLogin/Login2.PNG",
+					"alt": "Login2"
+				},
+				{
+					"src": "/phpLogin/SignUp.PNG",
+					"alt": "SignUp"
+				},
+				{
+					"src": "/phpLogin/SignUp2.PNG",
+					"alt": "SignUp2"
+				},
+				{
+					"src": "/phpLogin/SignUp2-2.PNG",
+					"alt": "SignUp2-2"
+				}
+			]
+		},
+		{
+			"image": {
+				"src": "/teslo-shop/Teslo1.jpg",
+				"alt": "Teslo1"
+			},
+			"category": "Practice",
+			"client": "Teslo - Shop",
+			"type": "practice",
+			"date": "28/04/2023",
+			"link": "https://teslo-shop-aguscba.vercel.app/",
+			"duration": "5",
+			"descriptionEsp": "E-commerce completo con sistema de pedidos, pago en paypal y ML, creacion de usuario con github, google y correo electronico, como tambien un sistema de admin para la creacion, edicion, eliminacion de productos.",
+			"descriptionEn": "Complete e-commerce with order system, payments via PayPal and ML, user creation with GitHub, Google, and email, along with an admin system for creating, editing, and deleting products.",
+			"language": [
+				"/iconos/Git.png",
+				"/iconos/NextJs.png",
+				"/iconos/Figma.png",
+				"/iconos/React.png",
+				"/iconos/Sass.png",
+				"/iconos/MongoDB.png",
+				"/iconos/Docker.png",
+				"/iconos/Node.png"
+			],
+			"imagenes": [
+				{
+					"src": "/teslo-shop/Teslo1.jpg",
+					"alt": "Teslo1"
+				},
+				{
+					"src": "/teslo-shop/Teslo2.jpg",
+					"alt": "Teslo2"
+				},
+				{
+					"src": "/teslo-shop/Teslo3.jpg",
+					"alt": "Teslo3"
+				},
+				{
+					"src": "/teslo-shop/Teslo4.jpg",
+					"alt": "Teslo4"
+				},
+				{
+					"src": "/teslo-shop/Teslo5.jpg",
+					"alt": "Teslo5"
+				},
+				{
+					"src": "/teslo-shop/Teslo6.jpg",
+					"alt": "Teslo6"
+				},
+				{
+					"src": "/teslo-shop/Teslo7.jpg",
+					"alt": "Teslo7"
+				},
+				{
+					"src": "/teslo-shop/Teslo8.jpg",
+					"alt": "Teslo8"
+				}
+			]
+		},
+		{
+			"image": {
+				"src": "/practicas/GifApp/Gif1.png",
+				"alt": "Gif1"
+			},
+			"category": "Practice",
+			"client": "Gif App",
+			"type": "practice",
+			"date": "20/02/2022",
+			"link": "https://react-gif-app-sigma.vercel.app/",
+			"duration": "2",
+			"descriptionEsp": "App para buscar cualquier tipo de Gif que trae desde una api.",
+			"descriptionEn": "App to search for any type of Gif, fetched from an API.",
+			"language": ["/iconos/Git.png", "/iconos/Figma.png", "/iconos/React.png", "/iconos/Sass.png"],
+			"imagenes": [
+				{
+					"src": "/practicas/GifApp/Gif1.png",
+					"alt": "Gif1"
+				},
+				{
+					"src": "/practicas/GifApp/Gif2.png",
+					"alt": "Gif2"
+				},
+				{
+					"src": "/practicas/GifApp/Gif3.png",
+					"alt": "Gif3"
+				}
+			]
+		},
+		{
+			"image": {
+				"src": "/practicas/OpenJira/Open1.png",
+				"alt": "Open1"
+			},
+			"category": "Practice",
+			"client": "Open Jira",
+			"type": "practice",
+			"date": "05/07/2022",
+			"link": "",
+			"duration": "3",
+			"descriptionEsp": "App de organizacion de entradas con metodologia scrum y capacidad de arrastrar y cambiar el estado de la entrada.",
+			"descriptionEn": "Task management app with Scrum methodology and ability to drag and drop to change the entry state.",
+			"language": [
+				"/iconos/Git.png",
+				"/iconos/NextJs.png",
+				"/iconos/Figma.png",
+				"/iconos/React.png",
+				"/iconos/Sass.png",
+				"/iconos/MongoDB.png",
+				"/iconos/Docker.png",
+				"/iconos/Node.png"
+			],
+			"imagenes": [
+				{
+					"src": "/practicas/OpenJira/Open1.png",
+					"alt": "Open1"
+				},
+				{
+					"src": "/practicas/OpenJira/Open2.png",
+					"alt": "Open2"
+				},
+				{
+					"src": "/practicas/OpenJira/Open3.png",
+					"alt": "Open3"
+				},
+				{
+					"src": "/practicas/OpenJira/Open4.png",
+					"alt": "Open4"
+				},
+				{
+					"src": "/practicas/OpenJira/Open5.png",
+					"alt": "Open5"
+				},
+				{
+					"src": "/practicas/OpenJira/OpenVideo.mp4",
+					"alt": "OpenVideo"
+				}
+			]
+		},
+		{
+			"image": {
+				"src": "/practicas/MarvelDc/MarvelDc1.png",
+				"alt": "MarvelDc1"
+			},
+			"category": "Practice",
+			"client": "Buscador Marvel/Dc",
+			"type": "practice",
+			"date": "05/05/2022",
+			"link": "https://heroes-app-rouge.vercel.app/",
+			"duration": "1",
+			"descriptionEsp": "Buscador de Marvel y DC con busqueda por API y proteccion de ruta por Login.",
+			"descriptionEn": "Marvel and DC search app using API, with route protection via Login.",
+			"language": [
+				"/iconos/Git.png",
+				"/iconos/NextJs.png",
+				"/iconos/Figma.png",
+				"/iconos/React.png",
+				"/iconos/Sass.png"
+			],
+			"imagenes": [
+				{
+					"src": "/practicas/MarvelDc/MarvelDc1.png",
+					"alt": "MarvelDc1"
+				},
+				{
+					"src": "/practicas/MarvelDc/MarvelDc2.png",
+					"alt": "MarvelDc2"
+				},
+				{
+					"src": "/practicas/MarvelDc/MarvelDc3.png",
+					"alt": "MarvelDc3"
+				}
+			]
+		},
+		{
+			"image": {
+				"src": "/practicas/Bar/Bar1.png",
+				"alt": "Bar1"
+			},
+			"category": "Practice",
+			"client": "App para barra de boliche",
+			"type": "practice",
+			"date": "10/10/2022",
+			"link": "https://barra-boliche.vercel.app/",
+			"duration": "2",
+			"descriptionEsp": "App para una barra de boliche con carrito de compras donde los datos se almacenan localmente.",
+			"descriptionEn": "Nightclub app with shopping cart where data is stored locally.",
+			"language": [
+				"/iconos/Git.png",
+				"/iconos/NextJs.png",
+				"/iconos/Figma.png",
+				"/iconos/React.png",
+				"/iconos/Sass.png"
+			],
+			"imagenes": [
+				{
+					"src": "/practicas/Bar/Bar1.png",
+					"alt": "Bar1"
+				},
+				{
+					"src": "/practicas/Bar/Bar2.png",
+					"alt": "Bar2"
+				},
+				{
+					"src": "/practicas/Bar/Bar3.png",
+					"alt": "Bar3"
+				}
+			]
+		},
+		{
+			"image": {
+				"src": "/practicas/Pokemon/Pokemon1.png",
+				"alt": "Pokemon1"
+			},
+			"category": "Practice",
+			"client": "Pokemon App",
+			"type": "practice",
+			"date": "15/03/2022",
+			"link": "https://pokemon-app1-zl1y.vercel.app/",
+			"duration": "2",
+			"descriptionEsp": "Aplicacion de pokemons que trae los datos de la pokeapi, permite guardar favoritos en otra pantalla.",
+			"descriptionEn": "Pokemon app fetching data from pokeapi, allows saving favorites in a different screen.",
+			"language": [
+				"/iconos/Git.png",
+				"/iconos/NextJs.png",
+				"/iconos/Figma.png",
+				"/iconos/React.png",
+				"/iconos/Sass.png"
+			],
+			"imagenes": [
+				{
+					"src": "/practicas/Pokemon/Pokemon1.png",
+					"alt": "Pokemon1"
+				},
+				{
+					"src": "/practicas/Pokemon/Pokemon2.png",
+					"alt": "Pokemon2"
+				},
+				{
+					"src": "/practicas/Pokemon/Pokemon3.png",
+					"alt": "Pokemon3"
+				},
+				{
+					"src": "/practicas/Pokemon/Pokemon4.png",
+					"alt": "Pokemon4"
+				}
+			]
+		},
+		{
+			"image": {
+				"src": "/practicas/digiFianz/digi1.jpg",
+				"alt": "digi1"
+			},
+			"category": "Practice",
+			"client": "Digi Fianz Test",
+			"type": "practice",
+			"date": "20/10/2021",
+			"link": "https://aguswork.github.io/DigiFianzTest/",
+			"duration": "1",
+			"descriptionEsp": "Aplicacion de prueba en JS con funcionalidades como arrastrar elementos, toggle de navbar y popups, todo hecho sin librerías ni NPM.",
+			"descriptionEn": "Test app in JS with functionalities like drag and drop, navbar toggle, and popups, all coded without libraries or NPM.",
+			"language": [
+				"/iconos/Git.png",
+				"/iconos/Figma.png",
+				"/iconos/Javascript.png",
+				"/iconos/css.png"
+			],
+			"imagenes": [
+				{
+					"src": "/practicas/digiFianz/digi1.jpg",
+					"alt": "digi1"
+				},
+				{
+					"src": "/practicas/digiFianz/digi2.jpg",
+					"alt": "digi2"
+				},
+				{
+					"src": "/practicas/digiFianz/digi3.jpg",
+					"alt": "digi3"
+				},
+				{
+					"src": "/practicas/digiFianz/digi4.jpg",
+					"alt": "digi4"
+				},
+				{
+					"src": "/practicas/digiFianz/digi5.jpg",
+					"alt": "digi5"
+				},
+				{
+					"src": "/practicas/digiFianz/digi6.jpg",
+					"alt": "digi6"
+				}
+			]
+		},
+		{
+			"image": {
+				"src": "/e-commerce/Mi pagina.PNG",
+				"alt": "Mi pagina"
+			},
+			"category": "Freelance",
+			"client": "Practica",
+			"type": "practice",
+			"date": "12/07/2021",
+			"link": "https://cordobaskatepage.000webhostapp.com/index.html",
+			"duration": "5",
+			"descriptionEsp": "",
+			"descriptionEn": "",
+			"language": ["/iconos/Git.png", "/iconos/Javascript.png", "/iconos/Sass.png"],
+			"imagenes": [
+				{
+					"src": "/e-commerce/Mi pagina.PNG",
+					"alt": "Mi pagina"
+				},
+				{
+					"src": "/e-commerce/MiPagina2.PNG",
+					"alt": "MiPagina2"
+				},
+				{
+					"src": "/e-commerce/MiPagina3.PNG",
+					"alt": "MiPagina3"
+				}
+			]
+		}
+	]
 }

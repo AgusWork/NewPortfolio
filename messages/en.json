@@ -86,7 +86,7 @@
 			}
 		},
 		"FooterSection": {
-			"heading": "Let&apos;s Work Together",
+			"heading": "Let's Work Together",
 			"email": "agustin.cordoba.work@gmail.com",
 			"socials": {
 				"title": "Socials",
@@ -99,6 +99,10 @@
 					"url": "https://github.com/AgusWork"
 				}
 			}
+		},
+		"RelatedSection":{
+			"heading": "Explore other",
+			"headingColor": " Projects"
 		}
 	},
 	"Components": {
@@ -139,7 +143,8 @@
 			"weeks": "weeks",
 			"fallsUnderCategory": "It falls under the category of",
 			"viewProject": "View Project",
-			"technologiesUsed": "Technologies Used",
+			"technologiesUsed": "Used",
+			"technologiesUsedColor": "Technologies",
 			"projectGallery": "Project Gallery",
 			"getInTouch": "Get in Touch",
 			"name": "Name",

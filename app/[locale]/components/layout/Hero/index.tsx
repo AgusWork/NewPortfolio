@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { Icon, InfiniteSlider, SubHeader, WoodenVideo, Button } from "../../ui";
+import { Icon, InfiniteTextSlider, WoodenVideo, Button } from "../../ui";
 import { Playfair_Display } from "next/font/google";
 import { useTheme } from "@/app/[locale]/components/contexts/DarkThemeContext";
 import { useTranslations } from "next-intl";
@@ -83,7 +83,7 @@ export default function EnhancedHero() {
 					</motion.div>
 
 					<motion.div className="hidden md:block mt-[5vh] h-[20vh]" {...fadeIn}>
-						<InfiniteSlider
+						<InfiniteTextSlider
 							words={sliderWords}
 							color1="text-yellow-800"
 							color2="text-teal-500"

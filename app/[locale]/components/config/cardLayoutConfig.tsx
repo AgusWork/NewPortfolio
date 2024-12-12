@@ -1,4 +1,4 @@
-import { projects } from "@/app/[locale]/data/projects";
+import { projects } from "@/app/[locale]/components/data/projects/projects.json";
 import { CardConfig } from "../types/cardLayout";
 
 export const cardLayoutConfig: CardConfig[] = [
