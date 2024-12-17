@@ -44,7 +44,7 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
 	return (
 		<html lang={locale}>
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} w-screen overflow-hidden antialiased relative min-h-screen text-black bg-neutral-50 bg-[radial-gradient(ellipse_80%_80%_at_50%-20%,rgba(245,222,179,.40),rgba(139,69,19,.20))]  transition-colors duration-300 dark:text-white dark:bg-neutral-950 dark:bg-[radial-gradient(ellipse_80%80%_at_50%-20%,rgba(0,128,255,.20),rgba(255,255,255,0))]`}
+				className={`${geistSans.variable} ${geistMono.variable} w-screen overflow-x-hidden antialiased relative min-h-screen text-black bg-neutral-50 bg-[radial-gradient(ellipse_80%_80%_at_50%-20%,rgba(245,222,179,.40),rgba(139,69,19,.20))]  transition-colors duration-300 dark:text-white dark:bg-neutral-950 dark:bg-[radial-gradient(ellipse_80%80%_at_50%-20%,rgba(0,128,255,.20),rgba(255,255,255,0))]`}
 			>
 				<NextIntlClientProvider messages={messages}>
 					<ThemeProvider>
