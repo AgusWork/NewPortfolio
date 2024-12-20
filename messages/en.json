@@ -1,5 +1,9 @@
 {
 	"Sections": {
+		"Layout": {
+			"title": "Agustin Cordoba - Portfolio",
+			"description": "Portfolio made by: Agustin Cordoba"
+		},
 		"HomeSection": {
 			"heading": "Front End ",
 			"headingColor": "Developer",
@@ -107,18 +111,18 @@
 			"heading": "Explore other",
 			"headingColor": " Projects"
 		},
-		"CvSection":{
+		"CvSection": {
 			"heading": "Download my ",
 			"headingColor": "Documents",
-			"Card1":{
+			"Card1": {
 				"title": "Currículum Vitae",
-				"description" : "Detailed experience and skills",
-				"href" : "/pdf/CurriculumVitaeEn.pdf"
+				"description": "Detailed experience and skills",
+				"href": "/pdf/CurriculumVitaeEn.pdf"
 			},
-			"Card2":{
+			"Card2": {
 				"title": "Cover letter",
-				"description" : "My motivation and professional goals",
-				"href" : "/pdf/PresentationEn.pdf"
+				"description": "My motivation and professional goals",
+				"href": "/pdf/PresentationEn.pdf"
 			}
 		}
 	},
