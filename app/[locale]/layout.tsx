@@ -48,7 +48,7 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
 			>
 				<NextIntlClientProvider messages={messages}>
 					<ThemeProvider>
-						<SubHeader style="h-[10vh] py-6" />
+						<SubHeader />
 						{children}
 					</ThemeProvider>
 				</NextIntlClientProvider>

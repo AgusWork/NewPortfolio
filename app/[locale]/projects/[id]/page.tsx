@@ -138,7 +138,7 @@ export default async function Challenge(props: { params: tParams }) {
 				<Slides images={clientData.imagenes} />
 			</section>
 
-			<section id="technologies" className={`py-20 `}>
+			<section id="languages" className={`py-20 `}>
 				<div className="container mx-auto px-4">
 					<div className={`${raleway.className} text-4xl font-bold mb-8 flex flex-col md:flex-row`}>
 						<p className="mr-2 text-teal-500 ">{t("technologiesUsedColor")}</p>

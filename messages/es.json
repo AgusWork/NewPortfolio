@@ -30,6 +30,9 @@
 			"cta": "Ver mi trabajo"
 		},
 		"FeaturedSection": {
+			"heading": "Mis   ",
+			"headingColor": "habilidades",
+			"headingEnd": "blandas",
 			"cleanCode": {
 				"title": "Código limpio",
 				"description": "Escribo código limpio, mantenible y eficiente que escala con tu proyecto."
@@ -103,31 +106,69 @@
 		"RelatedSection": {
 			"heading": "Explore other",
 			"headingColor": " Projects"
+		},
+		"CvSection":{
+			"heading": "Descarga mis ",
+			"headingColor": "Documentos",
+			"Card1":{
+				"title": "Currículum Vitae",
+				"description" : "Experiencia y habilidades detalladas",
+				"href" : "/pdf/CurriculumVitaeEsp.pdf"
+			},
+			"Card2":{
+				"title": "Carta de Presentación",
+				"description" : "Mi motivación y objetivos profesionales",
+				"href" : "/pdf/PresentationEsp.pdf"
+			}
 		}
 	},
 	"Components": {
 		"SubHeader": {
 			"heading": "Contáctame",
 			"links": {
-				"about": {
-					"name": "Acerca de",
-					"href": "about"
-				},
-				"works": {
-					"name": "Trabajos",
-					"href": "works"
-				},
-				"contact": {
-					"name": "Contacto",
-					"href": "contact"
-				},
-				"languages": {
-					"name": "Lenguajes",
-					"href": "languages"
+				"home": {
+					"about": {
+						"name": "Acerca de",
+						"href": "about"
+					},
+					"work": {
+						"name": "Trabajos",
+						"href": "work"
+					},
+					"contact": {
+						"name": "Contacto",
+						"href": "contact"
+					},
+					"languages": {
+						"name": "Lenguajes",
+						"href": "languages"
+					},
+					"practice": {
+						"name": "Practicas",
+						"href": "practice"
+					}
 				},
 				"projects": {
-					"name": "Proyectos",
-					"href": "projects"
+					"about": {
+						"name": "Acerca de",
+						"href": "about"
+					},
+					"gallery": {
+						"name": "Galeria",
+						"href": "gallery"
+					},
+					"languages": {
+						"name": "Lenguages",
+						"href": "languages"
+					},
+					"relatedProjects": {
+						"name": "Projectos Relacionados",
+						"href": "relatedProjects"
+					},
+					"contact": {
+						"name": "Contacto",
+						"href": "contact"
+					}
 				}
 			}
 		}

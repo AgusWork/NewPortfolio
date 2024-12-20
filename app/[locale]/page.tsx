@@ -1,6 +1,6 @@
 import React from "react";
 import { Features } from "./components/ui";
-import { AboutMe, Footer, Hero, Languages, Projects } from "./components/layout";
+import { AboutMe, CV, Footer, Hero, Languages, Projects } from "./components/layout";
 import ThemeWrapper from "./components/contexts/ThemeWrapper";
 
 export default function Home() {
@@ -28,6 +28,7 @@ export default function Home() {
 					/>
 					<Languages />
 					<Features />
+					<CV />
 				</main>
 				<Footer />
 			</div>
