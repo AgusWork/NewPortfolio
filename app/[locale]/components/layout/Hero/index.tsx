@@ -35,6 +35,9 @@ export default function EnhancedHero() {
 
 	const sliderWords = keys.map((key) => t(`sliderWords.${key}.title`));
 
+	const handleScrollToSection = (id: string) => {
+		document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+	};
 	return (
 		<div className={`${theme === "dark" ? "dark" : ""} h-screen`}>
 			<div className="bg-background h-full text-foreground transition-colors duration-300 dark:bg-background-dark dark:text-foreground-dark">
@@ -72,7 +75,10 @@ export default function EnhancedHero() {
 								</div>
 							</motion.div>
 							<motion.div {...fadeIn} className="hidden md:block mt-12">
-								<Button className="text-lg px-8 py-4 bg-teal-500 hover:bg-teal-600 text-white">
+								<Button
+									onClick={() => handleScrollToSection("work")}
+									className="text-lg px-8 py-4 bg-teal-500 hover:bg-teal-600 text-white"
+								>
 									{t("cta")} <ArrowRight className="ml-2" />
 								</Button>
 							</motion.div>

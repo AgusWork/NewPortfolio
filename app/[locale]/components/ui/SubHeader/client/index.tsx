@@ -43,9 +43,11 @@ export function ClientSubHeaderActions() {
         <Button variant="outline" onClick={toggleTheme}>
           {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
         </Button>
+        <a href="https://cal.com/agustin-maria-cordoba/30min" target="_blank">
         <Button className="hidden md:block" variant="outline">
           {t("heading")}
         </Button>
+        </a>
         <LanguageSwitcher />
         <button
           className="border border-teal-500 py-2 px-3 text-teal-500 rounded-lg hover:bg-white"
