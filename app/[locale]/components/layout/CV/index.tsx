@@ -48,7 +48,7 @@ export default function InteractiveCardsDesign() {
 				</motion.div>
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10 ">
 					<motion.div
-						className="w-full md:w-[50%] flex flex-col justify-between ml-auto bg-white dark:bg-transparent dark:border-teal-500 dark:border dark:text-teal-500 p-6 rounded-lg text-white cursor-pointer dark:hover:text-white dark:border-gray-700 dark:hover:border-teal-800 dark:hover:bg-teal-800"
+						className="w-full md:w-[50%] flex flex-col justify-between ml-auto bg-white dark:bg-transparent dark:border-teal-500 dark:border dark:text-teal-500 p-6 rounded-lg text-green-900 cursor-pointer dark:hover:text-white dark:border-gray-700 dark:hover:border-teal-800 dark:hover:bg-teal-800"
 						onHoverStart={() => setHoveredCard("cv")}
 						onHoverEnd={() => setHoveredCard(null)}
 					>
@@ -59,7 +59,7 @@ export default function InteractiveCardsDesign() {
 						<Button href={t("Card1.href")}/>
 					</motion.div>
 					<motion.div
-						className="w-full md:w-[50%] flex flex-col justify-between mr-auto bg-white dark:bg-transparent dark:border-teal-500 dark:border dark:text-teal-500 p-6 rounded-lg text-white cursor-pointer dark:hover:text-white dark:border-gray-700 dark:hover:border-teal-800 dark:hover:bg-teal-800"
+						className="w-full md:w-[50%] flex flex-col justify-between mr-auto bg-white dark:bg-transparent dark:border-teal-500 dark:border dark:text-teal-500 p-6 rounded-lg text-green-900 cursor-pointer dark:hover:text-white dark:border-gray-700 dark:hover:border-teal-800 dark:hover:bg-teal-800"
 						onHoverStart={() => setHoveredCard("letter")}
 						onHoverEnd={() => setHoveredCard(null)}
 					>
