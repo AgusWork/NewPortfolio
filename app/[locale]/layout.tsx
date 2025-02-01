@@ -34,6 +34,11 @@ export async function generateMetadata({ params }: { params: { locale: Locale } 
   return {
     title: t("Sections.Layout.title"),
     description: t("Sections.Layout.description"),
+    icons: {
+      icon: '/FotoCV1-circular2.png',
+   
+    },
+    
   };
 }
 
