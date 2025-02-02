@@ -22,11 +22,10 @@ export function ClientSubHeaderActions() {
   const [keys, setKeys] = useState<string[]>([]);
 
   useEffect(() => {
-    if (pathname.includes('projects')) {
-      setKeys(['about', 'gallery', 'languages', "relatedProjects", 'contact']);
-    } else {
-      setKeys(['about', 'work', 'practice', 'languages', 'contact']);
-    }
+    setKeys(pathname.includes('projects') ? 
+      ['about', 'gallery', 'languages', "relatedProjects", 'contact'] :
+      ['about', 'work', 'practice', 'languages', 'contact']
+    );
   }, [pathname]);
 
   const links = keys.map((key) => {
