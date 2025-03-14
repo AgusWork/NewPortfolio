@@ -39,21 +39,21 @@ export default function EnhancedHero() {
 		document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 	};
 	return (
-		<div className={`${theme === "dark" ? "dark" : ""} h-screen`}>
-			<div className="bg-background h-full text-foreground transition-colors duration-300 dark:bg-background-dark dark:text-foreground-dark">
-				<section className="container mx-auto px-4 my-[5vh] flex flex-col justify-center w-full h-[80vh] ">
+		<div className={`${theme === "dark" ? "dark" : ""} `}>
+			<div className="bg-background h-full text-foreground transition-colors duration-300 dark:bg-background-dark dark:text-foreground-dark px-[10vw]">
+				<section className="px-4 my-[5vh] flex flex-col justify-center w-full h-[75vh] ">
 					<motion.div
-						className="flex flex-col lg:flex-row w-full  md:max-h-[60vh] p-7 md:p-10 bg-gradient-to-br from-teal-50 to-sky-50 dark:from-teal-900 dark:to-sky-900 rounded-3xl shadow-xl"
+						className="flex flex-col w-full lg:flex-row w-full  md:max-h-[60vh] p-7 md:p-10 bg-gradient-to-br from-teal-50 to-sky-50 dark:from-teal-900 dark:to-sky-900 rounded-3xl shadow-xl"
 						{...boxAnimation}
 					>
 						<div className="flex flex-col flex-grow">
-							<motion.div {...fadeIn} className="max-w-4xl">
+							<motion.div {...fadeIn} className="">
 								<h1
-									className={`${playFair.className} text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6`}
+									className={`${playFair.className} text-4xl md:text-6xl  2xl:text-7xl font-bold tracking-tight mb-6`}
 								>
 									{t("heading")} <span className="text-teal-500">{t("headingColor")}</span>
 								</h1>
-								<motion.p {...fadeIn} className="mt-6 text-md md:text-xl text-muted-foreground">
+								<motion.p {...fadeIn} className="mt-6 text-md md:text-xl 2xl:text-2xl text-muted-foreground">
 									{t("subheading")}
 								</motion.p>
 							</motion.div>
@@ -65,19 +65,19 @@ export default function EnhancedHero() {
 							>
 								<div className="flex items-center gap-2">
 									<Icon name="award" className="text-teal-500 h-6 w-6" />
-									<span className="text-md md:text-xl text-muted-foreground">
+									<span className="text-md md:text-xl text-muted-foreground lg:text-2xl 2xl:text-3xl">
 										{t("experience")}
 									</span>
 								</div>
 								<div className="flex items-center gap-2">
 									<Icon name="globe" className="text-yellow-400 h-6 w-6" />
-									<span className="text-md md:text-xl text-muted-foreground">{t("projects")}</span>
+									<span className="text-md md:text-xl text-muted-foreground lg:text-2xl 2xl:text-3xl">{t("projects")}</span>
 								</div>
 							</motion.div>
 							<motion.div {...fadeIn} className="hidden md:block mt-12">
 								<Button
 									onClick={() => handleScrollToSection("work")}
-									className="text-lg px-8 py-4 bg-teal-500 hover:bg-teal-600 text-white"
+									className="text-lg px-8 py-4 2xl:px-12 2xl:py-8 bg-teal-500 hover:bg-teal-600 text-white lg:text-2xl 2xl:text-3xl"
 								>
 									{t("cta")} <ArrowRight className="ml-2" />
 								</Button>

@@ -51,11 +51,13 @@
 			}
 		},
 		"LanguageSection": {
-			"heading": "Mis Lenguages"
+			"heading": "Mis Lenguajes"
 		},
 		"SelectedPracticeSection": {
-			"heading": "Prácticas",
-			"headingColor": "Seleccionadas",
+			"heading": "Trabajos",
+			"headingColor": "Profesionales",
+			"heading2": "Prácticas",
+			"headingColor2": "Seleccionadas",
 			"seeAll": "Ver todo",
 			"projects": {
 				"ecommerce": {
@@ -162,11 +164,11 @@
 						"href": "gallery"
 					},
 					"languages": {
-						"name": "Lenguages",
+						"name": "Lenguajes",
 						"href": "languages"
 					},
 					"relatedProjects": {
-						"name": "Projectos Relacionados",
+						"name": "Proyectos Relacionados",
 						"href": "relatedProjects"
 					},
 					"contact": {

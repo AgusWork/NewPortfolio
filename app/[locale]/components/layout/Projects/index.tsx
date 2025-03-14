@@ -7,7 +7,7 @@ import { useTheme } from "@/app/[locale]/components/contexts/DarkThemeContext";
 import GralLayout from "../GralLayout";
 import { CardSection, CardWork } from "../../ui";
 import projectsData from "../../data/projects/projects.json";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import "../../styles/custom-scrollbar-sectionCard.css";
 
 const playFair = Playfair_Display({ subsets: ["latin"] });
@@ -19,7 +19,7 @@ const fadeIn = {
 };
 
 interface SelectedSectionProps {
-  type: "work" | "practice";
+  type: "Trabajo Profesional" | "Practica";
   headingText: string;
   headingColorText: string;
   seeAllText: string;
@@ -30,8 +30,6 @@ interface SelectedSectionProps {
 
 export default function SelectedSection({
   type,
-  headingText,
-  headingColorText,
   justifyEnd = false,
   underlineOriginRight = false,
 }: SelectedSectionProps) {
@@ -39,20 +37,23 @@ export default function SelectedSection({
   const isInView = useInView(ref, { once: true, amount: 0.2 });
   const { theme } = useTheme();
   const locale = useLocale();
+  const t = useTranslations("Sections.SelectedPracticeSection");
 
   const projectsItems = projectsData.projects
-    .filter((p) => p.type == type)
+    .filter((p) => p.typeEsp == type)
     .map((item) => ({
       title: item.client,
       category: item.category,
+      typeEn: item.typeEn,
+      typeEsp: item.typeEsp,
       image: item.image,
       link:`/${locale}/projects/${item.client.replace(/\s+/g, "-")}`,
     }));
 
   return (
-    <GralLayout className={`pt-10 md:pt-20 h-full`}>
+    <GralLayout className={`pt-10 md:pt-20 2xl:px-[15vw] h-full`}>
       <motion.h2
-        id={type}
+        id={type == "Trabajo Profesional" ? "work" : "practice"}
         {...fadeIn}
         ref={ref}
         className={`${
@@ -61,9 +62,9 @@ export default function SelectedSection({
           justifyEnd ? "md:justify-end" : ""
         } font-bold mb-12 relative pb-6`}
       >
-        {headingText}{" "}
+        {type == "Trabajo Profesional" ? t("heading") : t("heading2")  }{" "}
         <p className={`${playFair.className} ml-4 text-teal-500`}>
-          {headingColorText}
+          {type == "Trabajo Profesional" ? t("headingColor") : t("headingColor2")}
         </p>
         <motion.div
           initial={{ scaleX: 0 }}

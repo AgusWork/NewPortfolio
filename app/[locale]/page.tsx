@@ -11,14 +11,14 @@ export default function Home() {
 					<Hero />
 					<AboutMe />
 					<Projects
-						type="work"
+						type="Trabajo Profesional"
 						headingText="Selected"
 						headingColorText="Work"
 						seeAllText="Ver Todos"
 						translationKey="Sections.SelectedWorkSection"
 					/>
 					<Projects
-						type="practice"
+						type="Practica"
 						headingText="Selected"
 						headingColorText="Practice"
 						seeAllText="See All"

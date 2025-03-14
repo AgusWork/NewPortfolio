@@ -15,7 +15,8 @@ type Image = {
 };
 
 type WorkItem = {
-	type: string;
+	typeEsp: string;
+	typeEn: string;
 	image: Image;
 	category: string;
 	client: string;
@@ -62,41 +63,41 @@ export default async function Challenge(props: { params: tParams }) {
 	return (
 		<main className="min-h-screen">
 			<section id="hero" className="py-20 h-[70vh] flex items-center">
-				<div className="container mx-auto px-4">
-					<p className={`${playFair.className} text-2xl w-full flex flex-row items-center`}>
-						<span className="text-xl mr-4">{t("projectType")}:</span>
-						{clientData.type}
-					</p>
+				<div className=" mx-[10vw] px-4">
 					<div className={`${playFair.className} max-w-4xl md:mt-[10vh]`}>
 						<h1
-							className={`${raleway.className} text-[#40A0A0] text-6xl md:text-7xl lg:text-8xl font-bold mb-12`}
+							className={`${raleway.className}   text-[#40A0A0] text-4xl md:text-5xl lg:text-7xl 2xl:text-8xl font-bold my-12`}
 						>
 							{clientData.client}
 						</h1>
-						<div className="grid grid-cols-2 gap-8 mb-16">
+					<p className={`${playFair.className} text-md md:text-4xl  w-full flex flex-row items-center`}>
+						<span className="text-md md:text-4xl  mr-4">{t("projectType")}:</span>
+						{locale == "es" ? clientData.typeEsp : clientData.typeEn}
+					</p>
+						<div className="grid grid-cols-2 gap-8 my-16">
 							<div>
 								<ColorThemeText
 									text={t("category")}
 									darkThemeColor="text-teal-500"
 									lightThemeColor="text-black"
-									className="text-sm mb-1"
+									className="text-sm mb-1 md:text-3xl"
 								/>
-								<p>{clientData.category}</p>
+								<p className="text-sm mb-1 md:text-2xl">{clientData.category}</p>
 							</div>
 							<div>
 								<ColorThemeText
 									text={t("date")}
 									darkThemeColor="text-teal-500"
 									lightThemeColor="text-black"
-									className="text-sm mb-1"
+									className="text-sm mb-1 md:text-3xl"
 								/>
-								<p>{clientData.date}</p>
+								<p className="text-sm mb-1 md:text-2xl">{clientData.date}</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section className="m-[5vw] mt-0">
+			<section className="m-[5vw] mx-[10vw] mt-0">
 				<div className="w-full h-[60vh] relative  ">
 					<Image
 						src={clientData.image.src}

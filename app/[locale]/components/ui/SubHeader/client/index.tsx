@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Menu, Moon, Sun } from 'lucide-react';
 import { useTheme } from "@/app/[locale]/components/contexts/DarkThemeContext";
 import { Button, LanguageSwitcher,  } from "../../../ui";
-import { useTranslations } from "next-intl";
+import {  useTranslations } from "next-intl";
 import { usePathname } from 'next/navigation';
 import dynamic from 'next/dynamic';
 
@@ -13,29 +13,29 @@ const SlideOutMenu = dynamic(() => import('../../SlideOutMenu'), {
 });
 
 
+
 export function ClientSubHeaderActions() {
   const { theme, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const t = useTranslations("Components.SubHeader");
   const pathname = usePathname();
 
-  const [keys, setKeys] = useState<string[]>([]);
+  const [links, setLinks] = useState<{ name: string; href: string }[]>([]);
 
   useEffect(() => {
-    setKeys(pathname.includes('projects') ? 
-      ['about', 'gallery', 'languages', "relatedProjects", 'contact'] :
-      ['about', 'work', 'practice', 'languages', 'contact']
-    );
-  }, [pathname]);
-
-  const links = keys.map((key) => {
-    const section = pathname.includes('projects') ? 'projects' : 'home';
-    return {
-      name: t(`links.${section}.${key}.name`),
-      href: t(`links.${section}.${key}.href`),
-    };
-  });
-
+      const section = pathname.includes('projects') ? 'projects' : 'home';
+      const currentKeys = section === 'projects'
+          ? ['about', 'gallery', 'languages', 'relatedProjects', 'contact']
+          : ['about', 'work', 'practice', 'languages', 'contact'];
+  
+      const newLinks = currentKeys.map((key) => ({
+          name: t(`links.${section}.${key}.name`),
+          href: t(`links.${section}.${key}.href`),
+      }));
+  
+      setLinks(newLinks);
+  }, [pathname, t]);
+  
   return (
     <>
       <div className="flex items-center gap-2 md:gap-4">
