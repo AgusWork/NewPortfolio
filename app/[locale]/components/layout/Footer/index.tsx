@@ -14,8 +14,8 @@ export default function Footer() {
 		<section id="contact" className="py-16 md:py-32 px-10 md:px-32 bg-gray-50 rounded-t-[10%]">
 			<div className="mx-auto">
 				<motion.h1
-					className={`text-5xl md:text-9xl font-bold mb-24 bg-gradient-to-r ${
-						theme === "dark" ? "from-gray-100 to-gray-500" : "from-gray-700 to-gray-400"
+					className={`text-5xl md:text-9xl font-bold pb-24 bg-gradient-to-r ${
+						theme === "dark" ? "from-gray-200 to-gray-500" : "from-gray-700 to-gray-400"
 					} bg-clip-text text-transparent`}
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}

@@ -5,6 +5,7 @@
 			"description": "Portfolio hecho por: Agustin Cordoba"
 		},
 		"HomeSection": {
+			"opositeheading": "Front End Developer",
 			"heading": "Desarrollador ",
 			"headingColor": "Front End",
 			"subheading": "Diseño sitios web visualmente atractivos e intuitivos que permiten a las empresas destacar y conectar eficazmente con su audiencia.",
@@ -23,6 +24,23 @@
 				},
 				"innovation": {
 					"title": "Innovación"
+				},
+				"responsive":{
+					"title":"Responsive"
+				}
+			},
+			"gifButtons":{
+				"about": {
+					"title": "Sobre mi"
+				},
+				"contact": {
+					"title": "Contacto"
+				},
+				"projects": {
+					"title": "Proyectos"
+				},
+				"languages": {
+					"title": "Lenguajes"
 				}
 			}
 		},
@@ -51,7 +69,9 @@
 			}
 		},
 		"LanguageSection": {
-			"heading": "Mis Lenguajes"
+			"heading": "Mis Lenguajes",
+			"button-more" : "Ver mas",
+			"button-less" : "Ver menos"
 		},
 		"SelectedPracticeSection": {
 			"heading": "Trabajos",
@@ -119,7 +139,7 @@
 			"Card1": {
 				"title": "Currículum Vitae",
 				"description": "Experiencia y habilidades detalladas",
-				"href": "/pdf/CurriculumVitaeEsp.pdf"
+				"href": "/pdf/Currículum Vitae - Agustin Cordoba.pdf"
 			},
 			"Card2": {
 				"title": "Carta de Presentación",

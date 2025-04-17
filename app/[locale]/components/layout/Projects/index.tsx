@@ -51,7 +51,7 @@ export default function SelectedSection({
     }));
 
   return (
-    <GralLayout className={`pt-10 md:pt-20 2xl:px-[15vw] h-full`}>
+    <div className={`w-full h-full`}>
       <motion.h2
         id={type == "Trabajo Profesional" ? "work" : "practice"}
         {...fadeIn}
@@ -89,13 +89,13 @@ export default function SelectedSection({
           </svg>
         </motion.div>
       </motion.h2>
-      <div className="w-full h-[80vh] overflow-y-auto custom-scrollbar">
+      <div className="w-full h-[80vh] 2xl:h-[60vh] overflow-y-auto overflow-x-hidden custom-scrollbar">
         <div className="hidden md:flex flex-col gap-8 w-full min-h-full">
           <CardSection projects={projectsItems} theme={theme} />
         </div>
         <div className="md:hidden flex flex-col gap-8 w-full min-h-full">
           {projectsItems.map((item, index) => (
-            <div className="w-full h-[60vh]" key={index}>
+            <div className="w-full h-[60vh] 2xl:h-[40vh]" key={index}>
               <CardWork
                 category={item.category}
                 image={item.image}
@@ -107,6 +107,6 @@ export default function SelectedSection({
           ))}
         </div>
       </div>
-    </GralLayout>
+    </div>
   );
 }

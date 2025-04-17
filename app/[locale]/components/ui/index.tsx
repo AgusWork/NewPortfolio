@@ -1,5 +1,4 @@
 export { default as Button } from "./Button";
-export { default as Features } from "../layout/Features";
 export { default as SubHeader } from "./SubHeader/server";
 export { default as InfiniteTextSlider } from "./InfiniteSlider/Text";
 export { default as InfiniteIconSlider } from "./InfiniteSlider/Icons";

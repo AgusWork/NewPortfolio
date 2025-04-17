@@ -96,7 +96,7 @@ const LanguageItem: React.FC<{ language: Language }> = ({ language }) => {
 			<language.icon
 				className={`w-6 h-6 ${theme === "dark" ? "text-teal-400" : "text-teal-600"}`}
 			/>
-			<span>{language.name}</span>
+			<span className="2xl:text-xl">{language.name}</span>
 		</li>
 	);
 };
@@ -106,6 +106,7 @@ const SkillCard: React.FC<{ category: SkillCategory; index: number }> = ({ categ
 	const [showAll, setShowAll] = useState(false);
 	const displayedLanguages = showAll ? category.languages : category.languages.slice(0, 5);
 	const { theme } = useTheme();
+	const t = useTranslations("Sections.LanguageSection");
 
 	return (
 		<motion.div
@@ -114,7 +115,8 @@ const SkillCard: React.FC<{ category: SkillCategory; index: number }> = ({ categ
 				theme === "dark"
 					? "border-gray-700 hover:border-teal-800 hover:bg-teal-800"
 					: "border-2 border-white hover:border-teal-800 hover:bg-teal-800 hover:text-white"
-			} shadow-sm`}
+			} shadow-sm h-fit`}
+		
 			initial={{ opacity: 0, y: 100 }}
 			animate={isInView ? { opacity: 1, y: 0 } : {}}
 			transition={{
@@ -126,7 +128,7 @@ const SkillCard: React.FC<{ category: SkillCategory; index: number }> = ({ categ
 				<category.icon
 					className={`w-8 h-8 ${theme === "dark" ? "text-teal-400 " : "text-teal-600"}`}
 				/>
-				<h3 className="text-2xl font-bold">{category.name}</h3>
+				<h3 className="text-2xl  font-bold">{category.name}</h3>
 			</div>
 			<ul className="space-y-2 mb-4">
 				{displayedLanguages.map((lang) => (
@@ -135,14 +137,17 @@ const SkillCard: React.FC<{ category: SkillCategory; index: number }> = ({ categ
 			</ul>
 			{category.languages.length > 5 && (
 				<button
-					onClick={() => setShowAll(!showAll)}
+				onClick={(e) => {
+					e.stopPropagation()
+					setShowAll(!showAll)
+				  }}
 					className={`${
 						theme === "dark"
 							? "text-teal-400 hover:text-teal-300"
 							: "text-teal-600 hover:text-teal-700"
 					} transition-colors duration-200 flex items-center`}
 				>
-					{showAll ? "See Less" : "See More"}
+					{showAll ? t("button-less") : t("button-more")}
 					<ChevronDownIcon
 						className={`w-5 h-5 ml-1 transform transition-transform duration-200 ${
 							showAll ? "rotate-180" : ""
@@ -192,8 +197,8 @@ const LanguageSkills: React.FC = () => {
 	}));
 
 	return (
-		<section id="languages" className={`py-10 md:py-20  ${theme === "dark" ? "" : ""}`}>
-			<div className="max-w-7xl mx-auto px-4">
+		<section id="languages" className={`py-10 md:py-20 md:px-[15vw] 2xl:px-[20vw] ${theme === "dark" ? "" : ""}`}>
+			<div className="w-full mx-auto px-4">
 				<motion.div
 					ref={ref}
 					className="relative mb-12"

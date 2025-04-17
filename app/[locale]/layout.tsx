@@ -36,9 +36,7 @@ export async function generateMetadata({ params }: { params: { locale: Locale } 
     description: t("Sections.Layout.description"),
     icons: {
       icon: '/FotoCV1-circular2.png',
-   
     },
-    
   };
 }
 
@@ -47,7 +45,6 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
   if (!locales.includes(locale)) {
     notFound();
   }
-
   const messages = useMessages();
 
   return (

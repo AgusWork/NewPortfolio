@@ -48,9 +48,9 @@ const Features = () => {
 	};
 
 	return (
-		<div className="py-10 md:py-20 px-6 xs:px-10 md:mb-20 sm:px-20 md:px-0">
-			<div className="max-w-7xl mx-auto px-4">
-      <motion.div
+		<div className="py-10 md:py-20 px-6 xs:px-10 md:mb-20 sm:px-20 md:px-0  px-[15vw] 2xl:px-[20vw]">
+			<div className="mx-auto md:px-4">
+				<motion.div
 					ref={ref}
 					className="relative mb-12 "
 					initial={{ opacity: 0, y: -50 }}
@@ -63,7 +63,7 @@ const Features = () => {
 					>
 						{t("heading")}
 						<p className="text-teal-500 ml-2">{t("headingColor")}</p>
-            <p className="ml-2">{t("headingEnd")}</p>
+						<p className="ml-2">{t("headingEnd")}</p>
 					</motion.h2>
 					<motion.div
 						initial={{ scaleX: 0 }}

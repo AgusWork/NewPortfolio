@@ -12,8 +12,8 @@ export default function InteractiveCardsDesign() {
 	const isInView = useInView(ref, { once: true, amount: 0.2 });
 
 	return (
-		<div className="py-10 md:py-20 px-6 xs:px-10 md:mb-20 sm:px-20 md:px-0">
-			<div className="max-w-7xl mx-auto px-4">
+		<div className="py-10 md:py-20  2xl:px-[20vw] px-6 xs:px-10 md:mb-20 sm:px-20 md:px-0">
+			<div className="max-w-7xl 2xl:max-w-full mx-auto 2xl:mx-0  px-4">
 				<motion.div
 					ref={ref}
 					className="relative mb-12 "
@@ -48,24 +48,24 @@ export default function InteractiveCardsDesign() {
 				</motion.div>
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10 ">
 					<motion.div
-						className="w-full md:w-[50%] flex flex-col justify-between ml-auto bg-white dark:bg-transparent dark:border-teal-500 dark:border dark:text-teal-500 p-6 rounded-lg text-green-900 cursor-pointer dark:hover:text-white dark:border-gray-700 dark:hover:border-teal-800 dark:hover:bg-teal-800"
+						className="w-full md:w-[50%] 2xl:w-[70%] flex flex-col justify-between ml-auto bg-white dark:bg-transparent dark:border-teal-500 dark:border dark:text-teal-500 p-6 rounded-lg text-green-900 cursor-pointer dark:hover:text-white dark:border-gray-700 dark:hover:border-teal-800 dark:hover:bg-teal-800"
 						onHoverStart={() => setHoveredCard("cv")}
 						onHoverEnd={() => setHoveredCard(null)}
 					>
 						<div className="flex flex-col">
-							<h3 className="text-xl font-semibold mb-2">{t("Card1.title")}</h3>
-							<p className="mb-4">{t("Card1.description")}</p>
+							<h3 className="text-xl 2xl:text-2xl font-semibold mb-2">{t("Card1.title")}</h3>
+							<p className="mb-4 2xl:text-lg">{t("Card1.description")}</p>
 						</div>
 						<Button href={t("Card1.href")}/>
 					</motion.div>
 					<motion.div
-						className="w-full md:w-[50%] flex flex-col justify-between mr-auto bg-white dark:bg-transparent dark:border-teal-500 dark:border dark:text-teal-500 p-6 rounded-lg text-green-900 cursor-pointer dark:hover:text-white dark:border-gray-700 dark:hover:border-teal-800 dark:hover:bg-teal-800"
+						className="w-full md:w-[50%] 2xl:w-[70%] flex flex-col justify-between mr-auto bg-white dark:bg-transparent dark:border-teal-500 dark:border dark:text-teal-500 p-6 rounded-lg text-green-900 cursor-pointer dark:hover:text-white dark:border-gray-700 dark:hover:border-teal-800 dark:hover:bg-teal-800"
 						onHoverStart={() => setHoveredCard("letter")}
 						onHoverEnd={() => setHoveredCard(null)}
 					>
 						<div className="flex flex-col">
-							<h3 className="text-xl font-semibold mb-2">{t("Card2.title")}</h3>
-							<p className="mb-4">{t("Card2.description")}</p>
+							<h3 className="text-xl font-semibold mb-2  2xl:text-2xl">{t("Card2.title")}</h3>
+							<p className="mb-4 2xl:text-lg">{t("Card2.description")}</p>
 						</div>
 						<Button href={t("Card2.href")}/>
 					</motion.div>

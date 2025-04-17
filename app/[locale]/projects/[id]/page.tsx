@@ -1,182 +1,263 @@
-import { Suspense } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { notFound } from "next/navigation";
-import { Playfair_Display, Raleway } from "next/font/google";
-import { ColorThemeText,  Slides, InfiniteIconSlider } from "../../components/ui";
-import { getLocale, getTranslations } from "next-intl/server";
-import projectsData from "@/app/[locale]/components/data/projects/projects.json";
-import { Footer, RelatedProjects } from "../..//components/layout";
-import { FaExternalLinkAlt } from "react-icons/fa";
+import { Suspense } from "react"
+import Image from "next/image"
+import Link from "next/link"
+import { notFound } from "next/navigation"
+import { Playfair_Display, Raleway } from "next/font/google"
+import { ColorThemeText, Slides, InfiniteIconSlider } from "../../components/ui"
+import { getLocale, getTranslations } from "next-intl/server"
+import projectsData from "@/app/[locale]/components/data/projects/projects.json"
+import { Footer, RelatedProjects } from "../../components/layout"
+import { FaExternalLinkAlt, FaCalendarAlt, FaLayerGroup } from "react-icons/fa"
 
-type Image = {
-	src: string;
-	alt?: string;
-};
+type ProjectImage = {
+  src: string
+  alt?: string
+}
 
 type WorkItem = {
-	typeEsp: string;
-	typeEn: string;
-	image: Image;
-	category: string;
-	client: string;
-	date: string;
-	link: string;
-	duration: string;
-	language: string[];
-	imagenes: Image[];
-	descriptionEsp: string;
-	descriptionEn: string;
-};
+  typeEsp: string
+  typeEn: string
+  image: ProjectImage
+  category: string
+  client: string
+  date: string
+  link: string
+  duration: string
+  language: string[]
+  imagenes: ProjectImage[]
+  descriptionEsp: string
+  descriptionEn: string
+}
 
 const playFair = Playfair_Display({
-	subsets: ["latin"],
-	weight: ["400", "500", "600", "700"],
-	style: ["normal", "italic"],
-	display: "swap",
-});
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+})
 
 const raleway = Raleway({
-	subsets: ["latin"],
-	weight: ["400", "500", "600", "700"],
-	style: ["normal", "italic"],
-	display: "swap",
-});
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+})
 
 async function getClientData(id: string): Promise<WorkItem | undefined> {
-	return projectsData.projects.find(
-		(item) => item.client.toLowerCase().replace(/\s+/g, "-") === id.toLowerCase()
-	);
+  return projectsData.projects.find((item) => item.client.toLowerCase().replace(/\s+/g, "-") === id.toLowerCase())
 }
-type tParams = Promise<{ id: string }>;
+type tParams = Promise<{ id: string }>
 
 export default async function Challenge(props: { params: tParams }) {
-	const { id } = await props.params;
-	const locale = await getLocale();
+  const { id } = await props.params
+  const locale = await getLocale()
 
-	const [clientData, t] = await Promise.all([getClientData(id), getTranslations("Pages.Projects")]);
+  const [clientData, t] = await Promise.all([getClientData(id), getTranslations("Pages.Projects")])
 
-	if (!clientData) {
-		notFound();
-	}
+  if (!clientData) {
+    notFound()
+  }
 
-	return (
-		<main className="min-h-screen">
-			<section id="hero" className="py-20 h-[70vh] flex items-center">
-				<div className=" mx-[10vw] px-4">
-					<div className={`${playFair.className} max-w-4xl md:mt-[10vh]`}>
-						<h1
-							className={`${raleway.className}   text-[#40A0A0] text-4xl md:text-5xl lg:text-7xl 2xl:text-8xl font-bold my-12`}
-						>
-							{clientData.client}
-						</h1>
-					<p className={`${playFair.className} text-md md:text-4xl  w-full flex flex-row items-center`}>
-						<span className="text-md md:text-4xl  mr-4">{t("projectType")}:</span>
-						{locale == "es" ? clientData.typeEsp : clientData.typeEn}
-					</p>
-						<div className="grid grid-cols-2 gap-8 my-16">
-							<div>
-								<ColorThemeText
-									text={t("category")}
-									darkThemeColor="text-teal-500"
-									lightThemeColor="text-black"
-									className="text-sm mb-1 md:text-3xl"
-								/>
-								<p className="text-sm mb-1 md:text-2xl">{clientData.category}</p>
-							</div>
-							<div>
-								<ColorThemeText
-									text={t("date")}
-									darkThemeColor="text-teal-500"
-									lightThemeColor="text-black"
-									className="text-sm mb-1 md:text-3xl"
-								/>
-								<p className="text-sm mb-1 md:text-2xl">{clientData.date}</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section className="m-[5vw] mx-[10vw] mt-0">
-				<div className="w-full h-[60vh] relative  ">
-					<Image
-						src={clientData.image.src}
-						alt={clientData.image.alt || clientData.image.src}
-						fill
-						className="rounded-2xl"
-					/>
-				</div>
-			</section>
+  return (
+    <main className="min-h-screen">
+      {/* Redesigned Hero Section */}
+      <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src={clientData.image.src || "/placeholder.svg"}
+            alt={clientData.image.alt || clientData.client}
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80"></div>
+        </div>
 
-			<section id="about" className="py-20 ">
-				<div
-					className={`container mx-auto px-4 flex flex-col ${
-						!clientData.descriptionEsp && " w-full justify-center"
-					}`}
-				>
-					{clientData.descriptionEsp && (
-					/* <Star color="bg-white" className="w-full max-w-3xl mx-auto">*/
-							<h2
-								className={`${playFair.className}  text-3xl pb-4 md:text-4xl font-bold mb-4 md:mb-8  text-slate-800 mx-auto border-b-4  border-b-slate-500 dark:text-white`}
-							>
-								{t("about")} {clientData.client}
-							</h2>
-						/* </Star> */
-					)}
-					{clientData.link && (
-						<div
-							className={`min-h-full flex flex-col items-center justify-center ${
-								!clientData.descriptionEsp && ""
-							}`}
-						>
-							{clientData.descriptionEsp && (
-								<p
-									className={`${playFair.className} text-base md:text-xl lg:text-3xl mb-4 md:mb-8 md:max-w-[70%] text-center`}
-								>
-									{locale === "es" ? clientData.descriptionEsp : clientData.descriptionEn}
-								</p>
-							)}
-							<Link
-								href={clientData.link}
-								target="_blank"
-								rel="noopener noreferrer"
-								className={`flex flex-row items-center justify-center gap-2 text-slate-700 font-bold bg-transparent border-2 border-slate-700 hover:text-white  px-4 py-2 md:px-6 md:py-2 text-sm md:text-base rounded-full hover:bg-slate-700 transition-colors ${
-									!clientData.descriptionEsp && " md:px-10 md:py-4 text-xl "
-								}`}
-							>
-								{t("viewProject") }<FaExternalLinkAlt />
-							</Link>
-						</div>
-					)}
-				</div>
-			</section>
+        {/* Content Container */}
+        <div className="container relative z-10 mx-auto px-6 md:px-12 pt-24 pb-12">
+          <div className="max-w-5xl">
+            {/* Project Type Badge */}
+            <div className="inline-block bg-teal-500/90 text-white px-4 py-1 rounded-full mb-6 backdrop-blur-sm">
+              {locale === "es" ? clientData.typeEsp : clientData.typeEn}
+            </div>
 
-			<section id="gallery" className="py-20 text-slate-800">
-				<Slides images={clientData.imagenes} />
-			</section>
+            {/* Client Name */}
+            <h1
+              className={`${raleway.className} text-white text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight`}
+            >
+              {clientData.client}
+            </h1>
 
-			<section id="languages" className={`py-20 `}>
-				<div className="container mx-auto px-4">
-					<div className={`${raleway.className} text-4xl font-bold mb-8 flex flex-col md:flex-row`}>
-						<p className="mr-2 text-teal-500 ">{t("technologiesUsedColor")}</p>
-						{t("technologiesUsed")}
-					</div>
-					<div className="flex flex-wrap ">
-						<InfiniteIconSlider
-							icons={clientData.language}
-							spacing="mx-4 md:mx-10"
-							fadeCorners={false}
-							className={`bg-slate-50 rounded-2xl p-4`}
-						/>
-					</div>
-				</div>
-			</section>
-			<section id="relatedProjects">
-				<Suspense>
-					<RelatedProjects />
-				</Suspense>
-			</section>
-			<Footer />
-		</main>
-	);
+            {/* Project Details */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+              <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20">
+                <div className="flex items-center mb-3">
+                  <FaLayerGroup className="text-teal-400 mr-3" />
+                  <ColorThemeText
+                    text={t("category")}
+                    darkThemeColor="text-teal-400"
+                    lightThemeColor="text-white"
+                    className="text-lg font-medium"
+                  />
+                </div>
+                <p className="text-white text-xl">{clientData.category}</p>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20">
+                <div className="flex items-center mb-3">
+                  <FaCalendarAlt className="text-teal-400 mr-3" />
+                  <ColorThemeText
+                    text={t("date")}
+                    darkThemeColor="text-teal-400"
+                    lightThemeColor="text-white"
+                    className="text-lg font-medium"
+                  />
+                </div>
+                <p className="text-white text-xl">{clientData.date}</p>
+              </div>
+            </div>
+
+            {/* View Project Button */}
+            {clientData.link && (
+              <Link
+                href={clientData.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center mt-12 bg-teal-500 hover:bg-teal-600 text-white px-8 py-3 rounded-full transition-all duration-300 group"
+              >
+                <span className="mr-2 text-lg font-medium">{t("viewProject")}</span>
+                <FaExternalLinkAlt className="transform group-hover:translate-x-1 transition-transform duration-300" />
+              </Link>
+            )}
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-white/80">
+          <span className="text-sm mb-2">{t("scrollDown")}</span>
+          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center p-1">
+            <div className="w-1 h-2 bg-white/80 rounded-full animate-bounce"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Redesigned About Section */}
+      <section
+        id="about"
+        className="py-24 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800"
+      >
+        <div className="container mx-auto px-6 md:px-12">
+          {clientData.descriptionEsp && (
+            <div className="max-w-5xl mx-auto">
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-4 mb-12">
+                <div className="h-1 w-16 bg-teal-500 rounded-full md:h-16 md:w-1"></div>
+                <h2 className={`${playFair.className} text-3xl md:text-5xl font-bold text-slate-800 dark:text-white`}>
+                  {t("about")} <span className="text-teal-500">{clientData.client}</span>
+                </h2>
+              </div>
+
+              <div className="grid md:grid-cols-5 gap-12">
+                {/* Description */}
+                <div className="md:col-span-3">
+                  <div className="prose prose-lg dark:prose-invert max-w-none">
+                    <p
+                      className={`${playFair.className} text-lg md:text-xl leading-relaxed text-slate-700 dark:text-slate-200`}
+                    >
+                      {locale === "es" ? clientData.descriptionEsp : clientData.descriptionEn}
+                    </p>
+                  </div>
+
+                  {clientData.link && (
+                    <Link
+                      href={clientData.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center mt-8 text-teal-600 dark:text-teal-400 hover:text-teal-800 dark:hover:text-teal-300 font-medium group"
+                    >
+                      <span className="mr-2">{t("viewProject")}</span>
+                      <FaExternalLinkAlt className="transform group-hover:translate-x-1 transition-transform duration-300" />
+                    </Link>
+                  )}
+                </div>
+
+                {/* Project Details */}
+                <div className="md:col-span-2 bg-white dark:bg-slate-800/50 p-8 rounded-2xl shadow-lg border border-slate-100 dark:border-slate-700">
+                  <h3 className={`${raleway.className} text-xl font-bold mb-6 text-slate-800 dark:text-white`}>
+                    {t("projectDetails")}
+                  </h3>
+
+                  <div className="space-y-6">
+                    <div>
+                      <p className="text-sm text-slate-500 dark:text-slate-400 mb-1">{t("client")}</p>
+                      <p className="text-lg font-medium text-slate-800 dark:text-white">{clientData.client}</p>
+                    </div>
+
+                    <div>
+                      <p className="text-sm text-slate-500 dark:text-slate-400 mb-1">{t("category")}</p>
+                      <p className="text-lg font-medium text-slate-800 dark:text-white">{clientData.category}</p>
+                    </div>
+
+                    <div>
+                      <p className="text-sm text-slate-500 dark:text-slate-400 mb-1">{t("date")}</p>
+                      <p className="text-lg font-medium text-slate-800 dark:text-white">{clientData.date}</p>
+                    </div>
+
+                    {clientData.duration && (
+                      <div>
+                        <p className="text-sm text-slate-500 dark:text-slate-400 mb-1">{t("duration")}</p>
+                        <p className="text-lg font-medium text-slate-800 dark:text-white">{clientData.duration}</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* If no description, just show the link button centered */}
+          {!clientData.descriptionEsp && clientData.link && (
+            <div className="flex flex-col items-center justify-center py-12">
+              <Link
+                href={clientData.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center bg-teal-500 hover:bg-teal-600 text-white px-10 py-4 rounded-full text-xl font-medium transition-all duration-300 group"
+              >
+                <span className="mr-3">{t("viewProject")}</span>
+                <FaExternalLinkAlt className="transform group-hover:translate-x-1 transition-transform duration-300" />
+              </Link>
+            </div>
+          )}
+        </div>
+      </section>
+
+      <section id="gallery" className="py-20 text-slate-800">
+        <Slides images={clientData.imagenes} />
+      </section>
+
+      <section id="languages" className={`py-20 `}>
+        <div className="container mx-auto px-4">
+          <div className={`${raleway.className} text-4xl font-bold mb-8 flex flex-col md:flex-row`}>
+            <p className="mr-2 text-teal-500 ">{t("technologiesUsedColor")}</p>
+            {t("technologiesUsed")}
+          </div>
+          <div className="flex flex-wrap ">
+            <InfiniteIconSlider
+              icons={clientData.language}
+              spacing="mx-4 md:mx-10"
+              fadeCorners={false}
+              className={`bg-slate-50 rounded-2xl p-4`}
+            />
+          </div>
+        </div>
+      </section>
+      <section id="relatedProjects">
+        <Suspense>
+          <RelatedProjects />
+        </Suspense>
+      </section>
+      <Footer />
+    </main>
+  )
 }

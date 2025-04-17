@@ -53,15 +53,15 @@ const InfiniteSlider: React.FC<InfiniteSliderProps> = ({
             >
                 {repeatedWords.map((word, index) => (
                     <div key={index} className={`flex items-center`}>
-                        <p className={`font-semibold ${fontSize} ${index % 2 === 0 ? color1 : color2}`}>
+                        <p className={`font-semibold text-lg md:${fontSize} ${index % 2 === 0 ? color1 : color2}`}>
                             {word}
                         </p>
                         {index !== repeatedWords.length - 1 && (
-                            <div className={`flex items-center ${spacing}`}>
+                            <div className={`flex items-center mx-2 md:${spacing}`}>
                                 {icon ? (
                                     <span style={{ fontSize: iconSize }}>{icon}</span>
                                 ) : (
-                                    <div className={`${iconSize} rounded-full ${circleColor}`}></div>
+                                    <div className={`h-1 w-1 md:${iconSize} rounded-full ${circleColor}`}></div>
                                 )}
                             </div>
                         )}

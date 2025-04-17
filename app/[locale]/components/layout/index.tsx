@@ -5,3 +5,4 @@ export { default as AboutMe } from "./AboutMe";
 export { default as Projects } from "./Projects";
 export { default as RelatedProjects } from "./RelatedProjects";
 export { default as CV } from "./CV";
+export { default as Features } from "./Features";

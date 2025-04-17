@@ -5,6 +5,7 @@
 			"description": "Portfolio made by: Agustin Cordoba"
 		},
 		"HomeSection": {
+			"opositeheading": "Desarrollador Front End",
 			"heading": "Front End ",
 			"headingColor": "Developer",
 			"subheading": "I design visually captivating and highly intuitive websites that empower businesses to stand out and engage their audience effectively.",
@@ -23,6 +24,24 @@
 				},
 				"innovation": {
 					"title": "Innovation"
+				},
+				"responsive":{
+					"title":"Responsive"
+				}
+				
+			},
+			"gifButtons":{
+				"about": {
+					"title": "About me"
+				},
+				"contact": {
+					"title": "Contact"
+				},
+				"projects": {
+					"title": "Projects"
+				},
+				"languages": {
+					"title": "Languages"
 				}
 			}
 		},
@@ -51,11 +70,15 @@
 			}
 		},
 		"LanguageSection": {
-			"heading": "My Language Skills"
+			"heading": "My Language Skills",
+			"button-more": "See More",
+			"button-less": "See Less"
 		},
 		"SelectedPracticeSection": {
-			"heading": "Selected",
-			"headingColor": "Practices",
+			"heading": "Professional",
+			"headingColor": "Works",
+			"heading2": "Selected",
+			"headingColor2": "Practices",
 			"seeAll": "See All",
 			"projects": {
 				"ecommerce": {
@@ -117,7 +140,7 @@
 			"Card1": {
 				"title": "Currículum Vitae",
 				"description": "Detailed experience and skills",
-				"href": "/pdf/CurriculumVitaeEn.pdf"
+				"href": "/pdf/Currículum Vitae - Agustin Cordoba - en.pdf"
 			},
 			"Card2": {
 				"title": "Cover letter",
