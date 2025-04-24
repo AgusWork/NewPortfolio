@@ -13,8 +13,6 @@ interface InfiniteSliderProps {
     icon?: ReactNode;
     circleColor?: string;
     fontSize?: string;
-    iconSize?: string;
-    spacing?: string;
 }
 
 const InfiniteSlider: React.FC<InfiniteSliderProps> = ({
@@ -26,8 +24,6 @@ const InfiniteSlider: React.FC<InfiniteSliderProps> = ({
     icon = null,
     circleColor = "bg-white",
     fontSize = "text-2xl",
-    iconSize = "h-2 w-2",
-    spacing = "mx-4",
 }) => {
     const repeatedWords = [...words, ...words, ...words, ...words];
 
@@ -57,11 +53,11 @@ const InfiniteSlider: React.FC<InfiniteSliderProps> = ({
                             {word}
                         </p>
                         {index !== repeatedWords.length - 1 && (
-                            <div className={`flex items-center mx-2 md:${spacing}`}>
+                            <div className={`flex items-center mx-2 md:mx-14`}>
                                 {icon ? (
-                                    <span style={{ fontSize: iconSize }}>{icon}</span>
+                                    <span className={`h-1 w-1 md:w-2 md:h-2`}>{icon}</span>
                                 ) : (
-                                    <div className={`h-1 w-1 md:${iconSize} rounded-full ${circleColor}`}></div>
+                                    <div className={`h-1 w-1 md:w-2 md:h-2 rounded-full ${circleColor}`}></div>
                                 )}
                             </div>
                         )}

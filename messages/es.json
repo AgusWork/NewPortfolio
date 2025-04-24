@@ -130,8 +130,8 @@
 			}
 		},
 		"RelatedSection": {
-			"heading": "Explore other",
-			"headingColor": " Projects"
+			"heading": "Explorar otros",
+			"headingColor": " Projectos"
 		},
 		"CvSection": {
 			"heading": "Descarga mis ",
@@ -217,7 +217,11 @@
 			"name": "Nombre",
 			"email": "Correo Electrónico",
 			"message": "Mensaje",
-			"sendMessage": "Enviar Mensaje"
+			"sendMessage": "Enviar Mensaje",
+			"scrollDown":"Scrollea hacia abajo",
+			"projectDetails": "Detalles del Projecto",
+			"client": "Cliente",
+			"duration": "Duracion"
 		}
 	}
 }

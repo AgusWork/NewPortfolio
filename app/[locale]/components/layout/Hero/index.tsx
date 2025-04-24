@@ -31,7 +31,6 @@ export default function HeroSection() {
 	useScrollToTop();
 	
 	const locale = useLocale();
-	const linkProjectName = locale == "es" ? "Proyectos" : "Projects";
 	const { theme } = useTheme();
 	const t2 = useTranslations("Components.SubHeader");
 	const t = useTranslations("Sections.HomeSection");
@@ -52,6 +51,8 @@ export default function HeroSection() {
 	const sliderWords = keys.map((key) => t(`sliderWords.${key}.title`));
 
 	useEffect(() => {
+		const linkProjectName = locale == "es" ? "Proyectos" : "Projects";
+
 		const links = [
 			{
 				name: t2("links.home.about.name"),
@@ -76,7 +77,7 @@ export default function HeroSection() {
 		];
 
 		setNavLinks(links);
-	}, [pathname, t2]);
+	}, [pathname, t2, locale]);
 
 	useEffect(() => {
 		const handleMouseMove = (e: MouseEvent) => {
@@ -395,8 +396,7 @@ export default function HeroSection() {
 							speed={20}
 							fadeCorners={false}
 							circleColor={theme === "dark" ? "bg-white" : "bg-black"}
-							fontSize="text-xl"
-							spacing="mx-14"
+							fontSize="text-2xl"
 						/>
 					</motion.div>
 			</div>

@@ -98,7 +98,6 @@ export default function EnhancedHero() {
 							fadeCorners={false}
 							circleColor={theme === "dark" ? "bg-white" : "bg-black"}
 							fontSize="text-4xl"
-							spacing="mx-14"
 						/>
 					</motion.div>
 				</section>

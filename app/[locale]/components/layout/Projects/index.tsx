@@ -4,7 +4,6 @@ import React from "react";
 import { motion, useInView } from "framer-motion";
 import { Playfair_Display } from "next/font/google";
 import { useTheme } from "@/app/[locale]/components/contexts/DarkThemeContext";
-import GralLayout from "../GralLayout";
 import { CardSection, CardWork } from "../../ui";
 import projectsData from "../../data/projects/projects.json";
 import { useLocale, useTranslations } from "next-intl";

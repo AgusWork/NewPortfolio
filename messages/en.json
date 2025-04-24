@@ -218,7 +218,12 @@
 			"name": "Name",
 			"email": "Email",
 			"message": "Message",
-			"sendMessage": "Send Message"
+			"sendMessage": "Send Message",
+			"scrollDown":"Scroll down",
+			"projectDetails": "Project Details",
+			"client": "Client",
+			"duration": "Duration"
+
 		}
 	}
 }

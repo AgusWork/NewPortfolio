@@ -60,9 +60,7 @@ export default async function Challenge(props: { params: tParams }) {
 
   return (
     <main className="min-h-screen">
-      {/* Redesigned Hero Section */}
       <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden">
-        {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
             src={clientData.image.src || "/placeholder.svg"}
@@ -74,22 +72,18 @@ export default async function Challenge(props: { params: tParams }) {
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80"></div>
         </div>
 
-        {/* Content Container */}
-        <div className="container relative z-10 mx-auto px-6 md:px-12 pt-24 pb-12">
+        <div className="container relative z-10 mx-auto px-[10vw]  pb-12">
           <div className="max-w-5xl">
-            {/* Project Type Badge */}
             <div className="inline-block bg-teal-500/90 text-white px-4 py-1 rounded-full mb-6 backdrop-blur-sm">
               {locale === "es" ? clientData.typeEsp : clientData.typeEn}
             </div>
 
-            {/* Client Name */}
             <h1
               className={`${raleway.className} text-white text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight`}
             >
               {clientData.client}
             </h1>
 
-            {/* Project Details */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
               <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20">
                 <div className="flex items-center mb-3">
@@ -118,7 +112,6 @@ export default async function Challenge(props: { params: tParams }) {
               </div>
             </div>
 
-            {/* View Project Button */}
             {clientData.link && (
               <Link
                 href={clientData.link}
@@ -133,7 +126,6 @@ export default async function Challenge(props: { params: tParams }) {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-white/80">
           <span className="text-sm mb-2">{t("scrollDown")}</span>
           <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center p-1">
@@ -142,13 +134,12 @@ export default async function Challenge(props: { params: tParams }) {
         </div>
       </section>
 
-      {/* Redesigned About Section */}
-      <section
+      {clientData.descriptionEsp && ( <section
         id="about"
         className="py-24 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800"
       >
-        <div className="container mx-auto px-6 md:px-12">
-          {clientData.descriptionEsp && (
+        <div className="container mx-auto px-[10vw] md:px-12">
+          
             <div className="max-w-5xl mx-auto">
               <div className="flex flex-col md:flex-row items-start md:items-center gap-4 mb-12">
                 <div className="h-1 w-16 bg-teal-500 rounded-full md:h-16 md:w-1"></div>
@@ -158,7 +149,6 @@ export default async function Challenge(props: { params: tParams }) {
               </div>
 
               <div className="grid md:grid-cols-5 gap-12">
-                {/* Description */}
                 <div className="md:col-span-3">
                   <div className="prose prose-lg dark:prose-invert max-w-none">
                     <p
@@ -181,8 +171,7 @@ export default async function Challenge(props: { params: tParams }) {
                   )}
                 </div>
 
-                {/* Project Details */}
-                <div className="md:col-span-2 bg-white dark:bg-slate-800/50 p-8 rounded-2xl shadow-lg border border-slate-100 dark:border-slate-700">
+                <div className="md:col-span-2 bg-white dark:bg-slate-800/50 p-8  rounded-2xl shadow-lg border border-slate-100 dark:border-slate-700">
                   <h3 className={`${raleway.className} text-xl font-bold mb-6 text-slate-800 dark:text-white`}>
                     {t("projectDetails")}
                   </h3>
@@ -213,10 +202,9 @@ export default async function Challenge(props: { params: tParams }) {
                 </div>
               </div>
             </div>
-          )}
+          
 
-          {/* If no description, just show the link button centered */}
-          {!clientData.descriptionEsp && clientData.link && (
+        
             <div className="flex flex-col items-center justify-center py-12">
               <Link
                 href={clientData.link}
@@ -228,16 +216,16 @@ export default async function Challenge(props: { params: tParams }) {
                 <FaExternalLinkAlt className="transform group-hover:translate-x-1 transition-transform duration-300" />
               </Link>
             </div>
-          )}
+          
         </div>
-      </section>
+      </section>)}
 
-      <section id="gallery" className="py-20 text-slate-800">
-        <Slides images={clientData.imagenes} />
+      <section id="gallery" className="py-20  text-slate-800">
+        <Slides images={clientData.imagenes} initialSlideIndex={1} />
       </section>
 
       <section id="languages" className={`py-20 `}>
-        <div className="container mx-auto px-4">
+        <div className="container px-[10vw]">
           <div className={`${raleway.className} text-4xl font-bold mb-8 flex flex-col md:flex-row`}>
             <p className="mr-2 text-teal-500 ">{t("technologiesUsedColor")}</p>
             {t("technologiesUsed")}
@@ -254,7 +242,7 @@ export default async function Challenge(props: { params: tParams }) {
       </section>
       <section id="relatedProjects">
         <Suspense>
-          <RelatedProjects />
+          <RelatedProjects id={id}/>
         </Suspense>
       </section>
       <Footer />
