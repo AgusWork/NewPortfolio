@@ -1,8 +1,17 @@
 {
 	"Sections": {
 		"Layout": {
+			"name": "Agustin Cordoba" ,
 			"title": "Agustin Cordoba - Portafolio",
-			"description": "Portfolio hecho por: Agustin Cordoba"
+			"description": "Portfolio hecho por: Agustin Cordoba",
+			"SEO": {
+				"keywords": "desarrollo web, frontend, react, next.js, typescript, ui/ux, diseño web, portfolio, desarrollador fullstack, javascript, programación",
+				"ogImageAlt": "Agustin Cordoba - Desarrollador Web",
+				"personName": "Agustin Maria Cordoba",
+				"jobTitle": "Desarrollador Web Full Stack Front End FrontEnd FullStack Web Developer",
+				"organization": "Buscando una nueva oportunidad",
+				"skills": "React,Next.js,TypeScript,JavaScript,HTML,CSS,UI/UX,Node.js,GraphQL,REST API, Nest.Js"
+			  }
 		},
 		"HomeSection": {
 			"opositeheading": "Front End Developer",

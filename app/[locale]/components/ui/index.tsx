@@ -12,3 +12,4 @@ export { default as LanguageSwitcher } from "./LanguageSwitcher";
 export { default as ColorThemeText } from "./colorThemeText";
 export { default as Star } from "./Star";
 export { default as Slides } from "./Slides";
+export { default as Breadcrumbs } from "./Breadcrumbs";
