@@ -88,7 +88,7 @@ export async function generateMetadata({ params }: { params: { locale: Locale } 
       apple: "/FotoCV1-circular2.png",
     },
     verification: {
-      google: "google-site-verification=Tj2wqjwzBQBJU2E7l0y2cpkfRwr2VIQO21RUiBvOPOw",
+      google: "gPEdabqzq0hDEBeqeHVduisv_RuWRTXzkpvCKgubc8o",
     },
   }
 }
