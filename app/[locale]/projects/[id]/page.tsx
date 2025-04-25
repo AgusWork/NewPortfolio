@@ -224,13 +224,13 @@ export default async function Challenge(props: { params: tParams }) {
         <Slides images={clientData.imagenes} initialSlideIndex={1} />
       </section>
 
-      <section id="languages" className={`py-20 `}>
-        <div className="container px-[10vw]">
+      <section id="languages" className={`py-20 px-[10vw]`}>
+        <div className="container ">
           <div className={`${raleway.className} text-4xl font-bold mb-8 flex flex-col md:flex-row`}>
             <p className="mr-2 text-teal-500 ">{t("technologiesUsedColor")}</p>
             {t("technologiesUsed")}
           </div>
-          <div className="flex flex-wrap ">
+          <div className="flex flex-wrap w-full">
             <InfiniteIconSlider
               icons={clientData.language}
               spacing="mx-4 md:mx-10"
