@@ -59,9 +59,9 @@ export default async function Challenge(props: { params: tParams }) {
   }
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen ">
       <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 ">
           <Image
             src={clientData.image.src || "/placeholder.svg"}
             alt={clientData.image.alt || clientData.client}
@@ -72,7 +72,7 @@ export default async function Challenge(props: { params: tParams }) {
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80"></div>
         </div>
 
-        <div className="container relative z-10 mx-auto px-[10vw]  pb-12">
+        <div className="container relative z-10 mx-auto pt-[5vh]  px-[10vw]  pb-12">
           <div className="max-w-5xl">
             <div className="inline-block bg-teal-500/90 text-white px-4 py-1 rounded-full mb-6 backdrop-blur-sm">
               {locale === "es" ? clientData.typeEsp : clientData.typeEn}

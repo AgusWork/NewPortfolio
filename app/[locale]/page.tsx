@@ -8,7 +8,7 @@ export default function Home() {
 	return (
 		<ThemeWrapper>
 
-			<div className="min-h-screen">
+			<div className="min-h-screen pt-[10vh]">
 				<main>
 					<Hero />
 					<AboutMe />
