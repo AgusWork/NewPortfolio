@@ -195,7 +195,7 @@ export default async function Challenge(props: { params: tParams }) {
                     {clientData.duration && (
                       <div>
                         <p className="text-sm text-slate-500 dark:text-slate-400 mb-1">{t("duration")}</p>
-                        <p className="text-lg font-medium text-slate-800 dark:text-white">{clientData.duration}</p>
+                        <p className="text-lg font-medium text-slate-800 dark:text-white">{clientData.duration}{locale == "es" ? " semanas" : " weeks"}</p>
                       </div>
                     )}
                   </div>
